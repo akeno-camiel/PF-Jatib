@@ -877,7 +877,7 @@ form .contacto .input-msg {
 }
 .accordion .accordion-item .accordion-header .accordion-button{
     color: white;
-    background-image: url(../img/aniquiladores-inverso.png);
+    background-image: url(../img/aniquiladorEs-inverso.png);
     background-color: #000000;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -885,7 +885,7 @@ form .contacto .input-msg {
 }
 
 .accordion .accordion-item{
-    background-image: url(../img/aniquiladores-inverso.png);
+    background-image: url(../img/aniquiladorEs-inverso.png);
     background-color: #d9d6d6;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -1388,7 +1388,7 @@ footer div h4 {
         ;
     }
     .hero0 .hero .hero1 {
-        height: 30vh;
+        height: 35vh;
     }
 
     .hero0 .hero div>img {
@@ -1396,13 +1396,11 @@ footer div h4 {
     }
 
     .hero0 .hero .hero1 .hero-logo1 img {
-        padding: 5px;
-        width: 2.8rem;
+        width: 2.4rem;
     }
 
     .hero0 .hero .hero1 .hero-logo2 img {
-        padding: 5px;
-        width: 2.8rem;
+        width: 2.4rem;
     }
 
     .hero0 .hero .hero1 .hero-logo1 h3 {
