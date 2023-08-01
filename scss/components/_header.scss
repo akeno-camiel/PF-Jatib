@@ -1,0 +1,32 @@
+header{
+    width: 100%;
+    height: 15vh;
+    background-image: url(../img/aniquiladores-bg.jpg);
+    @include bg (none, cover, no-repeat);
+    background-attachment: fixed;
+    @include flex (flex, space-around, center, row);
+
+    a{
+        img{
+            height: 100px;
+        }
+    }
+    nav{
+        @include flex (flex, center, center, row);
+        ul{
+            list-style: none;
+            @include flex (flex, center, center, row);
+            li{
+                a{
+                    text-decoration: none;
+                    color: $color-black;
+                    @include fuente ('Sarabun', 700, 1.2rem);
+                    margin-left: 20px;
+                    &:hover{
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+}

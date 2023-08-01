@@ -1,0 +1,56 @@
+.main-contacto{
+    .contacto-titulo{
+        @include fuente ('Montserrat', 700, 45px);
+        font-style: italic;
+        text-align: right;
+        margin: 30px 30px 10px 30px;
+    }
+    form{
+        .contacto{
+            @include fuente ('Montserrat', 400, 1rem);
+            @include flex (flex, center, none, row);
+            margin: 10px 30px 30px 10px;
+            padding: 30px 0 30px 0;
+            border: $color-black 1px solid;
+            border-radius: 10px;
+            background-color: #f1e5e5;
+            div{
+                background-color: nth($rojos, 4);
+                width: 95%;
+                input{
+                    border-width: 0 0 1px 0;
+                    padding: 5px;
+                    margin: 5px;
+                    display: block;
+                    background-color: nth($rojos, 4);
+                    width: 90%;
+                }
+                h2{
+                    @include fuente ('Montserrat', 400, 1rem);
+                }
+                select{
+                    border-width: 0 0 1px 0;
+                    padding: 5px;
+                    margin: 15px 0 15px 0;
+                    background-color: #ffffff57;
+                }
+                .input-msg {
+                    border: nth($rojos, 6) 1px solid;
+                    border-radius: 30px;
+                    padding: 5px;
+                    margin: 5px;
+                    background-color: nth($rojos, 5);
+                    width: 100px;
+                }
+                textarea{
+                    border-width: 0 0 1px 0;
+                    padding: 5px;
+                    margin: 5px;
+                    background-color: #ffffff4a;
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+}

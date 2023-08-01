@@ -1,0 +1,468 @@
+main {
+    .nav2 {
+        background: linear-gradient(0.75turn, nth($rojos, 2), nth($rojos, 3), $color-kings);
+        @extend %nav;
+
+        .titulo {
+            @include fuente (Arial, 600, 1.5rem);
+            color: rgba(255, 255, 255, 0.907);
+            text-decoration: underline rgb(213, 213, 213);
+            margin-right: 15px;
+        }
+
+        .clasificacion-kings {
+            display: inline-flex;
+            .titulo {
+                @include fuente (Arial, 600, 1.5rem);
+                color: rgba(255, 255, 255, 0.907);
+                text-decoration: underline rgb(213, 213, 213);
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+.clasificacion-kings1 {
+    @include flex (flex, center, none, row);
+    margin: 10px 0 10px 0;
+    text-align: center;
+
+    .tabla1 {
+        width: 100%;
+        border-bottom: 2px solid $color-black;
+        text-align: center;
+        border-collapse: collapse;
+        @include fuente ('Times New Roman', normal, 1.2rem);
+
+        .theadq {
+            background-color: $color-queens;
+            border-bottom: 2px solid $color-black;
+            color: $color-white;
+        }
+
+        thead {
+            background-color: $color-kings;
+            border-bottom: 2px solid $color-black;
+            color: $color-white;
+
+            tr {
+                th {
+                    padding: 10px 5px 10px 5px;
+
+                    &:nth-child(4) {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        tr {
+            &:nth-child(even) {
+                background-color: #dddddd3f
+            }
+
+            &:hover td {
+                background-color: #ed2a2a;
+                color: $color-white;
+            }
+
+            td {
+                padding: 10px 5px 10px 5px;
+
+                &:nth-child(2) {
+                    text-align: right;
+                }
+
+                &:nth-child(3) {
+                    text-align: left;
+                }
+
+                &:nth-child(4) {
+                    text-align: left;
+                }
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+        .abv {}
+        .abrev {}
+    }
+}
+
+.clasificacion2 {
+    @include flex (grid, center, center, none);
+    grid-template-columns: repeat(5fr);
+    grid-template-rows: repeat(7 50px);
+    grid-template-areas:
+        "h2 h2 h2 h2 h2"
+        "po-1 semi-4 final semi-2 po-3"
+        "po-2 semi-4 final semi-2 po-4"
+        "po-7 semi-3 final semi-1 po-5"
+        "po-8 semi-3 final semi-1 po-6"
+    ;
+    margin: 50px;
+    column-gap: 20px;
+    row-gap: 20px;
+
+    .po-1 {
+        grid-area: po-1;
+        border: 2px solid $color-black;
+        @include flex (flex, space-around, center, row);
+        height: 70px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h3 {
+            @include fuente (Arial, bold, 1rem);
+        }
+    }
+
+    .po-2 {
+        grid-area: po-2;
+        border: 2px solid $color-black;
+        @include flex (flex, space-around, center, row);
+        height: 70px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h3 {
+            @include fuente (Arial, bold, 1rem);
+        }
+    }
+
+    .po-3 {
+        grid-area: po-3;
+        border: 2px solid $color-black;
+        @include flex (flex, space-around, center, row);
+        height: 70px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h3 {
+            @include fuente (Arial, bold, 1rem);
+        }
+    }
+
+    .po-4 {
+        grid-area: po-4;
+        border: 2px solid $color-black;
+        @include flex (flex, space-around, center, row);
+        height: 70px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h3 {
+            @include fuente (Arial, bold, 1rem);
+        }
+    }
+
+    .po-5 {
+        grid-area: po-5;
+        border: 2px solid $color-black;
+        @include flex (flex, space-around, center, row);
+        height: 70px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h3 {
+            @include fuente (Arial, bold, 1rem);
+        }
+    }
+
+    .po-6 {
+        grid-area: po-6;
+        border: 2px solid $color-black;
+        @include flex (flex, space-around, center, row);
+        height: 70px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h3 {
+            @include fuente (Arial, bold, 1rem);
+        }
+    }
+
+    .po-7 {
+        grid-area: po-7;
+        border: 2px solid $color-black;
+        @include flex (flex, space-around, center, row);
+        height: 70px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h3 {
+            @include fuente (Arial, bold, 1rem);
+        }
+    }
+
+    .po-8 {
+        grid-area: po-8;
+        border: 2px solid $color-black;
+        @include flex (flex, space-around, center, row);
+        height: 70px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h3 {
+            @include fuente (Arial, bold, 1rem);
+        }
+    }
+
+    .semi-1 {
+        grid-area: semi-1;
+        border: 2px solid $color-black;
+        @include flex (flex, space-around, center, row);
+        height: 70px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h3 {
+            @include fuente (Arial, bold, 1rem);
+        }
+    }
+
+    .semi-2 {
+        grid-area: semi-2;
+        border: 2px solid $color-black;
+        @include flex (flex, space-around, center, row);
+        height: 70px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h3 {
+            @include fuente (Arial, bold, 1rem);
+        }
+    }
+
+    .semi-3 {
+        grid-area: semi-3;
+        border: 2px solid $color-black;
+        @include flex (flex, space-around, center, row);
+        height: 70px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h3 {
+            @include fuente (Arial, bold, 1rem);
+        }
+    }
+
+    .semi-4 {
+        grid-area: semi-4;
+        border: 2px solid $color-black;
+        @include flex (flex, space-around, center, row);
+        height: 70px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h3 {
+            @include fuente (Arial, bold, 1rem);
+        }
+    }
+
+    .final {
+        grid-area: final;
+        border: 2px solid $color-black;
+        @include flex (flex, space-around, center, row);
+        height: 70px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h3 {
+            @include fuente (Arial, bold, 1rem);
+        }
+    }
+
+    .clasificacion3 {
+        @include flex (grid, center, center, none);
+        grid-template-columns: repeat(7fr);
+        grid-template-rows: repeat(7 50px);
+        grid-template-areas:
+            "h2 h2 h2 h2 h2 h2 h2"
+            ". . semi-4 . semi-1 cu-1 ."
+            ". . semi-4 . semi-1 cu-2 oc-3"
+            ". cu-5 semi-4 final semi-1 cu-2 oc-4"
+            ". cu-5 semi-3 final semi-2 cu-3 ."
+            "oc-1 cu-6 semi-3 . semi-2 cu-4 oc-5"
+            "oc-2 cu-6 . . . cu-4 oc-6";
+        ;
+        margin: 50px;
+        column-gap: 20px;
+        row-gap: 20px;
+
+        .oc-1 {
+            grid-area: oc-1;
+        }
+
+        .oc-2 {
+            grid-area: oc-2;
+        }
+
+        .oc-3 {
+            grid-area: oc-3;
+        }
+
+        .oc-4 {
+            grid-area: oc-4;
+        }
+
+        .oc-5 {
+            grid-area: oc-5;
+        }
+
+        .oc-6 {
+            grid-area: oc-6;
+        }
+
+        .cu-1 {
+            grid-area: cu-1;
+        }
+
+        .cu-2 {
+            grid-area: cu-2;
+        }
+
+        .cu-3 {
+            grid-area: cu-3;
+        }
+
+        .cu-4 {
+            grid-area: cu-4;
+        }
+
+        .cu-5 {
+            grid-area: cu-5;
+        }
+
+        .cu-6 {
+            grid-area: cu-6;
+        }
+
+        .semi-1 {
+            grid-area: semi-1;
+            border: 2px solid $color-black;
+            @include flex (flex, space-around, center, row);
+            height: 70px;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+
+            h3 {
+                @include fuente (Arial, bold, 1rem);
+            }
+        }
+
+        .semi-2 {
+            grid-area: semi-2;
+            border: 2px solid $color-black;
+            @include flex (flex, space-around, center, row);
+            height: 70px;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+
+            h3 {
+                @include fuente (Arial, bold, 1rem);
+            }
+        }
+
+        .semi-3 {
+            grid-area: semi-3;
+            border: 2px solid $color-black;
+            @include flex (flex, space-around, center, row);
+            height: 70px;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+
+            h3 {
+                @include fuente (Arial, bold, 1rem);
+            }
+        }
+
+        .semi-4 {
+            grid-area: semi-4;
+            border: 2px solid $color-black;
+            @include flex (flex, space-around, center, row);
+            height: 70px;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+
+            h3 {
+                @include fuente (Arial, bold, 1rem);
+            }
+        }
+
+        .final {
+            grid-area: final;
+            border: 2px solid $color-black;
+            @include flex (flex, space-around, center, row);
+            height: 70px;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+
+            h3 {
+                @include fuente (Arial, bold, 1rem);
+            }
+        }
+    }
+}
+
+.winner {
+    margin: 20px 0px 20px 0px;
+    @include flex (flex, center, center, row);
+}

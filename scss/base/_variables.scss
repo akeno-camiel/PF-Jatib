@@ -1,0 +1,86 @@
+$color-kings: #F2B64A;
+$color-queens: #02C1B6;
+
+// ---------------------------ROJOS---------------------------
+$rojos: #dc143c,
+    #C2405A,
+    #F55B77,
+    #fae4e489,
+    #ffffffab,
+    #ff0000;
+
+// ---------------------------NEUTRO---------------------------
+
+$color-black: #000000;
+$color-white: #ffffff;
+
+// ---------------------------REDES---------------------------
+$color-twitch: #6B46B3;
+$color-twitter: #03A9F4;
+$color-insta: linear-gradient(39deg, rgba(254, 209, 26, 1) 24%, rgba(253, 34, 127, 1) 51%, rgba(158, 3, 208, 1) 82%);
+$color-tiktok: #000000;
+$color-spotify: #1ED760;
+
+
+// ---------------------------EXTENDS---------------------------
+
+%nav {
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    position: sticky;
+    top: 0px;
+    padding: 0 10px 0 10px;
+    z-index: 1;
+}
+
+%hero-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20vh;
+}
+
+%titulo-equipo {
+    margin: 20px 0 10px 40px;
+    border: solid 3px $color-kings;
+    width: 90vw;
+    height: 3rem;
+    padding-left: 20px;
+    text-transform: uppercase;
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 400;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+}
+
+%caja-footer{
+    width: 9rem;
+    font-size: medium;
+    margin-bottom: 10px;
+}
+
+// ---------------------------MIXINS---------------------------
+@mixin flex ($flex, $justify, $align, $direction) {
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align ;
+    flex-direction: $direction ;
+}
+
+@mixin fuente ($fuente, $ancho, $size) {
+    font-family: $fuente;
+    font-weight: $ancho;
+    font-size: $size;
+}
+
+@mixin bg ($bg-position, $bg-size, $bg-repeat){
+    background-position: $bg-position;
+    background-size: $bg-size;
+    background-repeat: $bg-repeat;
+}

@@ -1,0 +1,171 @@
+main {
+    .nav3{
+        background: linear-gradient(0.75turn, $color-queens, nth($rojos,3), $color-kings);
+        @extend %nav;
+        }
+        a{
+            h3{
+                @include fuente (Arial, 600, 1.5rem);
+                color: rgba(255, 255, 255, 0.907);
+                text-decoration: underline rgb(213, 213, 213);
+                text-align: right;
+            }
+        }
+    .nav2{
+        background: linear-gradient(0.75turn, nth($rojos, 2), nth($rojos, 3), $color-kings);
+        @extend %nav;
+        a{
+            .titulo{
+                @include fuente (Arial, 600, 1.5rem);
+                color: rgba(255, 255, 255, 0.907);
+                text-decoration: underline rgb(213, 213, 213);
+            }
+        }
+    }
+    section {
+        .titulo-equipo {
+            @extend %titulo-equipo;
+            background: linear-gradient(0.75turn, nth($rojos , 3), $color-white, $color-kings);
+        }
+
+        .titulo-equipoq {
+            @extend %titulo-equipo;
+            background: linear-gradient(0.25turn, nth($rojos , 3), $color-white, $color-queens);
+        }
+
+        .tarjetas {
+            @include flex (flex, space-evenly, none, row);
+            flex-wrap: wrap;
+
+            .card1 {
+                width: 250px;
+                height: 450px;
+                text-align: center;
+                margin: 20px;
+                @include bg (center, cover, none);
+                box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+                -webkit-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+                -moz-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+                position: relative;
+
+                &:hover .icon i {
+                    color: nth($rojos, 6);
+                }
+
+                &:hover .icon .icon1 {
+                    @include bg (center, cover, no-repeat);
+                    display: none;
+                }
+
+                &:hover .icon .icon2,
+                &:hover .icon .icon3 {
+                    display: initial;
+                }
+
+                .icon {
+                    width: 30%;
+                    position: absolute;
+                    top: 10px;
+                    right: 0;
+
+                    .icon1 {
+                        width: 100%;
+                        color: $color-white;
+                    }
+
+                    .icon2 {
+                        width: 90px;
+                        height: 90px;
+                        margin-left: -7px;
+                        color: $color-white;
+                        display: none;
+                    }
+
+                    .icon3 {
+                        width: 100%;
+                        color: $color-white;
+                        display: none;
+                    }
+
+                    i {
+                        color: $color-white;
+
+                    }
+                }
+
+                .imgq {
+                    z-index: 2;
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='250' height='400' preserveAspectRatio='none' viewBox='0 0 250 400'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1002%26quot%3b)' fill='none'%3e%3crect width='250' height='400' x='0' y='0' fill='rgba(2%2c 193%2c 182%2c 1)'%3e%3c/rect%3e%3cpath d='M1.63 -13.7L27.61 1.3L27.61 31.3L1.63 46.3L-24.35 31.3L-24.35 1.3zM1.63 166.3L27.61 181.3L27.61 211.3L1.63 226.3L-24.35 211.3L-24.35 181.3zM53.59 76.3L79.57 91.3L79.57 121.3L53.59 136.3L27.61 121.3L27.61 91.3zM53.59 166.3L79.57 181.3L79.57 211.3L53.59 226.3L27.61 211.3L27.61 181.3zM79.57 211.3L105.56 226.3L105.56 256.3L79.57 271.3L53.59 256.3L53.59 226.3zM79.57 301.3L105.56 316.3L105.56 346.3L79.57 361.3L53.59 346.3L53.59 316.3zM53.59 346.3L79.57 361.3L79.57 391.3L53.59 406.3L27.61 391.3L27.61 361.3zM105.56 -13.7L131.54 1.3L131.54 31.3L105.56 46.3L79.57 31.3L79.57 1.3zM105.56 76.3L131.54 91.3L131.54 121.3L105.56 136.3L79.57 121.3L79.57 91.3zM131.54 211.3L157.52 226.3L157.52 256.3L131.54 271.3L105.56 256.3L105.56 226.3zM131.54 301.3L157.52 316.3L157.52 346.3L131.54 361.3L105.56 346.3L105.56 316.3zM105.56 346.3L131.54 361.3L131.54 391.3L105.56 406.3L79.57 391.3L79.57 361.3zM157.52 -13.7L183.5 1.3L183.5 31.3L157.52 46.3L131.54 31.3L131.54 1.3zM157.52 346.3L183.5 361.3L183.5 391.3L157.52 406.3L131.54 391.3L131.54 361.3zM209.48 -13.7L235.46 1.3L235.46 31.3L209.48 46.3L183.5 31.3L183.5 1.3zM235.46 31.3L261.44 46.3L261.44 76.3L235.46 91.3L209.48 76.3L209.48 46.3zM235.46 121.3L261.44 136.3L261.44 166.3L235.46 181.3L209.48 166.3L209.48 136.3zM235.46 211.3L261.44 226.3L261.44 256.3L235.46 271.3L209.48 256.3L209.48 226.3zM235.46 301.3L261.44 316.3L261.44 346.3L235.46 361.3L209.48 346.3L209.48 316.3z' stroke='url(%26quot%3b%23SvgjsRadialGradient1003%26quot%3b)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1002'%3e%3crect width='250' height='400' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='125' cy='200' r='235.85' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient1003'%3e%3cstop stop-color='rgba(255%2c 255%2c 255%2c 1)' offset='0.31'%3e%3c/stop%3e%3cstop stop-color='rgba(71%2c 233%2c 224%2c 1)' offset='0.65'%3e%3c/stop%3e%3c/radialGradient%3e%3c/defs%3e%3c/svg%3e");
+                    background-size: cover;
+
+                    img {
+                        position: relative;
+                        width: 100%;
+                    }
+
+                }
+
+                .img {
+                    z-index: 2;
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='250' height='400' preserveAspectRatio='none' viewBox='0 0 250 400'%3e%3cg mask='url(%26quot%3b%23SvgjsMask8643%26quot%3b)' fill='none'%3e%3crect width='250' height='400' x='0' y='0' fill='rgba(230%2c 141%2c 63%2c 1)'%3e%3c/rect%3e%3cpath d='M28.5 177.72L54.48 192.72L54.48 222.72L28.5 237.72L2.52 222.72L2.52 192.72zM54.48 222.72L80.46 237.72L80.46 267.72L54.48 282.72L28.5 267.72L28.5 237.72zM28.5 267.72L54.48 282.72L54.48 312.72L28.5 327.72L2.52 312.72L2.52 282.72zM54.48 312.72L80.46 327.72L80.46 357.72L54.48 372.72L28.5 357.72L28.5 327.72zM80.46 -2.28L106.44 12.72L106.44 42.72L80.46 57.72L54.48 42.72L54.48 12.72zM106.44 42.72L132.43 57.72L132.43 87.72L106.44 102.72L80.46 87.72L80.46 57.72zM106.44 132.72L132.43 147.72L132.43 177.72L106.44 192.72L80.46 177.72L80.46 147.72zM80.46 177.72L106.44 192.72L106.44 222.72L80.46 237.72L54.48 222.72L54.48 192.72zM106.44 222.72L132.43 237.72L132.43 267.72L106.44 282.72L80.46 267.72L80.46 237.72zM106.44 312.72L132.43 327.72L132.43 357.72L106.44 372.72L80.46 357.72L80.46 327.72zM132.43 -2.28L158.41 12.72L158.41 42.72L132.43 57.72L106.44 42.72L106.44 12.72zM132.43 87.72L158.41 102.72L158.41 132.72L132.43 147.72L106.44 132.72L106.44 102.72zM132.43 177.72L158.41 192.72L158.41 222.72L132.43 237.72L106.44 222.72L106.44 192.72zM158.41 222.72L184.39 237.72L184.39 267.72L158.41 282.72L132.43 267.72L132.43 237.72zM132.43 267.72L158.41 282.72L158.41 312.72L132.43 327.72L106.44 312.72L106.44 282.72zM132.43 357.72L158.41 372.72L158.41 402.72L132.43 417.72L106.44 402.72L106.44 372.72zM210.37 42.72L236.35 57.72L236.35 87.72L210.37 102.72L184.39 87.72L184.39 57.72zM184.39 87.72L210.37 102.72L210.37 132.72L184.39 147.72L158.41 132.72L158.41 102.72zM184.39 267.72L210.37 282.72L210.37 312.72L184.39 327.72L158.41 312.72L158.41 282.72zM262.33 42.72L288.31 57.72L288.31 87.72L262.33 102.72L236.35 87.72L236.35 57.72zM236.35 87.72L262.33 102.72L262.33 132.72L236.35 147.72L210.37 132.72L210.37 102.72zM262.33 132.72L288.31 147.72L288.31 177.72L262.33 192.72L236.35 177.72L236.35 147.72zM236.35 177.72L262.33 192.72L262.33 222.72L236.35 237.72L210.37 222.72L210.37 192.72zM236.35 267.72L262.33 282.72L262.33 312.72L236.35 327.72L210.37 312.72L210.37 282.72z' stroke='url(%26quot%3b%23SvgjsRadialGradient8644%26quot%3b)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask8643'%3e%3crect width='250' height='400' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='125' cy='200' r='235.85' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient8644'%3e%3cstop stop-color='rgba(255%2c 255%2c 255%2c 1)' offset='0.39'%3e%3c/stop%3e%3cstop stop-color='rgba(225%2c 51%2c 51%2c 1)' offset='0.68'%3e%3c/stop%3e%3c/radialGradient%3e%3c/defs%3e%3c/svg%3e");
+                    background-size: cover;
+
+                    img {
+                        position: relative;
+                        width: 100%;
+
+                    }
+                }
+
+                .equipo-name {
+                    margin-top: 20px;
+
+                    h3 {
+                        @include fuente ('Sarabun', 600, 100%);
+                    }
+
+                    h4 {
+                        @include fuente ('Sarabun', 500, 80%);
+                    }
+
+                    .info-description {
+                        h4 {
+                            @include fuente ('Sarabun', 600, 80%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        .resumen {
+            width: 100%;
+            background-color: $color-black;
+            @include flex (flex, space-evenly, center, row);
+            flex-wrap: wrap;
+
+            div {
+                border: 2px solid black;
+                text-align: center;
+                margin: 20px 10px 30px 10px;
+                display: inline-block;
+
+                .resumenqh2 {
+                    @include fuente ('Montserrat', 700, 2rem);
+                    color: $color-queens;
+                }
+
+                h2 {
+                    @include fuente ('Montserrat', 700, 2rem);
+                    color: $color-kings;
+                }
+
+                h3 {
+                    @include fuente ('Montserrat', 700, 5rem);
+                    color: whitesmoke;
+                }
+            }
+        }
+    }
+}

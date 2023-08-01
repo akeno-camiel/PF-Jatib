@@ -114,7 +114,7 @@ header nav ul li a:hover {
 
 .hero0 .hero .hero1 .hero-logo2 {
     width: 20vh;
-    border: 4px solid rgb(255, 5, 5);
+    border: 4px solid #ff0505;
     background-color: #ffffff;
     padding: 10px;
 }
@@ -175,29 +175,25 @@ header nav ul li a:hover {
     overflow: scroll;
 }
 
-.aside .clasificacion-index .a-kings a,
-.aside .clasificacion-index .a-queens a {
+.aside .clasificacion-index div a{
     text-decoration: none;
     color: #E03050;
     text-align: center;
 }
 
-.aside .clasificacion-index .a-kings a:hover,
-.aside .clasificacion-index .a-queens a:hover {
+.aside .clasificacion-index div a:hover{
     color: white;
 }
 
-.aside .clasificacion-index .a-kings a h2,
-.aside .clasificacion-index .a-queens a h2 {
+.aside .clasificacion-index div a h2{
     border: 5px dashed crimson;
     padding: 5px;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 0
 }
 
-.aside .clasificacion-index .a-kings:hover a h2,
-.aside .clasificacion-index .a-queens:hover a h2 {
-    background-color: crimson;
+.aside .clasificacion-index div:hover a h2{
+    background-color: #dc143c;
     border: 5px dashed white;
 }
 
@@ -283,19 +279,36 @@ header nav ul li a:hover {
     padding-top: 2rem;
     border-bottom: 2px double #F2B64A;
 }
-
+.section-calendario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-calendario{
+    width: 60%;
+}
 .resultado {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    width: 95vw;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
+    width: 100%;
+    margin: 2rem 0 5rem 0;
 }
-
+.resultado tr th:nth-child(1){
+    text-align: left;
+    width: 1%;
+}
+.resultado tr th:nth-child(2){
+    text-align: right;
+}
+.resultado tr th:nth-child(4){
+    width: 20%;
+}
+.resultado tr th:nth-child(6){
+    text-align: left;
+}
 .resultado tr:nth-child(even) {
-    background-color: #ddd;
-    border-top: #000000 1px solid;
-    border-bottom: #000000 1px solid;
+    border-top: #00000029 1px solid;
+    border-bottom: #00000029 1px solid;
 }
 
 .resultado tr:hover:nth-child(even) th {
@@ -311,7 +324,7 @@ header nav ul li a:hover {
     width: 50px;
 }
 
-.resultado tr th a:hover {
+.resultado tr:hover th a {
     background-color: white;
     border-radius: 50px;
 }
@@ -319,27 +332,22 @@ header nav ul li a:hover {
 .resultado .goles {
     background: linear-gradient(0.75turn, #F55B77, #F6A734);
     color: white;
-    border-radius: 15px;
-    display: block;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
 }
 
 .resultado .golesq {
     background: linear-gradient(0.25turn, #02C1B6, #F55B77);
     color: white;
-    border-radius: 15px;
-    display: block;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
 }
-
-.cupra {
-    padding-left: 2rem;
-    padding-top: 2rem;
-}
-
-.campnou {
-    padding-left: 2rem;
-    padding-top: 2rem;
-}
-
 
 /*? ----------------------------------CLASIFICACION --------------------------------------*/
 .nav2 {
@@ -484,7 +492,7 @@ header nav ul li a:hover {
     border-bottom: 2px solid black;
     text-align: center;
     border-collapse: collapse;
-    font-family: 'Times New Roman', Times, serif
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .clasificacion-kings1 .tabla1 tr:nth-child(even),
@@ -654,7 +662,7 @@ form .contacto {
 }
 
 form .contacto div {
-    background-color: #fae4e489;
+    background-color: #fae4e479;
     width: 95%;
 }
 
@@ -689,7 +697,7 @@ form .contacto div h2 {
 }
 
 form .contacto .input-msg {
-    border: rgb(255, 47, 47) 1px solid;
+    border: #ff2f2f 1px solid;
     border-radius: 30px;
     padding: 5px;
     margin: 5px;
@@ -1051,8 +1059,7 @@ footer div h4 {
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width:1750px) {
-    .aside .clasificacion-index .a-kings a h2,
-    .aside .clasificacion-index .a-queens a h2 {
+    .aside .clasificacion-index div a h2{
         font-size: 1.7rem;
     }
 }
@@ -1094,8 +1101,7 @@ footer div h4 {
 /*!------------------------MEDIA QUERIES------------------------*/
 
 @media screen and (max-width:1560px) {
-    .aside .clasificacion-index .a-kings a h2,
-    .aside .clasificacion-index .a-queens a h2 {
+    .aside .clasificacion-index div a h2{
         font-size: 1.8rem;
     }
 
@@ -1125,8 +1131,7 @@ footer div h4 {
 /*!------------------------MEDIA QUERIES------------------------*/
 
 @media screen and (max-width:1460px) {
-    .aside .clasificacion-index .a-kings a h2,
-    .aside .clasificacion-index .a-queens a h2 {
+    .aside .clasificacion-index div a h2{
         font-size: 1.2rem;
     }
     .aside .clasificacion-index .tabla table td,
@@ -1138,8 +1143,7 @@ footer div h4 {
 
 @media screen and (max-width:1400px) {
 
-    .aside .clasificacion-index .a-kings a h2,
-    .aside .clasificacion-index .a-queens a h2 {
+    .aside .clasificacion-index div a h2 {
         font-size: 1rem;
     }
     .aside .clasificacion-index .tabla .abv-equipo {
@@ -1241,7 +1245,7 @@ footer div h4 {
     .aside .clasificacion-index {
         width: auto;
     }
-    .aside .clasificacion-index .a-kings a h2, .aside .clasificacion-index .a-queens a h2 {
+    .aside .clasificacion-index div a h2 {
         font-size: 1.7rem;
         padding: 5px;
     }
@@ -1480,8 +1484,7 @@ footer div h4 {
         font-size: 0.9rem;
         margin:  0;
     }
-    .aside .clasificacion-index .a-kings a h2,
-    .aside .clasificacion-index .a-queens a h2 {
+    .aside .clasificacion-index div a h2{
         font-size: 1.2rem;
     }
     .aside .clasificacion-index .tabla table td,

@@ -1,0 +1,104 @@
+footer{
+    background: linear-gradient(0.75turn, nth($rojos, 2), nth($rojos, 3), $color-kings);
+    width: 100%;
+    @include fuente ('Open Sans', 200, 1rem);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 400px auto;
+    grid-template-areas:
+        " h3 h3"
+        "redes redes"
+        "logos links ";
+
+    h3{
+        color: $color-white;
+        text-align: center;
+        grid-area: h3;
+        align-self: self-end;
+        @include fuente (Arial, bold, 1.2rem);
+    }
+
+    .redes{
+        @include flex (flex, space-evenly, center, row);
+        flex-wrap: wrap;
+        grid-area: redes;
+        align-self: center;
+        justify-self: center;
+
+        .foot-twitch {
+            background-color: $color-twitch;
+            @extend %caja-footer;
+        }
+        .foot-twitter {
+            background-color: $color-twitter;
+            @extend %caja-footer;
+        }
+        .foot-insta{
+            background: (circle, center, (darkslateblue 0 10%) (white 10% 20%) (dodgerblue 20% 30%) (powderblue 30% 100%));
+            @extend %caja-footer;
+        }
+        .foot-tiktok{
+            background-color: $color-tiktok;
+            @extend %caja-footer;
+        }
+        .foot-spotify{
+            background-color: $color-spotify;
+            @extend %caja-footer;
+        }
+        a{
+            margin-left: 7px;
+            color: $color-white;
+            text-decoration: none;
+
+            img{
+                width: 60px;
+            }
+
+            h4{
+                margin-left: 15px;
+                margin-top: 5px;
+                @include fuente (Arial, bold, large);
+            }
+
+            h5{
+                text-align: right;
+                margin-right: 15px;
+                @include fuente (Arial, 400, medium);
+                font-style: italic;
+            }
+        }
+    }
+    .footer-logo{
+        grid-area: logos;
+        align-self: self-end;
+        display: flex;
+
+        div{
+            img{
+                width: 5rem;
+                padding: 10px;
+            }
+        }
+    }
+    .footer-links{
+        grid-area: links;
+        justify-self: end;
+        align-self: self-end;
+        text-align: right;
+        margin-bottom: 5px;
+        ul{
+            @include fuente ('Open Sans', 500, 1rem);
+            list-style: none;
+            li{
+                a{
+                    color: $color-white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.footer-queens {
+    background: linear-gradient(0.75turn, $color-queens, nth($rojos, 3) , $color-kings);
+}
