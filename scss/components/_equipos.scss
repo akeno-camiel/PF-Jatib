@@ -1,27 +1,31 @@
 main {
-    .nav3{
-        background: linear-gradient(0.75turn, $color-queens, nth($rojos,3), $color-kings);
+    .nav3 {
+        background: linear-gradient(0.75turn, $color-queens, nth($rojos, 3), $color-kings);
         @extend %nav;
+    }
+
+    a {
+        h3 {
+            @include fuente (Arial, 600, 1.5rem);
+            color: rgba(255, 255, 255, 0.907);
+            text-decoration: underline rgb(213, 213, 213);
+            text-align: right;
         }
-        a{
-            h3{
-                @include fuente (Arial, 600, 1.5rem);
-                color: rgba(255, 255, 255, 0.907);
-                text-decoration: underline rgb(213, 213, 213);
-                text-align: right;
-            }
-        }
-    .nav2{
+    }
+
+    .nav2 {
         background: linear-gradient(0.75turn, nth($rojos, 2), nth($rojos, 3), $color-kings);
         @extend %nav;
-        a{
-            .titulo{
+
+        a {
+            .titulo {
                 @include fuente (Arial, 600, 1.5rem);
                 color: rgba(255, 255, 255, 0.907);
                 text-decoration: underline rgb(213, 213, 213);
             }
         }
     }
+
     section {
         .titulo-equipo {
             @extend %titulo-equipo;
@@ -60,6 +64,18 @@ main {
                 &:hover .icon .icon2,
                 &:hover .icon .icon3 {
                     display: initial;
+                }
+
+                &:hover .equipo-name{
+                    margin-top: -35px;
+                    transition: all 400ms;
+                }
+                &:hover .equipo-name h3{
+                    display: none;
+                }
+                &:hover .info-description{
+                    margin-top: 33px;
+                    opacity: 100%;
                 }
 
                 .icon {
@@ -127,11 +143,24 @@ main {
                     h4 {
                         @include fuente ('Sarabun', 500, 80%);
                     }
+                }
 
-                    .info-description {
-                        h4 {
-                            @include fuente ('Sarabun', 600, 80%);
-                        }
+                .info-description {
+                    width: 250px;
+                    height: 86px;
+                    color: #000000;
+                    background-color: #ffffff4f;
+                    padding: 5px;
+                    margin-top: -250px;
+                    opacity: 0;
+                    transition: all 400ms;
+                    h4 {
+                        @include fuente ('Sarabun', 600, 80%);
+                        display: -webkit-box;
+                        display: -moz-box;
+                        display: box;
+                        display: inline;
+                        margin-right: 5px;
                     }
                 }
             }

@@ -119,9 +119,18 @@ header {
         font-family: "Sarabun";
         font-weight: 700;
         font-size: 1.2rem;
-        margin-left: 20px; }
+        margin-left: 20px;
+        border-left: 2px solid #000000;
+        border-right: 2px solid #000000;
+        padding: 0 20px 0 20px; }
         header nav ul li a:hover {
-          color: #ffffff; }
+          color: #ffffff;
+          border-left: 2px solid #ffffff;
+          border-right: 2px solid #ffffff; }
+      header nav ul li .h-eq {
+        border: none; }
+        header nav ul li .h-eq:hover {
+          border: none; }
 
 .grid-container {
   display: grid;
@@ -135,6 +144,8 @@ header {
       justify-content: center;
       align-items: center;
       flex-direction: row; }
+      .grid-container .hero0 .hero h1 {
+        display: none; }
       .grid-container .hero0 .hero .hero1 {
         margin: 50px 0 50px 0;
         padding: 10px;
@@ -154,7 +165,7 @@ header {
           padding: 5px; }
           .grid-container .hero0 .hero .hero1 .hero-logo1 img {
             width: 100%; }
-          .grid-container .hero0 .hero .hero1 .hero-logo1 h3 {
+          .grid-container .hero0 .hero .hero1 .hero-logo1 h2 {
             font-family: "Sarabun";
             font-weight: 900;
             font-size: 3rem; }
@@ -164,7 +175,7 @@ header {
           padding: 10px; }
           .grid-container .hero0 .hero .hero1 .hero-logo2 img {
             width: 100%; }
-          .grid-container .hero0 .hero .hero1 .hero-logo2 h3 {
+          .grid-container .hero0 .hero .hero1 .hero-logo2 h2 {
             font-family: "Sarabun";
             font-weight: 900;
             font-size: 3rem; }
@@ -370,31 +381,29 @@ main .presupuesto div div .carousel .carousel-inner .carousel-item img {
   margin: 20px;
   width: 90%; }
 
-main .nav2 {
-  background: linear-gradient(0.75turn, #C2405A, #F55B77, #F2B64A); }
-  main .nav2 .titulo {
+main .nav2 .titulo, main .nav3 .titulo {
+  font-family: Arial;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.907);
+  text-decoration: underline #d5d5d5;
+  margin-right: 15px; }
+
+main .nav2 .clasificacion-kings, main .nav3 .clasificacion-kings {
+  display: inline-flex; }
+  main .nav2 .clasificacion-kings .titulo, main .nav3 .clasificacion-kings .titulo {
     font-family: Arial;
     font-weight: 600;
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.907);
     text-decoration: underline #d5d5d5;
     margin-right: 15px; }
-  main .nav2 .clasificacion-kings {
-    display: inline-flex; }
-    main .nav2 .clasificacion-kings .titulo {
-      font-family: Arial;
-      font-weight: 600;
-      font-size: 1.5rem;
-      color: rgba(255, 255, 255, 0.907);
-      text-decoration: underline #d5d5d5;
-      margin-right: 15px; }
 
 .clasificacion-kings1 {
   display: flex;
   justify-content: center;
   align-items: none;
   flex-direction: row;
-  margin: 10px 0 10px 0;
   text-align: center; }
   .clasificacion-kings1 .tabla1 {
     width: 100%;
@@ -442,8 +451,34 @@ main .nav2 {
   grid-template-rows: repeat(7 50px);
   grid-template-areas: "h2 h2 h2 h2 h2" "po-1 semi-4 final semi-2 po-3" "po-2 semi-4 final semi-2 po-4" "po-7 semi-3 final semi-1 po-5" "po-8 semi-3 final semi-1 po-6";
   margin: 50px;
-  column-gap: 20px;
-  row-gap: 20px; }
+  column-gap: 2rem;
+  row-gap: 1rem;
+  text-align: center;
+  background-image: url(../img/cancha1.jpg);
+  height: 80vh;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .clasificacion2 h2 {
+    color: #ffffff;
+    margin-left: 1.1rem; }
+  .clasificacion2 div {
+    background-color: rgba(255, 255, 255, 0.704); }
+  .clasificacion2 img {
+    width: 40px;
+    height: 40px; }
+  .clasificacion2 h3 {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 0 3px 0 3px; }
+  .clasificacion2 .copa-kings-league {
+    width: 8%;
+    height: 35%;
+    position: absolute;
+    right: 46%;
+    top: 15%; }
   .clasificacion2 .po-1 {
     grid-area: po-1;
     border: 2px solid #000000;
@@ -451,14 +486,7 @@ main .nav2 {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    height: 70px; }
-    .clasificacion2 .po-1 img {
-      width: 50px;
-      height: 50px; }
-    .clasificacion2 .po-1 h3 {
-      font-family: Arial;
-      font-weight: bold;
-      font-size: 1rem; }
+    height: 3rem; }
   .clasificacion2 .po-2 {
     grid-area: po-2;
     border: 2px solid #000000;
@@ -466,14 +494,7 @@ main .nav2 {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    height: 70px; }
-    .clasificacion2 .po-2 img {
-      width: 50px;
-      height: 50px; }
-    .clasificacion2 .po-2 h3 {
-      font-family: Arial;
-      font-weight: bold;
-      font-size: 1rem; }
+    height: 3rem; }
   .clasificacion2 .po-3 {
     grid-area: po-3;
     border: 2px solid #000000;
@@ -481,14 +502,7 @@ main .nav2 {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    height: 70px; }
-    .clasificacion2 .po-3 img {
-      width: 50px;
-      height: 50px; }
-    .clasificacion2 .po-3 h3 {
-      font-family: Arial;
-      font-weight: bold;
-      font-size: 1rem; }
+    height: 3rem; }
   .clasificacion2 .po-4 {
     grid-area: po-4;
     border: 2px solid #000000;
@@ -496,14 +510,7 @@ main .nav2 {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    height: 70px; }
-    .clasificacion2 .po-4 img {
-      width: 50px;
-      height: 50px; }
-    .clasificacion2 .po-4 h3 {
-      font-family: Arial;
-      font-weight: bold;
-      font-size: 1rem; }
+    height: 3rem; }
   .clasificacion2 .po-5 {
     grid-area: po-5;
     border: 2px solid #000000;
@@ -511,14 +518,7 @@ main .nav2 {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    height: 70px; }
-    .clasificacion2 .po-5 img {
-      width: 50px;
-      height: 50px; }
-    .clasificacion2 .po-5 h3 {
-      font-family: Arial;
-      font-weight: bold;
-      font-size: 1rem; }
+    height: 3rem; }
   .clasificacion2 .po-6 {
     grid-area: po-6;
     border: 2px solid #000000;
@@ -526,14 +526,7 @@ main .nav2 {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    height: 70px; }
-    .clasificacion2 .po-6 img {
-      width: 50px;
-      height: 50px; }
-    .clasificacion2 .po-6 h3 {
-      font-family: Arial;
-      font-weight: bold;
-      font-size: 1rem; }
+    height: 3rem; }
   .clasificacion2 .po-7 {
     grid-area: po-7;
     border: 2px solid #000000;
@@ -541,14 +534,7 @@ main .nav2 {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    height: 70px; }
-    .clasificacion2 .po-7 img {
-      width: 50px;
-      height: 50px; }
-    .clasificacion2 .po-7 h3 {
-      font-family: Arial;
-      font-weight: bold;
-      font-size: 1rem; }
+    height: 3rem; }
   .clasificacion2 .po-8 {
     grid-area: po-8;
     border: 2px solid #000000;
@@ -556,14 +542,7 @@ main .nav2 {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    height: 70px; }
-    .clasificacion2 .po-8 img {
-      width: 50px;
-      height: 50px; }
-    .clasificacion2 .po-8 h3 {
-      font-family: Arial;
-      font-weight: bold;
-      font-size: 1rem; }
+    height: 3rem; }
   .clasificacion2 .semi-1 {
     grid-area: semi-1;
     border: 2px solid #000000;
@@ -571,14 +550,7 @@ main .nav2 {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    height: 70px; }
-    .clasificacion2 .semi-1 img {
-      width: 50px;
-      height: 50px; }
-    .clasificacion2 .semi-1 h3 {
-      font-family: Arial;
-      font-weight: bold;
-      font-size: 1rem; }
+    height: 3rem; }
   .clasificacion2 .semi-2 {
     grid-area: semi-2;
     border: 2px solid #000000;
@@ -586,14 +558,7 @@ main .nav2 {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    height: 70px; }
-    .clasificacion2 .semi-2 img {
-      width: 50px;
-      height: 50px; }
-    .clasificacion2 .semi-2 h3 {
-      font-family: Arial;
-      font-weight: bold;
-      font-size: 1rem; }
+    height: 3rem; }
   .clasificacion2 .semi-3 {
     grid-area: semi-3;
     border: 2px solid #000000;
@@ -601,14 +566,7 @@ main .nav2 {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    height: 70px; }
-    .clasificacion2 .semi-3 img {
-      width: 50px;
-      height: 50px; }
-    .clasificacion2 .semi-3 h3 {
-      font-family: Arial;
-      font-weight: bold;
-      font-size: 1rem; }
+    height: 3rem; }
   .clasificacion2 .semi-4 {
     grid-area: semi-4;
     border: 2px solid #000000;
@@ -616,14 +574,7 @@ main .nav2 {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    height: 70px; }
-    .clasificacion2 .semi-4 img {
-      width: 50px;
-      height: 50px; }
-    .clasificacion2 .semi-4 h3 {
-      font-family: Arial;
-      font-weight: bold;
-      font-size: 1rem; }
+    height: 3rem; }
   .clasificacion2 .final {
     grid-area: final;
     border: 2px solid #000000;
@@ -631,124 +582,182 @@ main .nav2 {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    height: 70px; }
-    .clasificacion2 .final img {
-      width: 50px;
-      height: 50px; }
-    .clasificacion2 .final h3 {
-      font-family: Arial;
-      font-weight: bold;
-      font-size: 1rem; }
-  .clasificacion2 .clasificacion3 {
-    display: grid;
-    justify-content: center;
+    height: 3rem; }
+
+.clasificacion3 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  flex-direction: none;
+  grid-template-columns: repeat(7fr);
+  grid-template-rows: repeat(7 50px);
+  grid-template-areas: "h2 h2 h2 h2 h2 h2 h2" ". . semi-4 . semi-1 cu-1 ." ". . semi-4 . semi-1 cu-2 oc-3" ". cu-5 semi-4 final semi-1 cu-2 oc-4" ". cu-5 semi-3 final semi-2 cu-3 ." "oc-1 cu-6 semi-3 . semi-2 cu-4 oc-5" "oc-2 cu-6 . . . cu-4 oc-6";
+  margin: 50px;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  text-align: center;
+  background-image: url(../img/cancha1.jpg);
+  height: 80vh;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .clasificacion3 h2 {
+    color: #ffffff;
+    margin-left: 1.1rem; }
+  .clasificacion3 div {
+    background-color: rgba(255, 255, 255, 0.704); }
+  .clasificacion3 img {
+    width: 40px;
+    height: 40px; }
+  .clasificacion3 h3 {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 0.7rem;
+    margin: 0 3px 0 3px; }
+  .clasificacion3 .copa-kings-league,
+  .clasificacion3 .copa-queens-league {
+    width: 8%;
+    height: 35%;
+    position: absolute;
+    right: 47%;
+    top: 15%; }
+  .clasificacion3 .oc-1 {
+    grid-area: oc-1;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    flex-direction: none;
-    grid-template-columns: repeat(7fr);
-    grid-template-rows: repeat(7 50px);
-    grid-template-areas: "h2 h2 h2 h2 h2 h2 h2" ". . semi-4 . semi-1 cu-1 ." ". . semi-4 . semi-1 cu-2 oc-3" ". cu-5 semi-4 final semi-1 cu-2 oc-4" ". cu-5 semi-3 final semi-2 cu-3 ." "oc-1 cu-6 semi-3 . semi-2 cu-4 oc-5" "oc-2 cu-6 . . . cu-4 oc-6";
-    margin: 50px;
-    column-gap: 20px;
-    row-gap: 20px; }
-    .clasificacion2 .clasificacion3 .oc-1 {
-      grid-area: oc-1; }
-    .clasificacion2 .clasificacion3 .oc-2 {
-      grid-area: oc-2; }
-    .clasificacion2 .clasificacion3 .oc-3 {
-      grid-area: oc-3; }
-    .clasificacion2 .clasificacion3 .oc-4 {
-      grid-area: oc-4; }
-    .clasificacion2 .clasificacion3 .oc-5 {
-      grid-area: oc-5; }
-    .clasificacion2 .clasificacion3 .oc-6 {
-      grid-area: oc-6; }
-    .clasificacion2 .clasificacion3 .cu-1 {
-      grid-area: cu-1; }
-    .clasificacion2 .clasificacion3 .cu-2 {
-      grid-area: cu-2; }
-    .clasificacion2 .clasificacion3 .cu-3 {
-      grid-area: cu-3; }
-    .clasificacion2 .clasificacion3 .cu-4 {
-      grid-area: cu-4; }
-    .clasificacion2 .clasificacion3 .cu-5 {
-      grid-area: cu-5; }
-    .clasificacion2 .clasificacion3 .cu-6 {
-      grid-area: cu-6; }
-    .clasificacion2 .clasificacion3 .semi-1 {
-      grid-area: semi-1;
-      border: 2px solid #000000;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-direction: row;
-      height: 70px; }
-      .clasificacion2 .clasificacion3 .semi-1 img {
-        width: 50px;
-        height: 50px; }
-      .clasificacion2 .clasificacion3 .semi-1 h3 {
-        font-family: Arial;
-        font-weight: bold;
-        font-size: 1rem; }
-    .clasificacion2 .clasificacion3 .semi-2 {
-      grid-area: semi-2;
-      border: 2px solid #000000;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-direction: row;
-      height: 70px; }
-      .clasificacion2 .clasificacion3 .semi-2 img {
-        width: 50px;
-        height: 50px; }
-      .clasificacion2 .clasificacion3 .semi-2 h3 {
-        font-family: Arial;
-        font-weight: bold;
-        font-size: 1rem; }
-    .clasificacion2 .clasificacion3 .semi-3 {
-      grid-area: semi-3;
-      border: 2px solid #000000;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-direction: row;
-      height: 70px; }
-      .clasificacion2 .clasificacion3 .semi-3 img {
-        width: 50px;
-        height: 50px; }
-      .clasificacion2 .clasificacion3 .semi-3 h3 {
-        font-family: Arial;
-        font-weight: bold;
-        font-size: 1rem; }
-    .clasificacion2 .clasificacion3 .semi-4 {
-      grid-area: semi-4;
-      border: 2px solid #000000;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-direction: row;
-      height: 70px; }
-      .clasificacion2 .clasificacion3 .semi-4 img {
-        width: 50px;
-        height: 50px; }
-      .clasificacion2 .clasificacion3 .semi-4 h3 {
-        font-family: Arial;
-        font-weight: bold;
-        font-size: 1rem; }
-    .clasificacion2 .clasificacion3 .final {
-      grid-area: final;
-      border: 2px solid #000000;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-direction: row;
-      height: 70px; }
-      .clasificacion2 .clasificacion3 .final img {
-        width: 50px;
-        height: 50px; }
-      .clasificacion2 .clasificacion3 .final h3 {
-        font-family: Arial;
-        font-weight: bold;
-        font-size: 1rem; }
+    flex-direction: row;
+    height: 3rem; }
+  .clasificacion3 .oc-2 {
+    grid-area: oc-2;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem; }
+  .clasificacion3 .oc-3 {
+    grid-area: oc-3;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem; }
+  .clasificacion3 .oc-4 {
+    grid-area: oc-4;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem; }
+  .clasificacion3 .oc-5 {
+    grid-area: oc-5;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem; }
+  .clasificacion3 .oc-6 {
+    grid-area: oc-6;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem; }
+  .clasificacion3 .cu-1 {
+    grid-area: cu-1;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem; }
+  .clasificacion3 .cu-2 {
+    grid-area: cu-2;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem; }
+  .clasificacion3 .cu-3 {
+    grid-area: cu-3;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem; }
+  .clasificacion3 .cu-4 {
+    grid-area: cu-4;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem; }
+  .clasificacion3 .cu-5 {
+    grid-area: cu-5;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem; }
+  .clasificacion3 .cu-6 {
+    grid-area: cu-6;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem; }
+  .clasificacion3 .semi-1 {
+    grid-area: semi-1;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem; }
+  .clasificacion3 .semi-2 {
+    grid-area: semi-2;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem; }
+  .clasificacion3 .semi-3 {
+    grid-area: semi-3;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem; }
+  .clasificacion3 .semi-4 {
+    grid-area: semi-4;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem; }
+  .clasificacion3 .final {
+    grid-area: final;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3rem; }
 
 .winner {
   margin: 20px 0px 20px 0px;
@@ -756,6 +765,85 @@ main .nav2 {
   justify-content: center;
   align-items: center;
   flex-direction: row; }
+
+main .nav2 .titulo {
+  font-family: Arial;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.907);
+  text-decoration: underline #d5d5d5;
+  margin-right: 15px; }
+
+main .nav2 .clasificacion-kings {
+  display: inline-flex; }
+  main .nav2 .clasificacion-kings .titulo {
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.907);
+    text-decoration: underline #d5d5d5;
+    margin-right: 15px; }
+
+main h1 {
+  display: none; }
+
+main .titulo-calendario {
+  padding-left: 2rem;
+  padding-top: 2rem;
+  border-bottom: 2px double #F2B64A; }
+
+main .section-calendario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; }
+  main .section-calendario .contenedor-calendario {
+    width: 60%; }
+    main .section-calendario .contenedor-calendario .resultado {
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      width: 100%;
+      margin: 2rem 0 5rem 0; }
+      main .section-calendario .contenedor-calendario .resultado tr:nth-child(even) {
+        border-top: #00000029 1px solid;
+        border-bottom: #00000029 1px solid; }
+      main .section-calendario .contenedor-calendario .resultado tr:hover:nth-child(even) th {
+        background-color: #000000;
+        color: white; }
+      main .section-calendario .contenedor-calendario .resultado tr:hover th a {
+        background-color: white;
+        border-radius: 50px; }
+      main .section-calendario .contenedor-calendario .resultado tr th {
+        padding: 5px 0 5px 0; }
+        main .section-calendario .contenedor-calendario .resultado tr th:nth-child(1) {
+          text-align: left;
+          width: 1%; }
+        main .section-calendario .contenedor-calendario .resultado tr th:nth-child(2) {
+          text-align: right; }
+        main .section-calendario .contenedor-calendario .resultado tr th:nth-child(4) {
+          width: 20%; }
+        main .section-calendario .contenedor-calendario .resultado tr th:nth-child(6) {
+          text-align: left; }
+        main .section-calendario .contenedor-calendario .resultado tr th img {
+          width: 50px; }
+        main .section-calendario .contenedor-calendario .resultado tr th .goles {
+          background: linear-gradient(0.75turn, #F55B77, #F2B64A);
+          color: #ffffff;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          height: 2.5rem; }
+        main .section-calendario .contenedor-calendario .resultado tr th .golesq {
+          background: linear-gradient(0.25turn, #02C1B6, #F55B77);
+          color: #ffffff;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          height: 2.5rem; }
 
 main .nav3 {
   background: linear-gradient(0.75turn, #02C1B6, #F55B77, #F2B64A); }
@@ -811,6 +899,14 @@ main section .tarjetas {
     main section .tarjetas .card1:hover .icon .icon2,
     main section .tarjetas .card1:hover .icon .icon3 {
       display: initial; }
+    main section .tarjetas .card1:hover .equipo-name {
+      margin-top: -35px;
+      transition: all 400ms; }
+    main section .tarjetas .card1:hover .equipo-name h3 {
+      display: none; }
+    main section .tarjetas .card1:hover .info-description {
+      margin-top: 33px;
+      opacity: 100%; }
     main section .tarjetas .card1 .icon {
       width: 30%;
       position: absolute;
@@ -855,10 +951,24 @@ main section .tarjetas {
         font-family: "Sarabun";
         font-weight: 500;
         font-size: 80%; }
-      main section .tarjetas .card1 .equipo-name .info-description h4 {
+    main section .tarjetas .card1 .info-description {
+      width: 250px;
+      height: 86px;
+      color: #000000;
+      background-color: #ffffff4f;
+      padding: 5px;
+      margin-top: -250px;
+      opacity: 0;
+      transition: all 400ms; }
+      main section .tarjetas .card1 .info-description h4 {
         font-family: "Sarabun";
         font-weight: 600;
-        font-size: 80%; }
+        font-size: 80%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: inline;
+        margin-right: 5px; }
 
 main section .resumen {
   width: 100%;

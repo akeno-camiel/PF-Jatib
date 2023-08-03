@@ -22,8 +22,19 @@ header{
                     color: $color-black;
                     @include fuente ('Sarabun', 700, 1.2rem);
                     margin-left: 20px;
+                    border-left: 2px solid $color-black;
+                    border-right: 2px solid $color-black;
+                    padding: 0 20px 0 20px;
                     &:hover{
                         color: $color-white;
+                        border-left: 2px solid $color-white;
+                        border-right: 2px solid $color-white;
+                    }
+                }
+                .h-eq{
+                    border: none;
+                    &:hover{
+                        border: none;
                     }
                 }
             }
