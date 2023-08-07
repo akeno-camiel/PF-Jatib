@@ -30,9 +30,42 @@ main {
         padding-top: 2rem;
         border-bottom: 2px double $color-kings;
     }
-
+    .enero{
+        background-image: url(../img/composicion-futbol-copyspace-derecha.jpg);
+        @include bg(50% 50%, cover,no-repeat);
+    }
+    .febrero{
+        background-image: url(../img/composicion-futbol-tarjetas-amarilla-roja.jpg);
+        @include bg(50% 50%, cover,no-repeat);
+    }
+    .marzo{
+        background-image: url(../img/composicion-futbol-copyspace-zapatos.jpg);
+        @include bg(50% 50%, cover,no-repeat);
+    }
+    .cupra{
+        background-image: url(../img/composicion-futbol-copyspace-pelota.jpg);
+        @include bg(50% 50%, cover,no-repeat);
+    }
+    .playoff{
+        background-image: url(../img/composicion-futbol-copyspace-derecha1.jpg);
+        @include bg(50% 50%, cover,no-repeat);
+    }
+    .campnou{
+        background-image: url(../img/composicion-futbol-copyspace-derecha-cesped.jpg);
+        @include bg(50% 50%, cover,no-repeat);
+    }
+    .final-campnou{
+        background-image: url(../img/lo-ultimo.jpg);
+        @include bg(50% 90%, cover,no-repeat);
+        height: 400px;
+    }
+    .final-civitas{
+        background-image: url(../img/final-civitas1.jpg);
+        @include bg(50% 50%, cover,no-repeat);
+        height: 500px;
+    }
     .section-calendario {
-        @include flex (flex, center, center, row);
+        @include flex (flex, center, none, row);
 
         .contenedor-calendario {
             width: 60%;
@@ -42,41 +75,54 @@ main {
                 font-family: 'Times New Roman', Times, serif;
                 width: 100%;
                 margin: 2rem 0 5rem 0;
+                border-radius: 30px;
 
                 tr {
                     &:nth-child(even) {
                         border-top: #00000029 1px solid;
                         border-bottom: #00000029 1px solid;
+                        background-color: #dddddd3f
                     }
 
-                    &:hover:nth-child(even) th {
+                    &:hover:nth-child(even) td {
                         background-color: $color-black;
-                        color: white;
+                        color: $color-white;
                     }
 
-                    &:hover th a {
-                        background-color: white;
-                        border-radius: 50px;
+                    &:hover td a{
+                        background-color: $color-white;
+                        border-radius: 100%;
                     }
 
-                    th {
+                    th,
+                    td {
                         padding: 5px 0 5px 0;
-
-                        &:nth-child(1) {
-                            text-align: left;
-                            width: 1%;
-                        }
+                        color: $color-white;
 
                         &:nth-child(2) {
                             text-align: right;
                         }
 
+                        &:nth-child(3) {
+                            text-align: right;
+                            width: 25%;
+                        }
+
                         &:nth-child(4) {
-                            width: 20%;
+                            width: min-content;
                         }
 
                         &:nth-child(6) {
+                            width: min-content;
+                        }
+
+                        &:nth-child(7) {
                             text-align: left;
+                        }
+
+                        &:nth-child(8) {
+                            text-align: left;
+                            width: 20%;
                         }
 
                         img {

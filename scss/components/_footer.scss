@@ -47,24 +47,24 @@ footer{
             @extend %caja-footer;
         }
         a{
-            margin-left: 7px;
+            margin-left: 5px;
             color: $color-white;
             text-decoration: none;
 
             img{
-                width: 60px;
+                width: 45px;
             }
 
             h4{
                 margin-left: 15px;
                 margin-top: 5px;
-                @include fuente (Arial, bold, large);
+                @include fuente (Arial, bold, 0.8rem);
             }
 
             h5{
                 text-align: right;
                 margin-right: 15px;
-                @include fuente (Arial, 400, medium);
+                @include fuente (Arial, 400, 0.6rem);
                 font-style: italic;
             }
         }

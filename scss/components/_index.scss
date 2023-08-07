@@ -14,7 +14,7 @@
         .hero {
             @include flex (flex, center, center, row);
 
-            h1{
+            h1 {
                 display: none;
             }
 
@@ -173,10 +173,6 @@
                         tr {
                             th {
                                 padding: 10px 5px 10px 5px;
-
-                                .pj {}
-
-                                .dj {}
                             }
                         }
                     }
@@ -185,28 +181,30 @@
                         &:nth-child(even) {
                             background-color: #ddd
                         }
+                        
 
-                        &:hover td{
+                        &:hover td {
                             background-color: #ed2a2a;
                             color: $color-white;
                         }
 
-                        .abv-equipo {}
-
-                        .abreviacion {}
-
-                        .pj {}
-
-                        .dj {}
+                        .abreviacion {
+                            display: none;
+                        }
 
                         td {
                             padding: 10px 5px 10px 5px;
-
+                            &:nth-child(2){
+                                text-align: right;
+                            }
+                            &:nth-child(3){
+                                text-align: left;
+                                width: 30%;
+                            }
                             img {
                                 width: 30px;
                             }
                         }
-
                     }
                 }
             }

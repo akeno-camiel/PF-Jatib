@@ -8,6 +8,33 @@
 }
 
 // ACA VA TODO LO QUE SE REPITE
+.nav2 {
+    background: linear-gradient(0.75turn, nth($rojos, 2), nth($rojos, 3), $color-kings);
+    @extend %nav;
+
+    a {
+        .titulo {
+            @include fuente (Arial, 600, 1.5rem);
+            color: rgba(255, 255, 255, 0.907);
+            text-decoration: underline rgb(213, 213, 213);
+        }
+    }
+}
+
+.nav3 {
+    background: linear-gradient(0.75turn, $color-queens, nth($rojos, 3), $color-kings);
+    @extend %nav;
+
+    a {
+        h3 {
+            @include fuente (Arial, 600, 1.5rem);
+            color: rgba(255, 255, 255, 0.907);
+            text-decoration: underline rgb(213, 213, 213);
+            text-align: right;
+        }
+    }
+}
+
 .slide-qk {
     img {
         width: 30px;

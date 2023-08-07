@@ -1,9 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+.nav2, .nav3, main .nav2 {
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  position: sticky;
+  top: 0px;
+  padding: 0 10px 0 10px;
+  z-index: 1; }
+
+.grid-container .hero0 .hero .hero1 .hero-logo1, .grid-container .hero0 .hero .hero1 .hero-logo2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20vh; }
+
+main .main-equipo section .titulo-equipo, main .main-equipo section .titulo-equipoq {
+  border: solid 3px #F2B64A;
+  width: 90vw;
+  height: 3rem;
+  padding-left: 20px;
+  text-transform: uppercase;
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+  font-size: larger;
+  display: flex;
+  align-items: center; }
+
+footer .redes .foot-twitch, footer .redes .foot-twitter, footer .redes .foot-insta, footer .redes .foot-tiktok, footer .redes .foot-spotify {
+  width: 8rem;
+  font-size: medium;
+  margin-bottom: 10px; }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 20px; }
+
+.nav2 {
+  background: linear-gradient(0.75turn, #C2405A, #F55B77, #F2B64A); }
+  .nav2 a .titulo {
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.907);
+    text-decoration: underline #d5d5d5; }
+
+.nav3 {
+  background: linear-gradient(0.75turn, #02C1B6, #F55B77, #F2B64A); }
+  .nav3 a h3 {
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.907);
+    text-decoration: underline #d5d5d5;
+    text-align: right; }
 
 .slide-qk img {
   width: 30px;
@@ -51,43 +106,6 @@
     .slide-qk .switch .slider.round:before {
       border-radius: 50%; }
 
-main .nav2, main .nav3 {
-  font-size: 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 70px;
-  position: sticky;
-  top: 0px;
-  padding: 0 10px 0 10px;
-  z-index: 1; }
-
-.grid-container .hero0 .hero .hero1 .hero-logo1, .grid-container .hero0 .hero .hero1 .hero-logo2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 20vh; }
-
-main section .titulo-equipo, main section .titulo-equipoq {
-  margin: 20px 0 10px 40px;
-  border: solid 3px #F2B64A;
-  width: 90vw;
-  height: 3rem;
-  padding-left: 20px;
-  text-transform: uppercase;
-  font-family: 'Sarabun', sans-serif;
-  font-weight: 400;
-  font-size: larger;
-  display: flex;
-  align-items: center; }
-
-footer .redes .foot-twitch, footer .redes .foot-twitter, footer .redes .foot-insta, footer .redes .foot-tiktok, footer .redes .foot-spotify {
-  width: 9rem;
-  font-size: medium;
-  margin-bottom: 10px; }
-
 header {
   width: 100%;
   height: 15vh;
@@ -109,6 +127,7 @@ header {
     flex-direction: row; }
     header nav ul {
       list-style: none;
+      padding-left: 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -257,8 +276,15 @@ header {
         .grid-container .aside .clasificacion-index .tabla table tr:hover td {
           background-color: #ed2a2a;
           color: #ffffff; }
+        .grid-container .aside .clasificacion-index .tabla table tr .abreviacion {
+          display: none; }
         .grid-container .aside .clasificacion-index .tabla table tr td {
           padding: 10px 5px 10px 5px; }
+          .grid-container .aside .clasificacion-index .tabla table tr td:nth-child(2) {
+            text-align: right; }
+          .grid-container .aside .clasificacion-index .tabla table tr td:nth-child(3) {
+            text-align: left;
+            width: 30%; }
           .grid-container .aside .clasificacion-index .tabla table tr td img {
             width: 30px; }
   .grid-container .proximo {
@@ -343,17 +369,20 @@ header {
       background-color: #ffffff4a;
       width: 90%; }
 
-main .presupuesto1 {
-  font-family: "Times New Roman";
-  font-weight: 600;
-  font-size: 40px;
-  margin-left: 30px; }
-
-main .pp {
-  font-family: "Times New Roman";
-  font-weight: 400;
-  font-size: 1.2rem;
-  margin-left: 60px; }
+main .presupuesto-encabezado {
+  background-color: #F2B64A; }
+  main .presupuesto-encabezado .presupuesto1 {
+    font-family: "Times New Roman";
+    font-weight: 600;
+    font-size: 40px;
+    margin-left: 30px;
+    color: #ffffff; }
+  main .presupuesto-encabezado .pp {
+    font-family: "Times New Roman";
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-left: 60px;
+    color: #ffffff; }
 
 main .presupuesto div div .presupuesto1 {
   font-family: "Times New Roman";
@@ -381,7 +410,7 @@ main .presupuesto div div .carousel .carousel-inner .carousel-item img {
   margin: 20px;
   width: 90%; }
 
-main .nav2 .titulo, main .nav3 .titulo {
+.titulo {
   font-family: Arial;
   font-weight: 600;
   font-size: 1.5rem;
@@ -389,9 +418,9 @@ main .nav2 .titulo, main .nav3 .titulo {
   text-decoration: underline #d5d5d5;
   margin-right: 15px; }
 
-main .nav2 .clasificacion-kings, main .nav3 .clasificacion-kings {
+.clasificacion-kings {
   display: inline-flex; }
-  main .nav2 .clasificacion-kings .titulo, main .nav3 .clasificacion-kings .titulo {
+  .clasificacion-kings .titulo {
     font-family: Arial;
     font-weight: 600;
     font-size: 1.5rem;
@@ -423,8 +452,6 @@ main .nav2 .clasificacion-kings, main .nav3 .clasificacion-kings {
       color: #ffffff; }
       .clasificacion-kings1 .tabla1 thead tr th {
         padding: 10px 5px 10px 5px; }
-        .clasificacion-kings1 .tabla1 thead tr th:nth-child(4) {
-          text-align: left; }
     .clasificacion-kings1 .tabla1 tr:nth-child(even) {
       background-color: #dddddd3f; }
     .clasificacion-kings1 .tabla1 tr:hover td {
@@ -441,14 +468,18 @@ main .nav2 .clasificacion-kings, main .nav3 .clasificacion-kings {
       .clasificacion-kings1 .tabla1 tr td img {
         width: 30px;
         height: 30px; }
+    .clasificacion-kings1 .tabla1 .abv {
+      text-align: left; }
+    .clasificacion-kings1 .tabla1 .abrev {
+      text-align: left; }
 
 .clasificacion2 {
   display: grid;
   justify-content: center;
   align-items: center;
   flex-direction: none;
-  grid-template-columns: repeat(5fr);
-  grid-template-rows: repeat(7 50px);
+  grid-template-columns: repeat(5, 200px);
+  grid-template-rows: repeat(7fr);
   grid-template-areas: "h2 h2 h2 h2 h2" "po-1 semi-4 final semi-2 po-3" "po-2 semi-4 final semi-2 po-4" "po-7 semi-3 final semi-1 po-5" "po-8 semi-3 final semi-1 po-6";
   margin: 50px;
   column-gap: 2rem;
@@ -456,308 +487,162 @@ main .nav2 .clasificacion-kings, main .nav3 .clasificacion-kings {
   text-align: center;
   background-image: url(../img/cancha1.jpg);
   height: 80vh;
+  width: 95vw;
   position: relative;
+  padding: 5px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
   .clasificacion2 h2 {
     color: #ffffff;
-    margin-left: 1.1rem; }
+    text-align: center; }
   .clasificacion2 div {
-    background-color: rgba(255, 255, 255, 0.704); }
+    background-color: rgba(255, 255, 255, 0.704);
+    justify-self: center;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3.2rem;
+    width: 100%; }
   .clasificacion2 img {
     width: 40px;
     height: 40px; }
   .clasificacion2 h3 {
     font-family: Arial;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin: 0 3px 0 3px; }
-  .clasificacion2 .copa-kings-league {
+  .clasificacion2 .copa {
     width: 8%;
     height: 35%;
     position: absolute;
     right: 46%;
     top: 15%; }
   .clasificacion2 .po-1 {
-    grid-area: po-1;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: po-1; }
   .clasificacion2 .po-2 {
-    grid-area: po-2;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: po-2; }
   .clasificacion2 .po-3 {
-    grid-area: po-3;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: po-3; }
   .clasificacion2 .po-4 {
-    grid-area: po-4;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: po-4; }
   .clasificacion2 .po-5 {
-    grid-area: po-5;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: po-5; }
   .clasificacion2 .po-6 {
-    grid-area: po-6;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: po-6; }
   .clasificacion2 .po-7 {
-    grid-area: po-7;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: po-7; }
   .clasificacion2 .po-8 {
-    grid-area: po-8;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: po-8; }
   .clasificacion2 .semi-1 {
-    grid-area: semi-1;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: semi-1; }
   .clasificacion2 .semi-2 {
-    grid-area: semi-2;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: semi-2; }
   .clasificacion2 .semi-3 {
-    grid-area: semi-3;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: semi-3; }
   .clasificacion2 .semi-4 {
-    grid-area: semi-4;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: semi-4; }
   .clasificacion2 .final {
     grid-area: final;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    width: max-content;
+    justify-self: center; }
+  .clasificacion2 .final-1 {
+    grid-area: final-1; }
+  .clasificacion2 .final-2 {
+    grid-area: final-2; }
 
 .clasificacion3 {
   display: grid;
   justify-content: center;
   align-items: center;
   flex-direction: none;
-  grid-template-columns: repeat(7fr);
-  grid-template-rows: repeat(7 50px);
-  grid-template-areas: "h2 h2 h2 h2 h2 h2 h2" ". . semi-4 . semi-1 cu-1 ." ". . semi-4 . semi-1 cu-2 oc-3" ". cu-5 semi-4 final semi-1 cu-2 oc-4" ". cu-5 semi-3 final semi-2 cu-3 ." "oc-1 cu-6 semi-3 . semi-2 cu-4 oc-5" "oc-2 cu-6 . . . cu-4 oc-6";
+  grid-template-columns: repeat(7, 170px);
+  grid-template-rows: repeat(7fr);
+  grid-template-areas: "h2 h2 h2 h2 h2 h2 h2" ". . semi-4 . semi-1 cu-1 ." ". . semi-4 . semi-1 cu-2 oc-3" ". . final final final cu-2 oc-4" ". cu-5 final final final cu-3 ." "oc-1 cu-6 semi-3 . semi-2 cu-4 oc-5" "oc-2 cu-6 . . . cu-4 oc-6";
   margin: 50px;
   column-gap: 2rem;
   row-gap: 1rem;
   text-align: center;
   background-image: url(../img/cancha1.jpg);
   height: 80vh;
+  width: 95vw;
   position: relative;
+  padding: 5px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
   .clasificacion3 h2 {
     color: #ffffff;
-    margin-left: 1.1rem; }
+    text-align: center; }
   .clasificacion3 div {
-    background-color: rgba(255, 255, 255, 0.704); }
+    background-color: rgba(255, 255, 255, 0.704);
+    justify-self: center;
+    border: 2px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 3.2rem;
+    width: 100%; }
+    .clasificacion3 div h3 {
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 0.7rem;
+      margin: 0 3px 0 3px;
+      font-size: 0.7rem; }
   .clasificacion3 img {
     width: 40px;
     height: 40px; }
-  .clasificacion3 h3 {
-    font-family: Arial;
-    font-weight: bold;
-    font-size: 0.7rem;
-    margin: 0 3px 0 3px; }
-  .clasificacion3 .copa-kings-league,
-  .clasificacion3 .copa-queens-league {
+  .clasificacion3 .copa {
     width: 8%;
     height: 35%;
     position: absolute;
-    right: 47%;
+    right: 46%;
     top: 15%; }
   .clasificacion3 .oc-1 {
-    grid-area: oc-1;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: oc-1; }
   .clasificacion3 .oc-2 {
-    grid-area: oc-2;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: oc-2; }
   .clasificacion3 .oc-3 {
-    grid-area: oc-3;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: oc-3; }
   .clasificacion3 .oc-4 {
-    grid-area: oc-4;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: oc-4; }
   .clasificacion3 .oc-5 {
-    grid-area: oc-5;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: oc-5; }
   .clasificacion3 .oc-6 {
-    grid-area: oc-6;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: oc-6; }
   .clasificacion3 .cu-1 {
-    grid-area: cu-1;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: cu-1; }
   .clasificacion3 .cu-2 {
-    grid-area: cu-2;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: cu-2; }
   .clasificacion3 .cu-3 {
-    grid-area: cu-3;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: cu-3; }
   .clasificacion3 .cu-4 {
-    grid-area: cu-4;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: cu-4; }
   .clasificacion3 .cu-5 {
-    grid-area: cu-5;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: cu-5; }
   .clasificacion3 .cu-6 {
-    grid-area: cu-6;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: cu-6; }
   .clasificacion3 .semi-1 {
-    grid-area: semi-1;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: semi-1; }
   .clasificacion3 .semi-2 {
-    grid-area: semi-2;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: semi-2; }
   .clasificacion3 .semi-3 {
-    grid-area: semi-3;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: semi-3; }
   .clasificacion3 .semi-4 {
-    grid-area: semi-4;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    grid-area: semi-4; }
   .clasificacion3 .final {
     grid-area: final;
-    border: 2px solid #000000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 3rem; }
+    width: fit-content;
+    justify-self: center; }
+  .clasificacion3 .final-1 {
+    grid-area: final-1;
+    width: fit-content; }
+  .clasificacion3 .final-2 {
+    grid-area: final-2;
+    width: fit-content; }
 
 .winner {
   margin: 20px 0px 20px 0px;
@@ -792,10 +677,60 @@ main .titulo-calendario {
   padding-top: 2rem;
   border-bottom: 2px double #F2B64A; }
 
+main .enero {
+  background-image: url(../img/composicion-futbol-copyspace-derecha.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+main .febrero {
+  background-image: url(../img/composicion-futbol-tarjetas-amarilla-roja.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+main .marzo {
+  background-image: url(../img/composicion-futbol-copyspace-zapatos.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+main .cupra {
+  background-image: url(../img/composicion-futbol-copyspace-pelota.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+main .playoff {
+  background-image: url(../img/composicion-futbol-copyspace-derecha1.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+main .campnou {
+  background-image: url(../img/composicion-futbol-copyspace-derecha-cesped.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+main .final-campnou {
+  background-image: url(../img/lo-ultimo.jpg);
+  background-position: 50% 90%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px; }
+
+main .final-civitas {
+  background-image: url(../img/final-civitas1.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px; }
+
 main .section-calendario {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: none;
   flex-direction: row; }
   main .section-calendario .contenedor-calendario {
     width: 60%; }
@@ -803,30 +738,47 @@ main .section-calendario {
       text-align: center;
       font-family: 'Times New Roman', Times, serif;
       width: 100%;
-      margin: 2rem 0 5rem 0; }
+      margin: 2rem 0 5rem 0;
+      border-radius: 30px; }
       main .section-calendario .contenedor-calendario .resultado tr:nth-child(even) {
         border-top: #00000029 1px solid;
-        border-bottom: #00000029 1px solid; }
-      main .section-calendario .contenedor-calendario .resultado tr:hover:nth-child(even) th {
+        border-bottom: #00000029 1px solid;
+        background-color: #dddddd3f; }
+      main .section-calendario .contenedor-calendario .resultado tr:hover:nth-child(even) td {
         background-color: #000000;
-        color: white; }
-      main .section-calendario .contenedor-calendario .resultado tr:hover th a {
-        background-color: white;
-        border-radius: 50px; }
-      main .section-calendario .contenedor-calendario .resultado tr th {
-        padding: 5px 0 5px 0; }
-        main .section-calendario .contenedor-calendario .resultado tr th:nth-child(1) {
-          text-align: left;
-          width: 1%; }
-        main .section-calendario .contenedor-calendario .resultado tr th:nth-child(2) {
+        color: #ffffff; }
+      main .section-calendario .contenedor-calendario .resultado tr:hover td a {
+        background-color: #ffffff;
+        border-radius: 100%; }
+      main .section-calendario .contenedor-calendario .resultado tr th,
+      main .section-calendario .contenedor-calendario .resultado tr td {
+        padding: 5px 0 5px 0;
+        color: #ffffff; }
+        main .section-calendario .contenedor-calendario .resultado tr th:nth-child(2),
+        main .section-calendario .contenedor-calendario .resultado tr td:nth-child(2) {
           text-align: right; }
-        main .section-calendario .contenedor-calendario .resultado tr th:nth-child(4) {
-          width: 20%; }
-        main .section-calendario .contenedor-calendario .resultado tr th:nth-child(6) {
+        main .section-calendario .contenedor-calendario .resultado tr th:nth-child(3),
+        main .section-calendario .contenedor-calendario .resultado tr td:nth-child(3) {
+          text-align: right;
+          width: 25%; }
+        main .section-calendario .contenedor-calendario .resultado tr th:nth-child(4),
+        main .section-calendario .contenedor-calendario .resultado tr td:nth-child(4) {
+          width: min-content; }
+        main .section-calendario .contenedor-calendario .resultado tr th:nth-child(6),
+        main .section-calendario .contenedor-calendario .resultado tr td:nth-child(6) {
+          width: min-content; }
+        main .section-calendario .contenedor-calendario .resultado tr th:nth-child(7),
+        main .section-calendario .contenedor-calendario .resultado tr td:nth-child(7) {
           text-align: left; }
-        main .section-calendario .contenedor-calendario .resultado tr th img {
+        main .section-calendario .contenedor-calendario .resultado tr th:nth-child(8),
+        main .section-calendario .contenedor-calendario .resultado tr td:nth-child(8) {
+          text-align: left;
+          width: 20%; }
+        main .section-calendario .contenedor-calendario .resultado tr th img,
+        main .section-calendario .contenedor-calendario .resultado tr td img {
           width: 50px; }
-        main .section-calendario .contenedor-calendario .resultado tr th .goles {
+        main .section-calendario .contenedor-calendario .resultado tr th .goles,
+        main .section-calendario .contenedor-calendario .resultado tr td .goles {
           background: linear-gradient(0.75turn, #F55B77, #F2B64A);
           color: #ffffff;
           border-radius: 10px;
@@ -835,7 +787,8 @@ main .section-calendario {
           align-items: center;
           flex-direction: row;
           height: 2.5rem; }
-        main .section-calendario .contenedor-calendario .resultado tr th .golesq {
+        main .section-calendario .contenedor-calendario .resultado tr th .golesq,
+        main .section-calendario .contenedor-calendario .resultado tr td .golesq {
           background: linear-gradient(0.25turn, #02C1B6, #F55B77);
           color: #ffffff;
           border-radius: 10px;
@@ -845,159 +798,154 @@ main .section-calendario {
           flex-direction: row;
           height: 2.5rem; }
 
-main .nav3 {
-  background: linear-gradient(0.75turn, #02C1B6, #F55B77, #F2B64A); }
-
-main a h3 {
-  font-family: Arial;
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.907);
-  text-decoration: underline #d5d5d5;
-  text-align: right; }
-
-main .nav2 {
-  background: linear-gradient(0.75turn, #C2405A, #F55B77, #F2B64A); }
-  main .nav2 a .titulo {
-    font-family: Arial;
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.907);
-    text-decoration: underline #d5d5d5; }
-
-main section .titulo-equipo {
-  background: linear-gradient(0.75turn, #F55B77, #ffffff, #F2B64A); }
-
-main section .titulo-equipoq {
-  background: linear-gradient(0.25turn, #F55B77, #ffffff, #02C1B6); }
-
-main section .tarjetas {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: none;
-  flex-direction: row;
-  flex-wrap: wrap; }
-  main section .tarjetas .card1 {
-    width: 250px;
-    height: 450px;
-    text-align: center;
-    margin: 20px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: none;
-    box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
-    -webkit-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
-    -moz-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
-    position: relative; }
-    main section .tarjetas .card1:hover .icon i {
-      color: #ff0000; }
-    main section .tarjetas .card1:hover .icon .icon1 {
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      display: none; }
-    main section .tarjetas .card1:hover .icon .icon2,
-    main section .tarjetas .card1:hover .icon .icon3 {
-      display: initial; }
-    main section .tarjetas .card1:hover .equipo-name {
-      margin-top: -35px;
-      transition: all 400ms; }
-    main section .tarjetas .card1:hover .equipo-name h3 {
-      display: none; }
-    main section .tarjetas .card1:hover .info-description {
-      margin-top: 33px;
-      opacity: 100%; }
-    main section .tarjetas .card1 .icon {
-      width: 30%;
-      position: absolute;
-      top: 10px;
-      right: 0; }
-      main section .tarjetas .card1 .icon .icon1 {
-        width: 100%;
-        color: #ffffff; }
-      main section .tarjetas .card1 .icon .icon2 {
-        width: 90px;
-        height: 90px;
-        margin-left: -7px;
-        color: #ffffff;
-        display: none; }
-      main section .tarjetas .card1 .icon .icon3 {
-        width: 100%;
-        color: #ffffff;
-        display: none; }
-      main section .tarjetas .card1 .icon i {
-        color: #ffffff; }
-    main section .tarjetas .card1 .imgq {
-      z-index: 2;
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='250' height='400' preserveAspectRatio='none' viewBox='0 0 250 400'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1002%26quot%3b)' fill='none'%3e%3crect width='250' height='400' x='0' y='0' fill='rgba(2%2c 193%2c 182%2c 1)'%3e%3c/rect%3e%3cpath d='M1.63 -13.7L27.61 1.3L27.61 31.3L1.63 46.3L-24.35 31.3L-24.35 1.3zM1.63 166.3L27.61 181.3L27.61 211.3L1.63 226.3L-24.35 211.3L-24.35 181.3zM53.59 76.3L79.57 91.3L79.57 121.3L53.59 136.3L27.61 121.3L27.61 91.3zM53.59 166.3L79.57 181.3L79.57 211.3L53.59 226.3L27.61 211.3L27.61 181.3zM79.57 211.3L105.56 226.3L105.56 256.3L79.57 271.3L53.59 256.3L53.59 226.3zM79.57 301.3L105.56 316.3L105.56 346.3L79.57 361.3L53.59 346.3L53.59 316.3zM53.59 346.3L79.57 361.3L79.57 391.3L53.59 406.3L27.61 391.3L27.61 361.3zM105.56 -13.7L131.54 1.3L131.54 31.3L105.56 46.3L79.57 31.3L79.57 1.3zM105.56 76.3L131.54 91.3L131.54 121.3L105.56 136.3L79.57 121.3L79.57 91.3zM131.54 211.3L157.52 226.3L157.52 256.3L131.54 271.3L105.56 256.3L105.56 226.3zM131.54 301.3L157.52 316.3L157.52 346.3L131.54 361.3L105.56 346.3L105.56 316.3zM105.56 346.3L131.54 361.3L131.54 391.3L105.56 406.3L79.57 391.3L79.57 361.3zM157.52 -13.7L183.5 1.3L183.5 31.3L157.52 46.3L131.54 31.3L131.54 1.3zM157.52 346.3L183.5 361.3L183.5 391.3L157.52 406.3L131.54 391.3L131.54 361.3zM209.48 -13.7L235.46 1.3L235.46 31.3L209.48 46.3L183.5 31.3L183.5 1.3zM235.46 31.3L261.44 46.3L261.44 76.3L235.46 91.3L209.48 76.3L209.48 46.3zM235.46 121.3L261.44 136.3L261.44 166.3L235.46 181.3L209.48 166.3L209.48 136.3zM235.46 211.3L261.44 226.3L261.44 256.3L235.46 271.3L209.48 256.3L209.48 226.3zM235.46 301.3L261.44 316.3L261.44 346.3L235.46 361.3L209.48 346.3L209.48 316.3z' stroke='url(%26quot%3b%23SvgjsRadialGradient1003%26quot%3b)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1002'%3e%3crect width='250' height='400' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='125' cy='200' r='235.85' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient1003'%3e%3cstop stop-color='rgba(255%2c 255%2c 255%2c 1)' offset='0.31'%3e%3c/stop%3e%3cstop stop-color='rgba(71%2c 233%2c 224%2c 1)' offset='0.65'%3e%3c/stop%3e%3c/radialGradient%3e%3c/defs%3e%3c/svg%3e");
-      background-size: cover; }
-      main section .tarjetas .card1 .imgq img {
-        position: relative;
-        width: 100%; }
-    main section .tarjetas .card1 .img {
-      z-index: 2;
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='250' height='400' preserveAspectRatio='none' viewBox='0 0 250 400'%3e%3cg mask='url(%26quot%3b%23SvgjsMask8643%26quot%3b)' fill='none'%3e%3crect width='250' height='400' x='0' y='0' fill='rgba(230%2c 141%2c 63%2c 1)'%3e%3c/rect%3e%3cpath d='M28.5 177.72L54.48 192.72L54.48 222.72L28.5 237.72L2.52 222.72L2.52 192.72zM54.48 222.72L80.46 237.72L80.46 267.72L54.48 282.72L28.5 267.72L28.5 237.72zM28.5 267.72L54.48 282.72L54.48 312.72L28.5 327.72L2.52 312.72L2.52 282.72zM54.48 312.72L80.46 327.72L80.46 357.72L54.48 372.72L28.5 357.72L28.5 327.72zM80.46 -2.28L106.44 12.72L106.44 42.72L80.46 57.72L54.48 42.72L54.48 12.72zM106.44 42.72L132.43 57.72L132.43 87.72L106.44 102.72L80.46 87.72L80.46 57.72zM106.44 132.72L132.43 147.72L132.43 177.72L106.44 192.72L80.46 177.72L80.46 147.72zM80.46 177.72L106.44 192.72L106.44 222.72L80.46 237.72L54.48 222.72L54.48 192.72zM106.44 222.72L132.43 237.72L132.43 267.72L106.44 282.72L80.46 267.72L80.46 237.72zM106.44 312.72L132.43 327.72L132.43 357.72L106.44 372.72L80.46 357.72L80.46 327.72zM132.43 -2.28L158.41 12.72L158.41 42.72L132.43 57.72L106.44 42.72L106.44 12.72zM132.43 87.72L158.41 102.72L158.41 132.72L132.43 147.72L106.44 132.72L106.44 102.72zM132.43 177.72L158.41 192.72L158.41 222.72L132.43 237.72L106.44 222.72L106.44 192.72zM158.41 222.72L184.39 237.72L184.39 267.72L158.41 282.72L132.43 267.72L132.43 237.72zM132.43 267.72L158.41 282.72L158.41 312.72L132.43 327.72L106.44 312.72L106.44 282.72zM132.43 357.72L158.41 372.72L158.41 402.72L132.43 417.72L106.44 402.72L106.44 372.72zM210.37 42.72L236.35 57.72L236.35 87.72L210.37 102.72L184.39 87.72L184.39 57.72zM184.39 87.72L210.37 102.72L210.37 132.72L184.39 147.72L158.41 132.72L158.41 102.72zM184.39 267.72L210.37 282.72L210.37 312.72L184.39 327.72L158.41 312.72L158.41 282.72zM262.33 42.72L288.31 57.72L288.31 87.72L262.33 102.72L236.35 87.72L236.35 57.72zM236.35 87.72L262.33 102.72L262.33 132.72L236.35 147.72L210.37 132.72L210.37 102.72zM262.33 132.72L288.31 147.72L288.31 177.72L262.33 192.72L236.35 177.72L236.35 147.72zM236.35 177.72L262.33 192.72L262.33 222.72L236.35 237.72L210.37 222.72L210.37 192.72zM236.35 267.72L262.33 282.72L262.33 312.72L236.35 327.72L210.37 312.72L210.37 282.72z' stroke='url(%26quot%3b%23SvgjsRadialGradient8644%26quot%3b)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask8643'%3e%3crect width='250' height='400' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='125' cy='200' r='235.85' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient8644'%3e%3cstop stop-color='rgba(255%2c 255%2c 255%2c 1)' offset='0.39'%3e%3c/stop%3e%3cstop stop-color='rgba(225%2c 51%2c 51%2c 1)' offset='0.68'%3e%3c/stop%3e%3c/radialGradient%3e%3c/defs%3e%3c/svg%3e");
-      background-size: cover; }
-      main section .tarjetas .card1 .img img {
-        position: relative;
-        width: 100%; }
-    main section .tarjetas .card1 .equipo-name {
-      margin-top: 20px; }
-      main section .tarjetas .card1 .equipo-name h3 {
-        font-family: "Sarabun";
-        font-weight: 600;
-        font-size: 100%; }
-      main section .tarjetas .card1 .equipo-name h4 {
-        font-family: "Sarabun";
-        font-weight: 500;
-        font-size: 80%; }
-    main section .tarjetas .card1 .info-description {
-      width: 250px;
-      height: 86px;
-      color: #000000;
-      background-color: #ffffff4f;
-      padding: 5px;
-      margin-top: -250px;
-      opacity: 0;
-      transition: all 400ms; }
-      main section .tarjetas .card1 .info-description h4 {
-        font-family: "Sarabun";
-        font-weight: 600;
-        font-size: 80%;
-        display: -webkit-box;
-        display: -moz-box;
-        display: box;
-        display: inline;
-        margin-right: 5px; }
-
-main section .resumen {
-  width: 100%;
-  background-color: #000000;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap; }
-  main section .resumen div {
-    border: 2px solid black;
-    text-align: center;
-    margin: 20px 10px 30px 10px;
-    display: inline-block; }
-    main section .resumen div .resumenqh2 {
-      font-family: "Montserrat";
-      font-weight: 700;
-      font-size: 2rem;
-      color: #02C1B6; }
-    main section .resumen div h2 {
-      font-family: "Montserrat";
-      font-weight: 700;
-      font-size: 2rem;
-      color: #F2B64A; }
-    main section .resumen div h3 {
-      font-family: "Montserrat";
-      font-weight: 700;
-      font-size: 5rem;
-      color: whitesmoke; }
+main .main-equipo {
+  background-image: url(../img/cancha-3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  main .main-equipo section {
+    padding: 20px 0 0 40px; }
+    main .main-equipo section .titulo-equipo {
+      background: linear-gradient(0.75turn, #F55B77, #ffffff, #F2B64A); }
+    main .main-equipo section .titulo-equipoq {
+      background: linear-gradient(0.25turn, #F55B77, #ffffff, #02C1B6); }
+    main .main-equipo section .tarjetas {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: none;
+      flex-direction: row;
+      flex-wrap: wrap; }
+      main .main-equipo section .tarjetas .card1 {
+        width: 250px;
+        height: 450px;
+        text-align: center;
+        margin: 20px;
+        background-color: rgba(255, 255, 255, 0.514);
+        background-position: center;
+        background-size: cover;
+        background-repeat: none;
+        box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+        -webkit-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+        -moz-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
+        position: relative; }
+        main .main-equipo section .tarjetas .card1:hover .icon i {
+          color: #ff0000; }
+        main .main-equipo section .tarjetas .card1:hover .icon .icon1 {
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          display: none; }
+        main .main-equipo section .tarjetas .card1:hover .icon .icon2,
+        main .main-equipo section .tarjetas .card1:hover .icon .icon3 {
+          display: initial; }
+        main .main-equipo section .tarjetas .card1:hover .equipo-name {
+          margin-top: -35px;
+          transition: all 400ms; }
+        main .main-equipo section .tarjetas .card1:hover .equipo-name h3 {
+          display: none; }
+        main .main-equipo section .tarjetas .card1:hover .info-description {
+          margin-top: 15px;
+          opacity: 100%; }
+        main .main-equipo section .tarjetas .card1 .icon {
+          width: 30%;
+          position: absolute;
+          top: 10px;
+          right: 0; }
+          main .main-equipo section .tarjetas .card1 .icon .icon1 {
+            width: 100%;
+            color: #ffffff; }
+          main .main-equipo section .tarjetas .card1 .icon .icon2 {
+            width: 90px;
+            height: 90px;
+            margin-left: -7px;
+            color: #ffffff;
+            display: none; }
+          main .main-equipo section .tarjetas .card1 .icon .icon3 {
+            width: 100%;
+            color: #ffffff;
+            display: none; }
+          main .main-equipo section .tarjetas .card1 .icon i {
+            color: #ffffff; }
+        main .main-equipo section .tarjetas .card1 .imgq {
+          z-index: 2;
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='250' height='400' preserveAspectRatio='none' viewBox='0 0 250 400'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1002%26quot%3b)' fill='none'%3e%3crect width='250' height='400' x='0' y='0' fill='rgba(2%2c 193%2c 182%2c 1)'%3e%3c/rect%3e%3cpath d='M1.63 -13.7L27.61 1.3L27.61 31.3L1.63 46.3L-24.35 31.3L-24.35 1.3zM1.63 166.3L27.61 181.3L27.61 211.3L1.63 226.3L-24.35 211.3L-24.35 181.3zM53.59 76.3L79.57 91.3L79.57 121.3L53.59 136.3L27.61 121.3L27.61 91.3zM53.59 166.3L79.57 181.3L79.57 211.3L53.59 226.3L27.61 211.3L27.61 181.3zM79.57 211.3L105.56 226.3L105.56 256.3L79.57 271.3L53.59 256.3L53.59 226.3zM79.57 301.3L105.56 316.3L105.56 346.3L79.57 361.3L53.59 346.3L53.59 316.3zM53.59 346.3L79.57 361.3L79.57 391.3L53.59 406.3L27.61 391.3L27.61 361.3zM105.56 -13.7L131.54 1.3L131.54 31.3L105.56 46.3L79.57 31.3L79.57 1.3zM105.56 76.3L131.54 91.3L131.54 121.3L105.56 136.3L79.57 121.3L79.57 91.3zM131.54 211.3L157.52 226.3L157.52 256.3L131.54 271.3L105.56 256.3L105.56 226.3zM131.54 301.3L157.52 316.3L157.52 346.3L131.54 361.3L105.56 346.3L105.56 316.3zM105.56 346.3L131.54 361.3L131.54 391.3L105.56 406.3L79.57 391.3L79.57 361.3zM157.52 -13.7L183.5 1.3L183.5 31.3L157.52 46.3L131.54 31.3L131.54 1.3zM157.52 346.3L183.5 361.3L183.5 391.3L157.52 406.3L131.54 391.3L131.54 361.3zM209.48 -13.7L235.46 1.3L235.46 31.3L209.48 46.3L183.5 31.3L183.5 1.3zM235.46 31.3L261.44 46.3L261.44 76.3L235.46 91.3L209.48 76.3L209.48 46.3zM235.46 121.3L261.44 136.3L261.44 166.3L235.46 181.3L209.48 166.3L209.48 136.3zM235.46 211.3L261.44 226.3L261.44 256.3L235.46 271.3L209.48 256.3L209.48 226.3zM235.46 301.3L261.44 316.3L261.44 346.3L235.46 361.3L209.48 346.3L209.48 316.3z' stroke='url(%26quot%3b%23SvgjsRadialGradient1003%26quot%3b)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1002'%3e%3crect width='250' height='400' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='125' cy='200' r='235.85' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient1003'%3e%3cstop stop-color='rgba(255%2c 255%2c 255%2c 1)' offset='0.31'%3e%3c/stop%3e%3cstop stop-color='rgba(71%2c 233%2c 224%2c 1)' offset='0.65'%3e%3c/stop%3e%3c/radialGradient%3e%3c/defs%3e%3c/svg%3e");
+          background-size: cover; }
+          main .main-equipo section .tarjetas .card1 .imgq img {
+            position: relative;
+            width: 100%; }
+          main .main-equipo section .tarjetas .card1 .imgq .espe {
+            margin-left: -70px;
+            margin-top: 10%;
+            height: 325px;
+            width: 400px; }
+        main .main-equipo section .tarjetas .card1 .img {
+          z-index: 2;
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='250' height='400' preserveAspectRatio='none' viewBox='0 0 250 400'%3e%3cg mask='url(%26quot%3b%23SvgjsMask8643%26quot%3b)' fill='none'%3e%3crect width='250' height='400' x='0' y='0' fill='rgba(230%2c 141%2c 63%2c 1)'%3e%3c/rect%3e%3cpath d='M28.5 177.72L54.48 192.72L54.48 222.72L28.5 237.72L2.52 222.72L2.52 192.72zM54.48 222.72L80.46 237.72L80.46 267.72L54.48 282.72L28.5 267.72L28.5 237.72zM28.5 267.72L54.48 282.72L54.48 312.72L28.5 327.72L2.52 312.72L2.52 282.72zM54.48 312.72L80.46 327.72L80.46 357.72L54.48 372.72L28.5 357.72L28.5 327.72zM80.46 -2.28L106.44 12.72L106.44 42.72L80.46 57.72L54.48 42.72L54.48 12.72zM106.44 42.72L132.43 57.72L132.43 87.72L106.44 102.72L80.46 87.72L80.46 57.72zM106.44 132.72L132.43 147.72L132.43 177.72L106.44 192.72L80.46 177.72L80.46 147.72zM80.46 177.72L106.44 192.72L106.44 222.72L80.46 237.72L54.48 222.72L54.48 192.72zM106.44 222.72L132.43 237.72L132.43 267.72L106.44 282.72L80.46 267.72L80.46 237.72zM106.44 312.72L132.43 327.72L132.43 357.72L106.44 372.72L80.46 357.72L80.46 327.72zM132.43 -2.28L158.41 12.72L158.41 42.72L132.43 57.72L106.44 42.72L106.44 12.72zM132.43 87.72L158.41 102.72L158.41 132.72L132.43 147.72L106.44 132.72L106.44 102.72zM132.43 177.72L158.41 192.72L158.41 222.72L132.43 237.72L106.44 222.72L106.44 192.72zM158.41 222.72L184.39 237.72L184.39 267.72L158.41 282.72L132.43 267.72L132.43 237.72zM132.43 267.72L158.41 282.72L158.41 312.72L132.43 327.72L106.44 312.72L106.44 282.72zM132.43 357.72L158.41 372.72L158.41 402.72L132.43 417.72L106.44 402.72L106.44 372.72zM210.37 42.72L236.35 57.72L236.35 87.72L210.37 102.72L184.39 87.72L184.39 57.72zM184.39 87.72L210.37 102.72L210.37 132.72L184.39 147.72L158.41 132.72L158.41 102.72zM184.39 267.72L210.37 282.72L210.37 312.72L184.39 327.72L158.41 312.72L158.41 282.72zM262.33 42.72L288.31 57.72L288.31 87.72L262.33 102.72L236.35 87.72L236.35 57.72zM236.35 87.72L262.33 102.72L262.33 132.72L236.35 147.72L210.37 132.72L210.37 102.72zM262.33 132.72L288.31 147.72L288.31 177.72L262.33 192.72L236.35 177.72L236.35 147.72zM236.35 177.72L262.33 192.72L262.33 222.72L236.35 237.72L210.37 222.72L210.37 192.72zM236.35 267.72L262.33 282.72L262.33 312.72L236.35 327.72L210.37 312.72L210.37 282.72z' stroke='url(%26quot%3b%23SvgjsRadialGradient8644%26quot%3b)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask8643'%3e%3crect width='250' height='400' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='125' cy='200' r='235.85' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient8644'%3e%3cstop stop-color='rgba(255%2c 255%2c 255%2c 1)' offset='0.39'%3e%3c/stop%3e%3cstop stop-color='rgba(225%2c 51%2c 51%2c 1)' offset='0.68'%3e%3c/stop%3e%3c/radialGradient%3e%3c/defs%3e%3c/svg%3e");
+          background-size: cover; }
+          main .main-equipo section .tarjetas .card1 .img img {
+            position: relative;
+            width: 100%; }
+        main .main-equipo section .tarjetas .card1 .equipo-name {
+          margin-top: 20px; }
+          main .main-equipo section .tarjetas .card1 .equipo-name h3 {
+            font-family: "Sarabun";
+            font-weight: 600;
+            font-size: 100%; }
+          main .main-equipo section .tarjetas .card1 .equipo-name h4 {
+            font-family: "Sarabun";
+            font-weight: 500;
+            font-size: 80%; }
+        main .main-equipo section .tarjetas .card1 .info-description {
+          display: flex;
+          justify-content: initial;
+          align-items: center;
+          flex-direction: row;
+          width: 250px;
+          height: 100px;
+          color: #000000;
+          background-color: #ffffff4f;
+          padding: 5px;
+          margin-top: -250px;
+          opacity: 0;
+          transition: all 400ms; }
+          main .main-equipo section .tarjetas .card1 .info-description h4 {
+            font-family: "Sarabun";
+            font-weight: 600;
+            font-size: 80%;
+            display: -webkit-box;
+            display: -moz-box;
+            display: box;
+            display: inline;
+            margin-right: 5px; }
+  main .main-equipo .section-resumen {
+    padding-left: 0; }
+    main .main-equipo .section-resumen .resumen {
+      width: 100%;
+      background-color: #000000;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap; }
+      main .main-equipo .section-resumen .resumen div {
+        text-align: center;
+        margin: 20px 10px 30px 10px;
+        display: inline-block; }
+        main .main-equipo .section-resumen .resumen div .resumenqh2 {
+          font-family: "Montserrat";
+          font-weight: 700;
+          font-size: 2rem;
+          color: #02C1B6; }
+        main .main-equipo .section-resumen .resumen div h2 {
+          font-family: "Montserrat";
+          font-weight: 700;
+          font-size: 2rem;
+          color: #F2B64A; }
+        main .main-equipo .section-resumen .resumen div h3 {
+          font-family: "Montserrat";
+          font-weight: 700;
+          font-size: 5rem;
+          color: whitesmoke; }
 
 footer {
   background: linear-gradient(0.75turn, #C2405A, #F55B77, #F2B64A);
@@ -1038,23 +986,23 @@ footer {
     footer .redes .foot-spotify {
       background-color: #1ED760; }
     footer .redes a {
-      margin-left: 7px;
+      margin-left: 5px;
       color: #ffffff;
       text-decoration: none; }
       footer .redes a img {
-        width: 60px; }
+        width: 45px; }
       footer .redes a h4 {
         margin-left: 15px;
         margin-top: 5px;
         font-family: Arial;
         font-weight: bold;
-        font-size: large; }
+        font-size: 0.8rem; }
       footer .redes a h5 {
         text-align: right;
         margin-right: 15px;
         font-family: Arial;
         font-weight: 400;
-        font-size: medium;
+        font-size: 0.6rem;
         font-style: italic; }
   footer .footer-logo {
     grid-area: logos;
@@ -1083,18 +1031,32 @@ footer {
 
 /*!---------------------------------------------------MEDIA QUERIES---------------------------------------------------*/
 @media screen and (max-width: 4000px) {
-  .grid-container .aside .clasificacion-index .tabla table tr .abreviacion {
+  .aside .clasificacion-index .tabla .abreviacion {
     display: none; }
-  .tabla1 tr th:nth-child(1),
-  .tabla2 tr th:nth-child(1) {
+  main .section-calendario .contenedor-calendario .resultado .resultado-abreviacion {
     display: none; }
-  .grid-container .aside .clasificacion-index .tabla table tr .abrev {
-    display: none; } }
+  .clasificacion-kings1 .tabla1 tr th:nth-child(1) {
+    display: none; }
+  .abrev {
+    display: none; }
+  .clasificacion2 .final-1,
+  .clasificacion2 .clasificacion-equipo,
+  .clasificacion2 .final-2,
+  .clasificacion3 .clasificacion-equipo,
+  .clasificacion3 .final-1,
+  .clasificacion3 .final-2 {
+    display: none; }
+  .presupuesto1 {
+    display: initial; } }
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 1750px) {
   .grid-container .aside .clasificacion-index div a h2 {
-    font-size: 1.7rem; } }
+    font-size: 1.7rem; }
+  .clasificacion2 .copa,
+  .clasificacion3 .copa {
+    height: 25%;
+    top: 27%; } }
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 1680px) {
@@ -1113,25 +1075,38 @@ footer {
     margin-left: 20px; }
   .grid-container .proximo div img {
     height: 80%; }
-  .clasificacion2 div img {
-    width: 40px;
-    height: 40px; } }
+  .clasificacion2 h2,
+  .clasificacion3 h2 {
+    font-size: 1.8rem; }
+  .clasificacion2 div img,
+  .clasificacion3 div img {
+    width: 35px;
+    height: 35px; } }
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 1560px) {
   .grid-container .aside .clasificacion-index div a h2 {
-    font-size: 1.8rem; }
+    font-size: 1.7rem; }
   .grid-container .aside .clasificacion-index .tabla table tr td,
   .grid-container .aside .clasificacion-index .tabla table thead tr th {
-    padding: 8px 4px 8px 4px; }
-  .grid-container .aside .clasificacion-index .tabla table thead tr .dg, .grid-container .aside .clasificacion-index .tabla table tr .dg {
-    display: none; } }
+    padding: 8px 4px 8px 4px;
+    font-size: 0.8rem; } }
+
+/*!------------------------MEDIA QUERIES------------------------*/
+@media screen and (max-width: 1530px) {
+  .clasificacion3 {
+    grid-template-columns: repeat(7, 150px); }
+  .clasificacion3 .clasificacion-equipo {
+    display: initial; }
+  .clasificacion3 .clasificacion-equipo-xl {
+    display: none; }
+  .clasificacion3 div {
+    width: 80%; }
+  .clasificacion3 div h3 {
+    font-size: 1rem; } }
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 1500px) {
-  .clasificacion2 div img {
-    width: 30px;
-    height: 30px; }
   .grid-container .proximo div img {
     height: 75%; } }
 
@@ -1141,21 +1116,24 @@ footer {
     font-size: 1.2rem; }
   .grid-container .aside .clasificacion-index .tabla table tr td,
   .grid-container .aside .clasificacion-index .tabla table thead tr th {
-    padding: 4px 2px 4px 2px; } }
+    padding: 4px 2px 4px 2px; }
+  .clasificacion3 h2 {
+    font-size: 1.6rem; } }
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 1400px) {
   .grid-container .aside .clasificacion-index div a h2 {
     font-size: 1rem; }
-  .grid-container .aside .clasificacion-index .tabla table tr .abv-equipo {
+  .grid-container .aside .clasificacion-index .tabla table thead tr .pj,
+  .grid-container .aside .clasificacion-index .tabla table tr .pj {
     display: none; }
-  .grid-container .aside .clasificacion-index .tabla table tr .abreviacion {
-    display: initial;
-    font-weight: bold; }
-  .grid-container .aside .clasificacion-index .tabla thead tr .pj, .grid-container .aside .clasificacion-index .tabla table tr .pj {
+  .grid-container .aside .clasificacion-index .tabla table thead tr .dg,
+  .grid-container .aside .clasificacion-index .tabla table tr .dg {
     display: none; }
   .grid-container .aside .clasificacion-index .tabla table tr td {
-    font-size: 0.8rem; } }
+    font-size: 0.8rem; }
+  .clasificacion3 {
+    margin: 25px; } }
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 1350px) {
@@ -1167,7 +1145,12 @@ footer {
   .grid-container .proximo div img {
     height: 65%; }
   .grid-container .twitter {
-    width: 90%; } }
+    width: 90%; }
+  .clasificacion3 div img {
+    width: 30px;
+    height: 30px; }
+  .clasificacion3 {
+    grid-template-columns: repeat(7, 130px); } }
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 1250px) {
@@ -1209,12 +1192,12 @@ footer {
   .grid-container .aside .clasificacion-index div a h2 {
     font-size: 1.7rem;
     padding: 5px; }
-  .grid-container .aside .clasificacion-index .tabla table tr td, .aside .clasificacion-index .tabla table thead tr th {
-    padding: 10px 5px 10px 5px; }
   .grid-container .aside .clasificacion-index .tabla table tr .abreviacion {
     display: none; }
-  .grid-container .aside .clasificacion-index .tabla table thead tr .pj, .grid-container .aside .clasificacion-index .tabla table tr .pj .grid-container .aside .clasificacion-index .tabla table tr .abv-equipo,
-  .grid-container .aside .clasificacion-index .tabla table thead tr .dg, .grid-container .aside .clasificacion-index .tabla table tr .dg {
+  .grid-container .aside .clasificacion-index .tabla table thead tr .pj,
+  .grid-container .aside .clasificacion-index .tabla table tr .pj,
+  .grid-container .aside .clasificacion-index .tabla table thead tr .dg,
+  .grid-container .aside .clasificacion-index .tabla table tr .dg {
     display: table-cell; }
   .grid-container .proximo {
     display: flex;
@@ -1223,12 +1206,39 @@ footer {
     justify-content: center; }
   .grid-container .twitter {
     width: 80%; }
-  .accordion .accordion-item .accordion-header .accordion-button {
+  main .section-calendario .contenedor-calendario {
+    width: 80%; }
+  .clasificacion2 {
+    grid-template-columns: repeat(5, 160px);
+    margin: 25px; }
+  .clasificacion3 {
+    grid-template-columns: repeat(7, 120px); }
+  .clasificacion2 .copa,
+  .clasificacion3 .copa {
+    width: 10%;
+    right: 45%; }
+  .clasificacion3 h2 {
+    font-size: 1.2rem; }
+  .clasificacion2 div img {
+    width: 30px;
+    height: 30px; }
+  main .presupuesto div div .accordion .accordion-item .accordion-header .accordion-button {
     color: #f45c5c;
-    font-weight: 700;
-    background-position: center; }
+    font-weight: 700; }
   footer .footer-logo {
     display: inline-block; } }
+
+/*!------------------------MEDIA QUERIES------------------------*/
+@media screen and (max-width: 1135px) {
+  .clasificacion3 {
+    grid-template-columns: repeat(7, 100px); }
+  .clasificacion3 h2 {
+    font-size: 1rem; }
+  .clasificacion3 div .clasificacion-equipo {
+    display: none; }
+  .clasificacion3 div img {
+    height: 50px;
+    width: 50px; } }
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 1020px) {
@@ -1240,7 +1250,72 @@ footer {
   .grid-container .twitter {
     width: 70%; }
   .grid-container .proximo div img {
-    height: 50%; } }
+    height: 50%; }
+  main .section-calendario .contenedor-calendario .resultado tr td:last-child {
+    width: min-content; }
+  main .section-calendario .contenedor-calendario .resultado tr td:nth-child(5) {
+    width: 20%; }
+  main .section-calendario .contenedor-calendario .resultado tr td:nth-child(7) {
+    width: 10%; }
+  main .section-calendario .contenedor-calendario .resultado tr .resultado-xl {
+    display: none; }
+  main .section-calendario .contenedor-calendario .resultado tr .resultado-abreviacion {
+    display: table-cell;
+    font-weight: 800; }
+  .clasificacion2 {
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(19fr);
+    grid-template-areas: "h2 h2 h2" ". . ." "po-7 . ." ". semi-3 ." "po-8 . ." ". . ." ". . ." "po-1 . ." ". semi-4 ." "po-2 . ." ". . final-1" ". . final-2" "po-5 . ." ". semi-1 ." "po-6 . ." ". . ." "po-3 . ." ". semi-2 ." "po-4 . .";
+    background-image: url(../img/cancha2.jpg);
+    height: max-content;
+    column-gap: 2rem;
+    padding: 10px; }
+  .clasificacion3 {
+    display: grid;
+    grid-template-columns: repeat(4, 180px);
+    grid-template-rows: repeat(17, 1fr);
+    grid-template-areas: "h2 h2 h2 h2" "oc-3 . . ." ". cu-2 . ." "oc-4 . semi-1 ." ". cu-1 . ." ". . . ." ". cu-3 . ." "oc-5 . semi-2 ." ". cu-4 . final-1" "oc-6 . . final-2" ". . . ." ". . semi-4 ." ". cu-5 . ." "oc-1 . semi-3 ." ". cu-6 . ." "oc-2 . . .";
+    background-image: url(../img/cancha2.jpg);
+    height: max-content;
+    column-gap: 2rem;
+    padding: 5px; }
+  .clasificacion2 .copa {
+    width: 20%;
+    height: inherit;
+    right: 5%;
+    top: 23%; }
+  .clasificacion3 .copa {
+    width: 20%;
+    height: inherit;
+    right: 5%;
+    top: 35%; }
+  .clasificacion2 .final,
+  .clasificacion3 .final {
+    display: none; }
+  .clasificacion2 .fixt,
+  .clasificacion3 .fixt {
+    display: none; }
+  .clasificacion3 h2 {
+    font-size: 2rem; }
+  .clasificacion2 .fixt1,
+  .clasificacion3 .fixt1 {
+    flex-direction: row-reverse; }
+  .clasificacion3 div {
+    height: 100%;
+    width: 100%; }
+  .clasificacion2 .final-1,
+  .clasificacion2 .final-2,
+  .clasificacion3 .final-1,
+  .clasificacion3 .final-2 {
+    display: flex; }
+  .clasificacion2 div img {
+    width: 50px;
+    height: 50px; }
+  .clasificacion3 div img {
+    height: 80%;
+    width: 80%; }
+  .clasificacion3 div h3 {
+    font-size: 2rem; } }
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 900px) {
@@ -1268,19 +1343,33 @@ footer {
     margin: 0; }
   .grid-container .proximo div img {
     height: 80%; }
-  .nav3 .slide-qk {
-    display: flex; }
-  .clasificacion-kings1 .tabla1 tr th:nth-child(1),
-  .clasificacion-queens1 .tabla2 tr th:nth-child(1) {
-    display: initial; }
-  .clasificacion-kings1 .tabla1 tr th:nth-child(2),
-  .clasificacion-queens1 .tabla2 tr th:nth-child(2) {
+  .clasificacion-kings1 .tabla1 tr th:nth-child(1) {
+    display: table-cell; }
+  .clasificacion-kings1 .tabla1 tr th:nth-child(2) {
     display: none; }
+  .clasificacion2 {
+    grid-template-columns: repeat(3, 200px); }
+  .clasificacion2 div {
+    width: 60%; }
+  .clasificacion2 div .clasificacion-equipo-xl {
+    display: none; }
+  .clasificacion2 div .clasificacion-equipo {
+    display: initial; }
+  .clasificacion3 {
+    grid-template-columns: repeat(4, 130px); }
+  .clasificacion3 h2 {
+    font-size: 1.5rem; }
+  .clasificacion3 div h3 {
+    font-size: 1.5rem; }
   footer {
     grid-template-rows: 100px 700px auto; } }
 
 /*!------------------------MEDIA QUERIES------------------------*/
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
+  main .nav2 .titulo,
+  main .nav2 a .titulo,
+  main .nav3 .titulo {
+    font-size: 1.2rem; }
   .grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -1305,18 +1394,69 @@ footer {
     justify-content: space-evenly; }
   .grid-container .proximo div img {
     height: 65%; }
-  .nav3 h1,
-  .nav3 h2,
-  .nav3 a h3 {
-    font-size: 1rem; } }
+  .grid-container .aside .clasificacion-index .tabla {
+    width: 80vw; }
+  main .section-calendario .contenedor-calendario .resultado tr td:nth-child(5) div {
+    font-size: 0.7rem; }
+  .clasificacion2 .copa {
+    width: 20%;
+    height: inherit;
+    right: 5%;
+    top: 29%; }
+  .clasificacion2 {
+    grid-template-columns: repeat(3, 150px);
+    width: 90vw; }
+  .clasificacion2 div .clasificacion-equipo {
+    display: none; }
+  .clasificacion3 {
+    grid-template-columns: repeat(4, 100px); }
+  .clasificacion3 .copa {
+    width: 10%;
+    height: inherit;
+    right: 10%;
+    top: 37%; }
+  .clasificacion3 h2 {
+    font-size: 1rem; }
+  .clasificacion3 div {
+    width: 80%; }
+  .clasificacion3 div h3 {
+    font-size: 1rem; }
+  .clasificacion3 div img {
+    width: 50%; }
+  .winner img {
+    width: 70%; } }
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 550px) {
   .grid-container .proximo div img {
-    height: 60%; } }
+    height: 60%; }
+  .clasificacion2 {
+    grid-template-columns: repeat(3, 120px); }
+  .clasificacion2 .copa {
+    width: 20%;
+    height: inherit;
+    right: 6%;
+    top: 32%; }
+  .clasificacion2 h2 {
+    font-size: 1.5rem; }
+  .clasificacion2 div img {
+    width: 40px;
+    height: 40px; }
+  .clasificacion3 {
+    grid-template-columns: repeat(4, 80px);
+    width: 90vw; } }
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 500px) {
+  header {
+    display: flex;
+    flex-direction: row; }
+  header nav ul {
+    display: inline; }
+  header nav ul li a {
+    border: none; }
+  header nav ul li a:hover {
+    border: none; }
   .grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -1337,7 +1477,8 @@ footer {
     height: 30%;
     padding-top: 0.3rem;
     margin: 0; }
-  .grid-container .ultimo .carousel .carousel-item .carousel-caption h5, p {
+  .grid-container .ultimo .carousel .carousel-item .carousel-caption h5,
+  p {
     font-size: 0.9rem;
     margin: 0; }
   .grid-container .aside .clasificacion-index div a h2 {
@@ -1348,7 +1489,7 @@ footer {
   .grid-container .aside .clasificacion-index .tabla table tr .abv-equipo {
     display: none; }
   .grid-container .aside .clasificacion-index .tabla table tr .abreviacion {
-    display: initial;
+    display: table-cell;
     font-weight: bold; }
   .grid-container .ultimo .carousel {
     margin-left: 10px; }
@@ -1366,17 +1507,59 @@ footer {
   .grid-container .twitter {
     width: 250px;
     height: 600px;
-    margin-left: 40px; } }
+    margin-left: 40px; }
+  main .titulo-calendario {
+    font-size: 1.2rem; }
+  main .section-calendario .contenedor-calendario .resultado tr td img {
+    width: 30px; }
+  main .section-calendario .contenedor-calendario .resultado tr td:nth-child(5) {
+    width: 20%; }
+  .clasificacion-kings1 .tabla1 .abv {
+    display: none; }
+  .clasificacion-kings1 .tabla1 .abrev {
+    display: table-cell; }
+  .clasificacion3 {
+    grid-template-columns: repeat(4, 50px); }
+  .clasificacion3 .copa {
+    width: 10%;
+    height: inherit;
+    right: 12%;
+    top: 37%; }
+  .clasificacion3 h2 {
+    font-size: 0.8rem; }
+  .clasificacion3 div {
+    width: 100%; }
+  .clasificacion3 div h3 {
+    font-size: 0.7rem; }
+  .clasificacion3 div img {
+    width: 80%; } }
 
 /*!------------------------MEDIA QUERIES------------------------*/
-@media screen and (max-width: 430px) {
-  header {
-    display: flex;
-    flex-direction: row; }
-  header nav ul {
-    display: inline; }
+@media screen and (max-width: 450px) {
+  main .nav2 .titulo,
+  main .nav2 a .titulo,
+  main .nav3 .titulo {
+    font-size: 1rem; }
+  main .nav2 .slide-qk img,
+  main .nav3 .slide-qk img {
+    height: 25px;
+    width: 20px; }
+  main .section-calendario .contenedor-calendario .resultado tr td:nth-child(5) div {
+    font-size: 0.6rem; }
   .grid-container .hero0 .hero .hero1 {
     width: 90vw; }
+  .clasificacion2 {
+    grid-template-columns: repeat(3, 100px);
+    column-gap: 1rem;
+    row-gap: 0.5rem; }
+  .clasificacion-kings1 .tabla1 thead tr th:nth-child(8),
+  .clasificacion-kings1 .tabla1 tr td:nth-child(9) {
+    display: none; }
+  .clasificacion-kings1 .tabla1 thead tr .celda-presupuesto,
+  .clasificacion-kings1 .tabla1 tr .celda-presupuesto {
+    display: table-cell; }
+  .clasificacion2 h2 {
+    font-size: 1.2rem; }
   .main-contacto {
     display: flex;
     flex-direction: column;
@@ -1387,9 +1570,11 @@ footer {
     width: 80%; }
   form .contacto div textarea {
     width: 90%; }
-  .titulo-equipo,
-  .titulo-equipoq {
+  main section .titulo-equipo,
+  main section .titulo-equipoq {
     width: 80vw; }
+  main .presupuesto1 {
+    font-size: 1.7rem; }
   footer {
     grid-template-rows: 100px 700px auto; }
   footer .footer-logo div img {
@@ -1402,15 +1587,25 @@ footer {
 @media screen and (max-width: 400px) {
   .grid-container .proximo {
     margin-left: 0; }
-  .abrev {
-    display: initial;
-    font-weight: bold; }
-  .abv {
+  .clasificacion-kings1 .tabla1 .abv {
     display: none; }
-  .nav3 h1,
-  .nav3 h2,
-  .nav3 a h3 {
+  .clasificacion-kings1 .tabla1 thead tr th {
     font-size: 0.8rem; }
+  main .nav2 .titulo,
+  main .nav2 a .titulo,
+  main .nav3 .titulo {
+    font-size: 0.7rem; }
+  main .nav2 .clasificacion-kings1 .dropdown .btn,
+  main .nav3 .clasificacion-kings1 .dropdown .btn {
+    font-size: 0.7rem; }
+  .clasificacion3 {
+    grid-template-columns: repeat(4, 40px); }
+  .clasificacion3 h2 {
+    font-size: 0.7rem; }
+  main .presupuesto-encabezado .presupuesto1 {
+    font-size: 1.5rem; }
+  main .presupuesto-encabezado .pp {
+    font-size: 1rem; }
   footer {
     grid-template-rows: 110px auto auto; }
   footer h3 {

@@ -15,6 +15,7 @@ header{
         @include flex (flex, center, center, row);
         ul{
             list-style: none;
+            padding-left: 0;
             @include flex (flex, center, center, row);
             li{
                 a{

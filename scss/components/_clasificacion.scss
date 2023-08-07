@@ -1,6 +1,12 @@
-main {
-    .nav2, .nav3 {
-        @extend %nav;
+    .titulo {
+        @include fuente (Arial, 600, 1.5rem);
+        color: rgba(255, 255, 255, 0.907);
+        text-decoration: underline rgb(213, 213, 213);
+        margin-right: 15px;
+    }
+
+    .clasificacion-kings {
+        display: inline-flex;
 
         .titulo {
             @include fuente (Arial, 600, 1.5rem);
@@ -8,19 +14,7 @@ main {
             text-decoration: underline rgb(213, 213, 213);
             margin-right: 15px;
         }
-
-        .clasificacion-kings {
-            display: inline-flex;
-
-            .titulo {
-                @include fuente (Arial, 600, 1.5rem);
-                color: rgba(255, 255, 255, 0.907);
-                text-decoration: underline rgb(213, 213, 213);
-                margin-right: 15px;
-            }
-        }
     }
-}
 
 .clasificacion-kings1 {
     @include flex (flex, center, none, row);
@@ -47,10 +41,6 @@ main {
             tr {
                 th {
                     padding: 10px 5px 10px 5px;
-
-                    &:nth-child(4) {
-                        text-align: left;
-                    }
                 }
             }
         }
@@ -87,16 +77,20 @@ main {
             }
         }
 
-        .abv {}
+        .abv {
+            text-align: left
+        }
 
-        .abrev {}
+        .abrev {
+            text-align: left
+        }
     }
 }
 
 .clasificacion2 {
     @include flex (grid, center, center, none);
-    grid-template-columns: repeat(5fr);
-    grid-template-rows: repeat(7 50px);
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(7fr);
     grid-template-areas:
         "h2 h2 h2 h2 h2"
         "po-1 semi-4 final semi-2 po-3"
@@ -110,16 +104,23 @@ main {
     text-align: center;
     background-image: url(../img/cancha1.jpg);
     height: 80vh;
+    width: 95vw;
     position: relative;
+    padding: 5px;
     @include bg (center, cover, no-repeat);
 
     h2 {
         color: $color-white;
-        margin-left: 1.1rem;
+        text-align: center;
     }
 
     div {
         background-color: rgba(255, 255, 255, 0.704);
+        justify-self: center;
+        border: 2px solid $color-black;
+        @include flex (flex, space-around, center, row);
+        height: 3.2rem;
+        width: 100%;
     }
 
     img {
@@ -128,11 +129,11 @@ main {
     }
 
     h3 {
-        @include fuente (Arial, bold, 0.9rem);
+        @include fuente (Arial, bold, 0.8rem);
         margin: 0 3px 0 3px;
     }
 
-    .copa-kings-league {
+    .copa {
         width: 8%;
         height: 35%;
         position: absolute;
@@ -142,106 +143,77 @@ main {
 
     .po-1 {
         grid-area: po-1;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .po-2 {
         grid-area: po-2;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .po-3 {
         grid-area: po-3;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .po-4 {
         grid-area: po-4;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .po-5 {
         grid-area: po-5;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .po-6 {
         grid-area: po-6;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .po-7 {
         grid-area: po-7;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .po-8 {
         grid-area: po-8;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .semi-1 {
         grid-area: semi-1;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .semi-2 {
         grid-area: semi-2;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .semi-3 {
         grid-area: semi-3;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .semi-4 {
         grid-area: semi-4;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .final {
         grid-area: final;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
+        width: max-content;
+        justify-self: center;
+    }
+
+    .final-1 {
+        grid-area: final-1;
+    }
+
+    .final-2 {
+        grid-area: final-2;
     }
 }
 
 .clasificacion3 {
     @include flex (grid, center, center, none);
-    grid-template-columns: repeat(7fr);
-    grid-template-rows: repeat(7 50px);
+    grid-template-columns: repeat(7, 170px);
+    grid-template-rows: repeat(7fr);
     grid-template-areas:
         "h2 h2 h2 h2 h2 h2 h2"
         ". . semi-4 . semi-1 cu-1 ."
         ". . semi-4 . semi-1 cu-2 oc-3"
-        ". cu-5 semi-4 final semi-1 cu-2 oc-4"
-        ". cu-5 semi-3 final semi-2 cu-3 ."
+        ". . final final final cu-2 oc-4"
+        ". cu-5 final final final cu-3 ."
         "oc-1 cu-6 semi-3 . semi-2 cu-4 oc-5"
         "oc-2 cu-6 . . . cu-4 oc-6";
     ;
@@ -251,16 +223,29 @@ main {
     text-align: center;
     background-image: url(../img/cancha1.jpg);
     height: 80vh;
+    width: 95vw;
     position: relative;
+    padding: 5px;
     @include bg (center, cover, no-repeat);
 
     h2 {
         color: $color-white;
-        margin-left: 1.1rem;
+        text-align: center;
     }
 
     div {
         background-color: rgba(255, 255, 255, 0.704);
+        justify-self: center;
+        border: 2px solid $color-black;
+        @include flex (flex, space-around, center, row);
+        height: 3.2rem;
+        width: 100%;
+
+        h3 {
+            @include fuente (Arial, bold, 0.7rem);
+            margin: 0 3px 0 3px;
+            font-size: 0.7rem;
+        }
     }
 
     img {
@@ -268,138 +253,92 @@ main {
         height: 40px;
     }
 
-    h3 {
-        @include fuente (Arial, bold, 0.7rem);
-        margin: 0 3px 0 3px;
-    }
-
-    .copa-kings-league,
-    .copa-queens-league {
+    .copa {
         width: 8%;
         height: 35%;
         position: absolute;
-        right: 47%;
+        right: 46%;
         top: 15%;
     }
 
     .oc-1 {
         grid-area: oc-1;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .oc-2 {
         grid-area: oc-2;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .oc-3 {
         grid-area: oc-3;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .oc-4 {
         grid-area: oc-4;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .oc-5 {
         grid-area: oc-5;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .oc-6 {
         grid-area: oc-6;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .cu-1 {
         grid-area: cu-1;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .cu-2 {
         grid-area: cu-2;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .cu-3 {
         grid-area: cu-3;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .cu-4 {
         grid-area: cu-4;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .cu-5 {
         grid-area: cu-5;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .cu-6 {
         grid-area: cu-6;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .semi-1 {
         grid-area: semi-1;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .semi-2 {
         grid-area: semi-2;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .semi-3 {
         grid-area: semi-3;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
-
     }
 
     .semi-4 {
         grid-area: semi-4;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
     }
 
     .final {
         grid-area: final;
-        border: 2px solid $color-black;
-        @include flex (flex, space-around, center, row);
-        height: 3rem;
+        width: fit-content;
+        justify-self: center;
+    }
+
+    .final-1 {
+        grid-area: final-1;
+        width: fit-content;
+    }
+
+    .final-2 {
+        grid-area: final-2;
+        width: fit-content;
     }
 }
 

@@ -1,27 +1,36 @@
-main{
-    .presupuesto1{
-        @include fuente ('Times New Roman', 600, 40px);
-        margin-left: 30px;
+main {
+    .presupuesto-encabezado {
+        background-color: $color-kings;
+        .presupuesto1 {
+            @include fuente ('Times New Roman', 600, 40px);
+            margin-left: 30px;
+            color: $color-white;
+        }
+
+        .pp {
+            @include fuente ('Times New Roman', 400, 1.2rem);
+            margin-left: 60px;
+            color: $color-white
+        }
     }
-    .pp{
-        @include fuente ('Times New Roman', 400, 1.2rem);
-        margin-left: 60px;
-    }
-    .presupuesto{
-        div{
-            div{
-                .presupuesto1{
+
+    .presupuesto {
+        div {
+            div {
+                .presupuesto1 {
                     @include fuente ('Times New Roman', 600, 40px);
                     margin-left: 30px;
                 }
-                .accordion{
-                    .accordion-item{
+
+                .accordion {
+                    .accordion-item {
                         @include bg (20%, normal, no-repeat);
                         background-image: url(../img/aniquiladorEs-inverso.png);
                         background-color: #d9d6d6;
                         background-attachment: fixed;
-                        .accordion-header{
-                            .accordion-button{
+
+                        .accordion-header {
+                            .accordion-button {
                                 color: $color-white;
                                 background-image: url(../img/aniquiladorEs-inverso.png);
                                 background-color: $color-black;
@@ -32,11 +41,12 @@ main{
                     }
                 }
             }
-            div{
-                .carousel{
-                    .carousel-inner{
-                        .carousel-item{
-                            img{
+
+            div {
+                .carousel {
+                    .carousel-inner {
+                        .carousel-item {
+                            img {
                                 margin: 20px;
                                 width: 90%;
                             }

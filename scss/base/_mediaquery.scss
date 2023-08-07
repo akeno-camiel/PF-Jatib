@@ -1,24 +1,47 @@
 /*!---------------------------------------------------MEDIA QUERIES---------------------------------------------------*/
 
 @media screen and (max-width:4000px) {
-    .grid-container .aside .clasificacion-index .tabla table tr .abreviacion {
+    .aside .clasificacion-index .tabla .abreviacion {
         display: none;
     }
 
-    .tabla1 tr th:nth-child(1),
-    .tabla2 tr th:nth-child(1) {
+    main .section-calendario .contenedor-calendario .resultado .resultado-abreviacion {
         display: none;
     }
 
-    .grid-container .aside .clasificacion-index .tabla table tr .abrev {
+    .clasificacion-kings1 .tabla1 tr th:nth-child(1) {
         display: none;
     }
+
+    .abrev {
+        display: none;
+    }
+
+    .clasificacion2 .final-1,
+    .clasificacion2 .clasificacion-equipo,
+    .clasificacion2 .final-2,
+    .clasificacion3 .clasificacion-equipo,
+    .clasificacion3 .final-1,
+    .clasificacion3 .final-2 {
+        display: none;
+    }
+
+    .presupuesto1 {
+        display: initial;
+    }
+
 }
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width:1750px) {
-    .grid-container .aside .clasificacion-index div a h2{
+    .grid-container .aside .clasificacion-index div a h2 {
         font-size: 1.7rem;
+    }
+
+    .clasificacion2 .copa,
+    .clasificacion3 .copa {
+        height: 25%;
+        top: 27%;
     }
 }
 
@@ -38,7 +61,7 @@
     .grid-container .hero0 .hero .hero1 img {
         width: 20vw;
     }
-    
+
     .grid-container .proximo {
         display: flex;
         flex-direction: column;
@@ -46,29 +69,58 @@
         justify-content: center;
         margin-left: 20px;
     }
+
     .grid-container .proximo div img {
         height: 80%;
     }
 
-    .clasificacion2 div img {
-        width: 40px;
-        height: 40px;
+    .clasificacion2 h2,
+    .clasificacion3 h2 {
+        font-size: 1.8rem;
+    }
+
+    .clasificacion2 div img,
+    .clasificacion3 div img {
+        width: 35px;
+        height: 35px;
     }
 }
 
 /*!------------------------MEDIA QUERIES------------------------*/
 
 @media screen and (max-width:1560px) {
-    .grid-container .aside .clasificacion-index div a h2{
-        font-size: 1.8rem;
+    .grid-container .aside .clasificacion-index div a h2 {
+        font-size: 1.7rem;
     }
 
     .grid-container .aside .clasificacion-index .tabla table tr td,
     .grid-container .aside .clasificacion-index .tabla table thead tr th {
         padding: 8px 4px 8px 4px;
-    }   
-    .grid-container .aside .clasificacion-index .tabla table thead tr .dg, .grid-container .aside .clasificacion-index .tabla table tr .dg{
+        font-size: 0.8rem;
+    }
+
+}
+
+/*!------------------------MEDIA QUERIES------------------------*/
+@media screen and (max-width:1530px) {
+    .clasificacion3 {
+        grid-template-columns: repeat(7, 150px);
+    }
+
+    .clasificacion3 .clasificacion-equipo {
+        display: initial;
+    }
+
+    .clasificacion3 .clasificacion-equipo-xl {
         display: none;
+    }
+
+    .clasificacion3 div {
+        width: 80%;
+    }
+
+    .clasificacion3 div h3 {
+        font-size: 1rem;
     }
 }
 
@@ -76,27 +128,29 @@
 
 @media screen and (max-width:1500px) {
 
-
-    .clasificacion2 div img {
-        width: 30px;
-        height: 30px;
-    }  
     .grid-container .proximo div img {
         height: 75%;
     }
 
 }
+
 /*!------------------------MEDIA QUERIES------------------------*/
 
 @media screen and (max-width:1460px) {
-    .grid-container .aside .clasificacion-index div a h2{
+    .grid-container .aside .clasificacion-index div a h2 {
         font-size: 1.2rem;
     }
+
     .grid-container .aside .clasificacion-index .tabla table tr td,
     .grid-container .aside .clasificacion-index .tabla table thead tr th {
         padding: 4px 2px 4px 2px;
-    }   
+    }
+
+    .clasificacion3 h2 {
+        font-size: 1.6rem;
+    }
 }
+
 /*!------------------------MEDIA QUERIES------------------------*/
 
 @media screen and (max-width:1400px) {
@@ -104,19 +158,23 @@
     .grid-container .aside .clasificacion-index div a h2 {
         font-size: 1rem;
     }
-    .grid-container .aside .clasificacion-index .tabla table tr .abv-equipo {
+
+    .grid-container .aside .clasificacion-index .tabla table thead tr .pj,
+    .grid-container .aside .clasificacion-index .tabla table tr .pj {
         display: none;
     }
-    
-    .grid-container .aside .clasificacion-index .tabla table tr .abreviacion {
-        display: initial;
-        font-weight: bold;
-    }
-    .grid-container .aside .clasificacion-index .tabla thead tr .pj, .grid-container .aside .clasificacion-index .tabla table tr .pj {
+
+    .grid-container .aside .clasificacion-index .tabla table thead tr .dg,
+    .grid-container .aside .clasificacion-index .tabla table tr .dg {
         display: none;
     }
+
     .grid-container .aside .clasificacion-index .tabla table tr td {
         font-size: 0.8rem;
+    }
+
+    .clasificacion3 {
+        margin: 25px;
     }
 }
 
@@ -133,11 +191,22 @@
             "proximo twitter aside"
         ;
     }
+
     .grid-container .proximo div img {
         height: 65%;
     }
-    .grid-container .twitter{
+
+    .grid-container .twitter {
         width: 90%;
+    }
+
+    .clasificacion3 div img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .clasificacion3 {
+        grid-template-columns: repeat(7, 130px);
     }
 }
 
@@ -203,20 +272,21 @@
     .grid-container .aside .clasificacion-index {
         width: auto;
     }
+
     .grid-container .aside .clasificacion-index div a h2 {
         font-size: 1.7rem;
         padding: 5px;
     }
-    .grid-container .aside .clasificacion-index .tabla table tr td, .aside .clasificacion-index .tabla table thead tr th {
-        padding: 10px 5px 10px 5px;
-    }
+
+
     .grid-container .aside .clasificacion-index .tabla table tr .abreviacion {
         display: none;
     }
 
-    .grid-container .aside .clasificacion-index .tabla table thead tr .pj, .grid-container .aside .clasificacion-index .tabla table tr .pj
-    .grid-container .aside .clasificacion-index .tabla table tr .abv-equipo,
-    .grid-container .aside .clasificacion-index .tabla table thead tr .dg, .grid-container .aside .clasificacion-index .tabla table tr .dg {
+    .grid-container .aside .clasificacion-index .tabla table thead tr .pj,
+    .grid-container .aside .clasificacion-index .tabla table tr .pj,
+    .grid-container .aside .clasificacion-index .tabla table thead tr .dg,
+    .grid-container .aside .clasificacion-index .tabla table tr .dg {
         display: table-cell;
     }
 
@@ -231,14 +301,63 @@
         width: 80%;
     }
 
-    .accordion .accordion-item .accordion-header .accordion-button{
+    main .section-calendario .contenedor-calendario {
+        width: 80%;
+    }
+
+    .clasificacion2 {
+        grid-template-columns: repeat(5, 160px);
+        margin: 25px;
+    }
+
+    .clasificacion3 {
+        grid-template-columns: repeat(7, 120px);
+    }
+
+    .clasificacion2 .copa,
+    .clasificacion3 .copa {
+        width: 10%;
+        right: 45%;
+    }
+
+    .clasificacion3 h2 {
+        font-size: 1.2rem;
+    }
+
+    .clasificacion2 div img {
+        width: 30px;
+        height: 30px;
+    }
+
+    main .presupuesto div div .accordion .accordion-item .accordion-header .accordion-button {
         color: rgb(244, 92, 92);
         font-weight: 700;
-        background-position: center;
     }
+
     footer .footer-logo {
         display: inline-block;
     }
+}
+
+/*!------------------------MEDIA QUERIES------------------------*/
+@media screen and (max-width:1135px) {
+    .clasificacion3 {
+        grid-template-columns: repeat(7, 100px);
+    }
+
+    .clasificacion3 h2 {
+        font-size: 1rem;
+    }
+
+    .clasificacion3 div .clasificacion-equipo {
+        display: none;
+    }
+
+    .clasificacion3 div img {
+        height: 50px;
+        width: 50px;
+    }
+
 }
 
 /*!------------------------MEDIA QUERIES------------------------*/
@@ -259,8 +378,145 @@
     .grid-container .twitter {
         width: 70%;
     }
+
     .grid-container .proximo div img {
         height: 50%;
+    }
+
+    main .section-calendario .contenedor-calendario .resultado tr td:last-child {
+        width: min-content;
+    }
+
+    main .section-calendario .contenedor-calendario .resultado tr td:nth-child(5) {
+        width: 20%;
+    }
+
+    main .section-calendario .contenedor-calendario .resultado tr td:nth-child(7) {
+        width: 10%;
+    }
+
+    main .section-calendario .contenedor-calendario .resultado tr .resultado-xl {
+        display: none;
+    }
+
+    main .section-calendario .contenedor-calendario .resultado tr .resultado-abreviacion {
+        display: table-cell;
+        font-weight: 800;
+    }
+
+    .clasificacion2 {
+        grid-template-columns: repeat(3, 250px);
+        grid-template-rows: repeat(19fr);
+        grid-template-areas:
+            "h2 h2 h2"
+            ". . ."
+            "po-7 . ."
+            ". semi-3 ."
+            "po-8 . ."
+            ". . ."
+            ". . ."
+            "po-1 . ."
+            ". semi-4 ."
+            "po-2 . ."
+            ". . final-1"
+            ". . final-2"
+            "po-5 . ."
+            ". semi-1 ."
+            "po-6 . ."
+            ". . ."
+            "po-3 . ."
+            ". semi-2 ."
+            "po-4 . .";
+        background-image: url(../img/cancha2.jpg);
+        height: max-content;
+        column-gap: 2rem;
+        padding: 10px;
+    }
+
+    .clasificacion3 {
+        display: grid;
+        grid-template-columns: repeat(4, 180px);
+        grid-template-rows: repeat(17, 1fr);
+        grid-template-areas:
+            "h2 h2 h2 h2"
+            "oc-3 . . ."
+            ". cu-2 . ."
+            "oc-4 . semi-1 ."
+            ". cu-1 . ."
+            ". . . ."
+            ". cu-3 . ."
+            "oc-5 . semi-2 ."
+            ". cu-4 . final-1"
+            "oc-6 . . final-2"
+            ". . . ."
+            ". . semi-4 ."
+            ". cu-5 . ."
+            "oc-1 . semi-3 ."
+            ". cu-6 . ."
+            "oc-2 . . .";
+        background-image: url(../img/cancha2.jpg);
+        height: max-content;
+        column-gap: 2rem;
+        padding: 5px;
+    }
+
+    .clasificacion2 .copa {
+        width: 20%;
+        height: inherit;
+        right: 5%;
+        top: 23%;
+    }
+
+    .clasificacion3 .copa {
+        width: 20%;
+        height: inherit;
+        right: 5%;
+        top: 35%;
+    }
+
+    .clasificacion2 .final,
+    .clasificacion3 .final {
+        display: none;
+    }
+
+    .clasificacion2 .fixt,
+    .clasificacion3 .fixt {
+        display: none;
+    }
+
+    .clasificacion3 h2 {
+        font-size: 2rem;
+    }
+
+    .clasificacion2 .fixt1,
+    .clasificacion3 .fixt1 {
+        flex-direction: row-reverse;
+    }
+
+    .clasificacion3 div {
+        height: 100%;
+        width: 100%;
+    }
+
+    .clasificacion2 .final-1,
+    .clasificacion2 .final-2,
+    .clasificacion3 .final-1,
+    .clasificacion3 .final-2 {
+        display: flex;
+    }
+
+    .clasificacion2 div img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .clasificacion3 div img {
+        height: 80%;
+        width: 80%;
+    }
+
+    .clasificacion3 div h3 {
+        font-size: 2rem;
     }
 }
 
@@ -308,25 +564,49 @@
     .grid-container .twitter {
         width: 90%;
     }
-    .grid-container .proximo{
+
+    .grid-container .proximo {
         margin: 0;
     }
-    .grid-container .proximo div img{
+
+    .grid-container .proximo div img {
         height: 80%;
     }
 
-    .nav3 .slide-qk {
-        display: flex;
+    .clasificacion-kings1 .tabla1 tr th:nth-child(1) {
+        display: table-cell;
     }
 
-    .clasificacion-kings1 .tabla1 tr th:nth-child(1),
-    .clasificacion-queens1 .tabla2 tr th:nth-child(1) {
+    .clasificacion-kings1 .tabla1 tr th:nth-child(2) {
+        display: none;
+    }
+
+    .clasificacion2 {
+        grid-template-columns: repeat(3, 200px);
+    }
+
+    .clasificacion2 div {
+        width: 60%;
+    }
+
+    .clasificacion2 div .clasificacion-equipo-xl {
+        display: none;
+    }
+
+    .clasificacion2 div .clasificacion-equipo {
         display: initial;
     }
 
-    .clasificacion-kings1 .tabla1 tr th:nth-child(2),
-    .clasificacion-queens1 .tabla2 tr th:nth-child(2) {
-        display: none;
+    .clasificacion3 {
+        grid-template-columns: repeat(4, 130px);
+    }
+
+    .clasificacion3 h2 {
+        font-size: 1.5rem;
+    }
+
+    .clasificacion3 div h3 {
+        font-size: 1.5rem;
     }
 
     footer {
@@ -336,7 +616,14 @@
 
 /*!------------------------MEDIA QUERIES------------------------*/
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:720px) {
+
+    main .nav2 .titulo,
+    main .nav2 a .titulo,
+    main .nav3 .titulo {
+        font-size: 1.2rem;
+    }
+
     .grid-container {
         display: grid;
         grid-template-columns: 1fr;
@@ -349,6 +636,7 @@
             "proximo"
         ;
     }
+
     .grid-container .hero0 .hero .hero1 {
         height: 35vh;
     }
@@ -383,11 +671,58 @@
     .grid-container .proximo div img {
         height: 65%;
     }
+    .grid-container .aside .clasificacion-index .tabla{
+        width: 80vw;
+    }
+    main .section-calendario .contenedor-calendario .resultado tr td:nth-child(5) div {
+        font-size: 0.7rem;
+    }
 
-    .nav3 h1,
-    .nav3 h2,
-    .nav3 a h3 {
+    .clasificacion2 .copa {
+        width: 20%;
+        height: inherit;
+        right: 5%;
+        top: 29%;
+    }
+
+    .clasificacion2 {
+        grid-template-columns: repeat(3, 150px);
+        width: 90vw;
+    }
+
+    .clasificacion2 div .clasificacion-equipo {
+        display: none;
+    }
+
+    .clasificacion3 {
+        grid-template-columns: repeat(4, 100px);
+    }
+
+    .clasificacion3 .copa {
+        width: 10%;
+        height: inherit;
+        right: 10%;
+        top: 37%;
+    }
+
+    .clasificacion3 h2 {
         font-size: 1rem;
+    }
+
+    .clasificacion3 div {
+        width: 80%;
+    }
+
+    .clasificacion3 div h3 {
+        font-size: 1rem;
+    }
+
+    .clasificacion3 div img {
+        width: 50%;
+    }
+
+    .winner img {
+        width: 70%;
     }
 }
 
@@ -397,10 +732,55 @@
     .grid-container .proximo div img {
         height: 60%;
     }
+
+    .clasificacion2 {
+        grid-template-columns: repeat(3, 120px);
+    }
+
+    .clasificacion2 .copa {
+        width: 20%;
+        height: inherit;
+        right: 6%;
+        top: 32%;
+    }
+
+    .clasificacion2 h2 {
+        font-size: 1.5rem;
+    }
+
+    .clasificacion2 div img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .clasificacion3 {
+        grid-template-columns: repeat(4, 80px);
+        width: 90vw;
+    }
+
 }
+
 /*!------------------------MEDIA QUERIES------------------------*/
 
 @media screen and (max-width:500px) {
+
+    header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    header nav ul {
+        display: inline;
+    }
+
+    header nav ul li a {
+        border: none;
+    }
+
+    header nav ul li a:hover {
+        border: none;
+    }
+
     .grid-container {
         display: grid;
         grid-template-columns: 1fr;
@@ -413,6 +793,7 @@
             "proximo"
         ;
     }
+
     .grid-container .hero0 .hero .hero1 {
         height: 30vh;
         width: 80vw;
@@ -429,40 +810,49 @@
     .grid-container .hero0 .hero .hero1 .hero-logo2 img {
         width: 2rem;
     }
+
     .grid-container .ultimo .carousel .carousel-indicators {
         margin-bottom: 0;
     }
+
     .grid-container .ultimo .carousel .carousel-item .carousel-caption {
         height: 30%;
         padding-top: 0.3rem;
         margin: 0;
     }
-    
-    .grid-container .ultimo .carousel .carousel-item .carousel-caption h5,p {
+
+    .grid-container .ultimo .carousel .carousel-item .carousel-caption h5,
+    p {
         font-size: 0.9rem;
-        margin:  0;
+        margin: 0;
     }
-    .grid-container .aside .clasificacion-index div a h2{
+
+    .grid-container .aside .clasificacion-index div a h2 {
         font-size: 1.2rem;
     }
+
     .grid-container .aside .clasificacion-index .tabla table tr td,
     .grid-container .aside .clasificacion-index .tabla table thead tr th {
         padding: 4px 2px 4px 2px;
-    }   
+    }
+
     .grid-container .aside .clasificacion-index .tabla table tr .abv-equipo {
         display: none;
     }
-    
+
     .grid-container .aside .clasificacion-index .tabla table tr .abreviacion {
-        display: initial;
+        display: table-cell;
         font-weight: bold;
     }
-    .grid-container .ultimo .carousel{
+
+    .grid-container .ultimo .carousel {
         margin-left: 10px;
     }
-    .grid-container .proximo{
+
+    .grid-container .proximo {
         justify-content: flex-start;
     }
+
     .grid-container .proximo div {
         flex-direction: column;
         display: flex;
@@ -475,28 +865,104 @@
         height: 50%;
         margin-bottom: 20px;
     }
-    .grid-container .twitter{
+
+    .grid-container .twitter {
         width: 250px;
         height: 600px;
         margin-left: 40px;
-}
+    }
+
+    main .titulo-calendario {
+        font-size: 1.2rem;
+    }
+
+    main .section-calendario .contenedor-calendario .resultado tr td img {
+        width: 30px;
+    }
+
+    main .section-calendario .contenedor-calendario .resultado tr td:nth-child(5) {
+        width: 20%;
+    }
+
+    .clasificacion-kings1 .tabla1 .abv {
+        display: none;
+    }
+
+    .clasificacion-kings1 .tabla1 .abrev {
+        display: table-cell;
+    }
+
+    .clasificacion3 {
+        grid-template-columns: repeat(4, 50px);
+    }
+
+    .clasificacion3 .copa {
+        width: 10%;
+        height: inherit;
+        right: 12%;
+        top: 37%;
+    }
+
+    .clasificacion3 h2 {
+        font-size: 0.8rem;
+    }
+
+    .clasificacion3 div {
+        width: 100%;
+    }
+
+    .clasificacion3 div h3 {
+        font-size: 0.7rem;
+    }
+
+    .clasificacion3 div img {
+        width: 80%;
+    }
 }
 
 /*!------------------------MEDIA QUERIES------------------------*/
 
-@media screen and (max-width:430px) {
+@media screen and (max-width:450px) {
 
-    header {
-        display: flex;
-        flex-direction: row;
+    main .nav2 .titulo,
+    main .nav2 a .titulo,
+    main .nav3 .titulo {
+        font-size: 1rem;
     }
 
-    header nav ul {
-        display: inline;
+    main .nav2 .slide-qk img,
+    main .nav3 .slide-qk img {
+        height: 25px;
+        width: 20px;
+    }
+
+    main .section-calendario .contenedor-calendario .resultado tr td:nth-child(5) div {
+        font-size: 0.6rem;
     }
 
     .grid-container .hero0 .hero .hero1 {
         width: 90vw;
+    }
+
+    .clasificacion2 {
+        grid-template-columns: repeat(3, 100px);
+        column-gap: 1rem;
+        row-gap: 0.5rem;
+    }
+
+
+    .clasificacion-kings1 .tabla1 thead tr th:nth-child(8),
+    .clasificacion-kings1 .tabla1 tr td:nth-child(9) {
+        display: none;
+    }
+
+    .clasificacion-kings1 .tabla1 thead tr .celda-presupuesto,
+    .clasificacion-kings1 .tabla1 tr .celda-presupuesto {
+        display: table-cell;
+    }
+
+    .clasificacion2 h2 {
+        font-size: 1.2rem;
     }
 
     .main-contacto {
@@ -517,9 +983,14 @@
         width: 90%;
     }
 
-    .titulo-equipo,
-    .titulo-equipoq {
+    main section .titulo-equipo,
+    main section .titulo-equipoq {
         width: 80vw;
+    }
+
+
+    main .presupuesto1 {
+        font-size: 1.7rem;
     }
 
     footer {
@@ -543,21 +1014,38 @@
         margin-left: 0;
     }
 
-    .abrev {
-        display: initial;
-        font-weight: bold;
-    }
-
-    .abv {
+    .clasificacion-kings1 .tabla1 .abv {
         display: none;
     }
 
-    .nav3 h1,
-    .nav3 h2,
-    .nav3 a h3 {
+    .clasificacion-kings1 .tabla1 thead tr th {
         font-size: 0.8rem;
     }
 
+    main .nav2 .titulo,
+    main .nav2 a .titulo,
+    main .nav3 .titulo {
+        font-size: 0.7rem;
+    }
+
+    main .nav2 .clasificacion-kings1 .dropdown .btn,
+    main .nav3 .clasificacion-kings1 .dropdown .btn {
+        font-size: 0.7rem;
+    }
+
+    .clasificacion3 {
+        grid-template-columns: repeat(4, 40px);
+    }
+
+    .clasificacion3 h2 {
+        font-size: 0.7rem;
+    }
+    main .presupuesto-encabezado .presupuesto1{
+        font-size: 1.5rem;
+    }
+    main .presupuesto-encabezado .pp{
+        font-size: 1rem;
+    }
     footer {
         grid-template-rows: 110px auto auto;
     }
