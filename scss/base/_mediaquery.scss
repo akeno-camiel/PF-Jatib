@@ -1,6 +1,10 @@
 /*!---------------------------------------------------MEDIA QUERIES---------------------------------------------------*/
 
 @media screen and (max-width:4000px) {
+    .grid-container .aside .clasificacion-index div a h2 {
+        font-size: 1.5rem;
+    }
+
     .aside .clasificacion-index .tabla .abreviacion {
         display: none;
     }
@@ -34,9 +38,6 @@
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width:1750px) {
-    .grid-container .aside .clasificacion-index div a h2 {
-        font-size: 1.7rem;
-    }
 
     .clasificacion2 .copa,
     .clasificacion3 .copa {
@@ -74,8 +75,8 @@
         height: 80%;
     }
 
-    .clasificacion2 h2,
-    .clasificacion3 h2 {
+    .clasificacion2 a,
+    .clasificacion3 a {
         font-size: 1.8rem;
     }
 
@@ -89,9 +90,6 @@
 /*!------------------------MEDIA QUERIES------------------------*/
 
 @media screen and (max-width:1560px) {
-    .grid-container .aside .clasificacion-index div a h2 {
-        font-size: 1.7rem;
-    }
 
     .grid-container .aside .clasificacion-index .tabla table tr td,
     .grid-container .aside .clasificacion-index .tabla table thead tr th {
@@ -137,9 +135,6 @@
 /*!------------------------MEDIA QUERIES------------------------*/
 
 @media screen and (max-width:1460px) {
-    .grid-container .aside .clasificacion-index div a h2 {
-        font-size: 1.2rem;
-    }
 
     .grid-container .aside .clasificacion-index .tabla table tr td,
     .grid-container .aside .clasificacion-index .tabla table thead tr th {
@@ -154,10 +149,6 @@
 /*!------------------------MEDIA QUERIES------------------------*/
 
 @media screen and (max-width:1400px) {
-
-    .grid-container .aside .clasificacion-index div a h2 {
-        font-size: 1rem;
-    }
 
     .grid-container .aside .clasificacion-index .tabla table thead tr .pj,
     .grid-container .aside .clasificacion-index .tabla table tr .pj {
@@ -273,12 +264,6 @@
         width: auto;
     }
 
-    .grid-container .aside .clasificacion-index div a h2 {
-        font-size: 1.7rem;
-        padding: 5px;
-    }
-
-
     .grid-container .aside .clasificacion-index .tabla table tr .abreviacion {
         display: none;
     }
@@ -320,7 +305,7 @@
         right: 45%;
     }
 
-    .clasificacion3 h2 {
+    .clasificacion3 a {
         font-size: 1.2rem;
     }
 
@@ -484,10 +469,6 @@
         display: none;
     }
 
-    .clasificacion3 h2 {
-        font-size: 2rem;
-    }
-
     .clasificacion2 .fixt1,
     .clasificacion3 .fixt1 {
         flex-direction: row-reverse;
@@ -549,7 +530,7 @@
         width: 40%;
     }
 
-    .grid-container .hero0 .hero .hero1 .hero-logo1 h3 {
+    .grid-container .hero0 .hero .hero1 .hero-logo1 h2 {
         font-size: 2rem;
     }
 
@@ -557,12 +538,13 @@
         width: 40%;
     }
 
-    .grid-container .hero0 .hero .hero-logo2 h3 {
+    .grid-container .hero0 .hero .hero1 .hero-logo2 h2 {
         font-size: 2rem;
     }
 
     .grid-container .twitter {
         width: 90%;
+        justify-self: center;
     }
 
     .grid-container .proximo {
@@ -599,10 +581,6 @@
 
     .clasificacion3 {
         grid-template-columns: repeat(4, 130px);
-    }
-
-    .clasificacion3 h2 {
-        font-size: 1.5rem;
     }
 
     .clasificacion3 div h3 {
@@ -646,19 +624,19 @@
     }
 
     .grid-container .hero0 .hero .hero1 .hero-logo1 img {
-        width: 2.4rem;
+        width: 2rem;
     }
 
     .grid-container .hero0 .hero .hero1 .hero-logo2 img {
-        width: 2.4rem;
+        width: 2rem;
     }
 
-    .grid-container .hero0 .hero .hero1 .hero-logo1 h3 {
-        font-size: 2rem;
+    .grid-container .hero0 .hero .hero1 .hero-logo1 h2 {
+        font-size: 1.5rem;
     }
 
-    .grid-container .hero0 .hero .hero1 .hero-logo2 h3 {
-        font-size: 2rem;
+    .grid-container .hero0 .hero .hero1 .hero-logo2 h2 {
+        font-size: 1.5rem;
     }
 
     .grid-container .aside {
@@ -671,11 +649,18 @@
     .grid-container .proximo div img {
         height: 65%;
     }
-    .grid-container .aside .clasificacion-index .tabla{
+
+    .grid-container .aside .clasificacion-index .tabla {
         width: 80vw;
     }
+
     main .section-calendario .contenedor-calendario .resultado tr td:nth-child(5) div {
         font-size: 0.7rem;
+    }
+
+    .clasificacion2 {
+        grid-template-columns: repeat(3, 150px);
+        width: 90vw;
     }
 
     .clasificacion2 .copa {
@@ -683,11 +668,6 @@
         height: inherit;
         right: 5%;
         top: 29%;
-    }
-
-    .clasificacion2 {
-        grid-template-columns: repeat(3, 150px);
-        width: 90vw;
     }
 
     .clasificacion2 div .clasificacion-equipo {
@@ -705,7 +685,7 @@
         top: 37%;
     }
 
-    .clasificacion3 h2 {
+    .clasificacion3 a {
         font-size: 1rem;
     }
 
@@ -744,7 +724,7 @@
         top: 32%;
     }
 
-    .clasificacion2 h2 {
+    .clasificacion2 a {
         font-size: 1.5rem;
     }
 
@@ -804,11 +784,19 @@
     }
 
     .grid-container .hero0 .hero .hero1 .hero-logo1 img {
-        width: 2rem;
+        width: 1.5rem;
     }
 
     .grid-container .hero0 .hero .hero1 .hero-logo2 img {
-        width: 2rem;
+        width: 1.5rem;
+    }
+
+    .grid-container .hero0 .hero .hero1 .hero-logo1 h2 {
+        font-size: 1.3rem;
+    }
+
+    .grid-container .hero0 .hero .hero1 .hero-logo2 h2 {
+        font-size: 1.3rem;
     }
 
     .grid-container .ultimo .carousel .carousel-indicators {
@@ -869,7 +857,6 @@
     .grid-container .twitter {
         width: 250px;
         height: 600px;
-        margin-left: 40px;
     }
 
     main .titulo-calendario {
@@ -903,16 +890,16 @@
         top: 37%;
     }
 
-    .clasificacion3 h2 {
-        font-size: 0.8rem;
+    .clasificacion3 a {
+        font-size: 0.7rem;
     }
 
     .clasificacion3 div {
         width: 100%;
     }
 
-    .clasificacion3 div h3 {
-        font-size: 0.7rem;
+    .clasificacion2 div h3, .clasificacion3 div h3 {
+        font-size: 0.5rem;
     }
 
     .clasificacion3 div img {
@@ -961,7 +948,7 @@
         display: table-cell;
     }
 
-    .clasificacion2 h2 {
+    .clasificacion2 a {
         font-size: 1.2rem;
     }
 
@@ -983,8 +970,8 @@
         width: 90%;
     }
 
-    main section .titulo-equipo,
-    main section .titulo-equipoq {
+    main .main-equipo section .titulo-equipo,
+    main .main-equipo section .titulo-equipoq {
         width: 80vw;
     }
 
@@ -1037,15 +1024,18 @@
         grid-template-columns: repeat(4, 40px);
     }
 
-    .clasificacion3 h2 {
+    .clasificacion3 a {
         font-size: 0.7rem;
     }
-    main .presupuesto-encabezado .presupuesto1{
+
+    main .presupuesto-encabezado .presupuesto1 {
         font-size: 1.5rem;
     }
-    main .presupuesto-encabezado .pp{
+
+    main .presupuesto-encabezado .pp {
         font-size: 1rem;
     }
+
     footer {
         grid-template-rows: 110px auto auto;
     }

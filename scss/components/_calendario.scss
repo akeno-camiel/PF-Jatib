@@ -30,40 +30,49 @@ main {
         padding-top: 2rem;
         border-bottom: 2px double $color-kings;
     }
-    .enero{
+
+    .enero {
         background-image: url(../img/composicion-futbol-copyspace-derecha.jpg);
-        @include bg(50% 50%, cover,no-repeat);
+        @include bg(50% 50%, cover, no-repeat);
     }
-    .febrero{
+
+    .febrero {
         background-image: url(../img/composicion-futbol-tarjetas-amarilla-roja.jpg);
-        @include bg(50% 50%, cover,no-repeat);
+        @include bg(50% 50%, cover, no-repeat);
     }
-    .marzo{
+
+    .marzo {
         background-image: url(../img/composicion-futbol-copyspace-zapatos.jpg);
-        @include bg(50% 50%, cover,no-repeat);
+        @include bg(50% 50%, cover, no-repeat);
     }
-    .cupra{
+
+    .cupra {
         background-image: url(../img/composicion-futbol-copyspace-pelota.jpg);
-        @include bg(50% 50%, cover,no-repeat);
+        @include bg(50% 50%, cover, no-repeat);
     }
-    .playoff{
+
+    .playoff {
         background-image: url(../img/composicion-futbol-copyspace-derecha1.jpg);
-        @include bg(50% 50%, cover,no-repeat);
+        @include bg(50% 50%, cover, no-repeat);
     }
-    .campnou{
+
+    .campnou {
         background-image: url(../img/composicion-futbol-copyspace-derecha-cesped.jpg);
-        @include bg(50% 50%, cover,no-repeat);
+        @include bg(50% 50%, cover, no-repeat);
     }
-    .final-campnou{
+
+    .final-campnou {
         background-image: url(../img/lo-ultimo.jpg);
-        @include bg(50% 90%, cover,no-repeat);
+        @include bg(50% 90%, cover, no-repeat);
         height: 400px;
     }
-    .final-civitas{
+
+    .final-civitas {
         background-image: url(../img/final-civitas1.jpg);
-        @include bg(50% 50%, cover,no-repeat);
+        @include bg(50% 50%, cover, no-repeat);
         height: 500px;
     }
+
     .section-calendario {
         @include flex (flex, center, none, row);
 
@@ -75,13 +84,12 @@ main {
                 font-family: 'Times New Roman', Times, serif;
                 width: 100%;
                 margin: 2rem 0 5rem 0;
-                border-radius: 30px;
 
                 tr {
                     &:nth-child(even) {
                         border-top: #00000029 1px solid;
                         border-bottom: #00000029 1px solid;
-                        background-color: #dddddd3f
+                        background-color: #dddddd3f;
                     }
 
                     &:hover:nth-child(even) td {
@@ -89,9 +97,9 @@ main {
                         color: $color-white;
                     }
 
-                    &:hover td a{
-                        background-color: $color-white;
-                        border-radius: 100%;
+                    &:hover td a {
+                        background: rgb(255, 255, 255);
+                        background: radial-gradient(circle, rgba(255, 255, 255, 1) 44%, rgba(2, 0, 36, 1) 46%);
                     }
 
                     th,
@@ -110,6 +118,10 @@ main {
 
                         &:nth-child(4) {
                             width: min-content;
+                        }
+
+                        &:nth-child(5) {
+                            width: 20%;
                         }
 
                         &:nth-child(6) {

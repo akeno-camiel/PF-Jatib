@@ -24,6 +24,9 @@
                     display: block;
                     background-color: nth($rojos, 4);
                     width: 90%;
+                    &:focus{
+                        background-color: $color-white;
+                    }
                 }
                 h2{
                     @include fuente ('Montserrat', 400, 1rem);
@@ -35,12 +38,24 @@
                     background-color: #ffffff57;
                 }
                 .input-msg {
-                    border: nth($rojos, 6) 1px solid;
+                    border: nth($rojos, 3) 3px solid;
                     border-radius: 30px;
                     padding: 5px;
                     margin: 5px;
                     background-color: nth($rojos, 5);
                     width: 100px;
+                    color: black;
+
+                    &:hover{
+                        background-color: $color-white;
+                        border: nth($rojos, 6) 3px solid;
+                    }
+
+                    &:active{
+                        background-color: nth($rojos, 6);
+                        color: $color-white;
+                        border: $color-white 3px solid;
+                    }
                 }
                 textarea{
                     border-width: 0 0 1px 0;
@@ -48,6 +63,9 @@
                     margin: 5px;
                     background-color: #ffffff4a;
                     width: 90%;
+                    &:focus{
+                        background-color: $color-white;
+                    }
                 }
             }
         }

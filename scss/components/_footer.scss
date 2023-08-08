@@ -25,6 +25,7 @@ footer{
         grid-area: redes;
         align-self: center;
         justify-self: center;
+        
 
         .foot-twitch {
             background-color: $color-twitch;
@@ -35,8 +36,11 @@ footer{
             @extend %caja-footer;
         }
         .foot-insta{
-            background: (circle, center, (darkslateblue 0 10%) (white 10% 20%) (dodgerblue 20% 30%) (powderblue 30% 100%));
-            @extend %caja-footer;
+            background: rgb(254,209,26);
+            background: -moz-linear-gradient(59deg, rgba(254,209,26,1) 1%, rgba(253,34,127,1) 37%, rgba(158,3,208,1) 68%);
+            background: -webkit-linear-gradient(59deg, rgba(254,209,26,1) 1%, rgba(253,34,127,1) 37%, rgba(158,3,208,1) 68%);
+            background: linear-gradient(59deg, rgba(254,209,26,1) 1%, rgba(253,34,127,1) 37%, rgba(158,3,208,1) 68%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fed11a",endColorstr="#9e03d0",GradientType=1);            @extend %caja-footer;
         }
         .foot-tiktok{
             background-color: $color-tiktok;
@@ -50,6 +54,12 @@ footer{
             margin-left: 5px;
             color: $color-white;
             text-decoration: none;
+            &:hover {
+                box-shadow: 10px 35px 95px 12px rgba(0, 0, 0, 0.6);
+                -webkit-box-shadow: 10px 35px 95px 12px rgba(0, 0, 0, 0.6);
+                -moz-box-shadow: 10px 35px 95px 12px rgba(0, 0, 0, 0.6);
+                transform: scale(1.2);
+            }
 
             img{
                 width: 45px;

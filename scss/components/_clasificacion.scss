@@ -109,9 +109,10 @@
     padding: 5px;
     @include bg (center, cover, no-repeat);
 
-    h2 {
+    a {
         color: $color-white;
         text-align: center;
+        text-decoration: underline $color-white;
     }
 
     div {
@@ -228,9 +229,10 @@
     padding: 5px;
     @include bg (center, cover, no-repeat);
 
-    h2 {
+    a {
         color: $color-white;
         text-align: center;
+        text-decoration: underline $color-white;
     }
 
     div {

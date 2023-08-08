@@ -1,4 +1,4 @@
-header{
+header {
     width: 100%;
     height: 15vh;
     background-image: url(../img/aniquiladores-bg.jpg);
@@ -6,19 +6,37 @@ header{
     background-attachment: fixed;
     @include flex (flex, space-around, center, row);
 
-    a{
-        img{
+    a {
+        img {
             height: 100px;
+
+            &:nth-child(2) {
+                display: none;
+                transform: scale(1.2);
+
+            }
+        }
+
+        &:hover img:nth-child(1) {
+            display: none;
+        }
+
+        &:hover img:nth-child(2) {
+            display: initial;
+            margin-left: 5px;
         }
     }
-    nav{
+
+    nav {
         @include flex (flex, center, center, row);
-        ul{
+
+        ul {
             list-style: none;
             padding-left: 0;
             @include flex (flex, center, center, row);
-            li{
-                a{
+
+            li {
+                a {
                     text-decoration: none;
                     color: $color-black;
                     @include fuente ('Sarabun', 700, 1.2rem);
@@ -26,15 +44,22 @@ header{
                     border-left: 2px solid $color-black;
                     border-right: 2px solid $color-black;
                     padding: 0 20px 0 20px;
-                    &:hover{
+
+                    &:hover {
                         color: $color-white;
                         border-left: 2px solid $color-white;
                         border-right: 2px solid $color-white;
                     }
                 }
-                .h-eq{
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                .h-eq {
                     border: none;
-                    &:hover{
+
+                    &:hover {
                         border: none;
                     }
                 }

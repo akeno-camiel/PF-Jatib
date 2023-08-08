@@ -127,15 +127,14 @@
 
                         h2 {
                             border: 5px dashed nth($rojos, 1);
-                            padding: 5px;
-                            @include fuente (Arial, normal, 2rem);
-                            margin-bottom: 0;
+                            @include fuente (Arial, normal, 1.5rem);
+                            margin: 0;
 
                             &:hover {
                                 background-color: nth($rojos, 1);
                                 border: 5px dashed $color-white;
                                 padding: 5px;
-                                @include fuente (Arial, normal, 2rem);
+                                @include fuente (Arial, normal, 1.5rem);
                             }
                         }
                     }

@@ -16,6 +16,7 @@
         .titulo {
             @include fuente (Arial, 600, 1.5rem);
             color: rgba(255, 255, 255, 0.907);
+            text-decoration: none;
             text-decoration: underline rgb(213, 213, 213);
         }
     }

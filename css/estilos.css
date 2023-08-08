@@ -48,6 +48,7 @@ footer .redes .foot-twitch, footer .redes .foot-twitter, footer .redes .foot-ins
     font-weight: 600;
     font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.907);
+    text-decoration: none;
     text-decoration: underline #d5d5d5; }
 
 .nav3 {
@@ -120,6 +121,14 @@ header {
   flex-direction: row; }
   header a img {
     height: 100px; }
+    header a img:nth-child(2) {
+      display: none;
+      transform: scale(1.2); }
+  header a:hover img:nth-child(1) {
+    display: none; }
+  header a:hover img:nth-child(2) {
+    display: initial;
+    margin-left: 5px; }
   header nav {
     display: flex;
     justify-content: center;
@@ -146,6 +155,8 @@ header {
           color: #ffffff;
           border-left: 2px solid #ffffff;
           border-right: 2px solid #ffffff; }
+      header nav ul li:hover {
+        transform: scale(1.1); }
       header nav ul li .h-eq {
         border: none; }
         header nav ul li .h-eq:hover {
@@ -242,18 +253,17 @@ header {
           color: #ffffff; }
           .grid-container .aside .clasificacion-index div a:hover h2 {
             border: 5px dashed #dc143c;
-            padding: 5px;
             font-family: Arial;
             font-weight: normal;
-            font-size: 2rem;
-            margin-bottom: 0; }
+            font-size: 1.5rem;
+            margin: 0; }
             .grid-container .aside .clasificacion-index div a:hover h2:hover {
               background-color: #dc143c;
               border: 5px dashed #ffffff;
               padding: 5px;
               font-family: Arial;
               font-weight: normal;
-              font-size: 2rem; }
+              font-size: 1.5rem; }
       .grid-container .aside .clasificacion-index .tabla-kings table thead {
         background-color: #F2B64A;
         border-bottom: 2px solid #000000;
@@ -346,6 +356,8 @@ header {
       display: block;
       background-color: #fae4e489;
       width: 90%; }
+      .main-contacto form .contacto div input:focus {
+        background-color: #ffffff; }
     .main-contacto form .contacto div h2 {
       font-family: "Montserrat";
       font-weight: 400;
@@ -356,18 +368,28 @@ header {
       margin: 15px 0 15px 0;
       background-color: #ffffff57; }
     .main-contacto form .contacto div .input-msg {
-      border: #ff0000 1px solid;
+      border: #F55B77 3px solid;
       border-radius: 30px;
       padding: 5px;
       margin: 5px;
       background-color: #ffffffab;
-      width: 100px; }
+      width: 100px;
+      color: black; }
+      .main-contacto form .contacto div .input-msg:hover {
+        background-color: #ffffff;
+        border: #ff0000 3px solid; }
+      .main-contacto form .contacto div .input-msg:active {
+        background-color: #ff0000;
+        color: #ffffff;
+        border: #ffffff 3px solid; }
     .main-contacto form .contacto div textarea {
       border-width: 0 0 1px 0;
       padding: 5px;
       margin: 5px;
       background-color: #ffffff4a;
       width: 90%; }
+      .main-contacto form .contacto div textarea:focus {
+        background-color: #ffffff; }
 
 main .presupuesto-encabezado {
   background-color: #F2B64A; }
@@ -493,9 +515,10 @@ main .presupuesto div div .carousel .carousel-inner .carousel-item img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
-  .clasificacion2 h2 {
+  .clasificacion2 a {
     color: #ffffff;
-    text-align: center; }
+    text-align: center;
+    text-decoration: underline #ffffff; }
   .clasificacion2 div {
     background-color: rgba(255, 255, 255, 0.704);
     justify-self: center;
@@ -573,9 +596,10 @@ main .presupuesto div div .carousel .carousel-inner .carousel-item img {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
-  .clasificacion3 h2 {
+  .clasificacion3 a {
     color: #ffffff;
-    text-align: center; }
+    text-align: center;
+    text-decoration: underline #ffffff; }
   .clasificacion3 div {
     background-color: rgba(255, 255, 255, 0.704);
     justify-self: center;
@@ -738,8 +762,7 @@ main .section-calendario {
       text-align: center;
       font-family: 'Times New Roman', Times, serif;
       width: 100%;
-      margin: 2rem 0 5rem 0;
-      border-radius: 30px; }
+      margin: 2rem 0 5rem 0; }
       main .section-calendario .contenedor-calendario .resultado tr:nth-child(even) {
         border-top: #00000029 1px solid;
         border-bottom: #00000029 1px solid;
@@ -748,8 +771,8 @@ main .section-calendario {
         background-color: #000000;
         color: #ffffff; }
       main .section-calendario .contenedor-calendario .resultado tr:hover td a {
-        background-color: #ffffff;
-        border-radius: 100%; }
+        background: white;
+        background: radial-gradient(circle, white 44%, #020024 46%); }
       main .section-calendario .contenedor-calendario .resultado tr th,
       main .section-calendario .contenedor-calendario .resultado tr td {
         padding: 5px 0 5px 0;
@@ -764,6 +787,9 @@ main .section-calendario {
         main .section-calendario .contenedor-calendario .resultado tr th:nth-child(4),
         main .section-calendario .contenedor-calendario .resultado tr td:nth-child(4) {
           width: min-content; }
+        main .section-calendario .contenedor-calendario .resultado tr th:nth-child(5),
+        main .section-calendario .contenedor-calendario .resultado tr td:nth-child(5) {
+          width: 20%; }
         main .section-calendario .contenedor-calendario .resultado tr th:nth-child(6),
         main .section-calendario .contenedor-calendario .resultado tr td:nth-child(6) {
           width: min-content; }
@@ -827,9 +853,17 @@ main .main-equipo {
         box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
         -webkit-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
         -moz-box-shadow: 30px 24px 95px -16px rgba(0, 0, 0, 0.59);
-        position: relative; }
+        position: relative;
+        transition: 250ms; }
+        main .main-equipo section .tarjetas .card1:hover {
+          box-shadow: 10px 35px 95px 12px rgba(0, 0, 0, 0.6);
+          -webkit-box-shadow: 10px 35px 95px 12px rgba(0, 0, 0, 0.6);
+          -moz-box-shadow: 10px 35px 95px 12px rgba(0, 0, 0, 0.6);
+          transform: scale(1.1); }
         main .main-equipo section .tarjetas .card1:hover .icon i {
-          color: #ff0000; }
+          color: #ff0000;
+          transform: scale(1.3);
+          margin: 20px 10px 0 0; }
         main .main-equipo section .tarjetas .card1:hover .icon .icon1 {
           background-position: center;
           background-size: cover;
@@ -839,18 +873,21 @@ main .main-equipo {
         main .main-equipo section .tarjetas .card1:hover .icon .icon3 {
           display: initial; }
         main .main-equipo section .tarjetas .card1:hover .equipo-name {
-          margin-top: -35px;
-          transition: all 400ms; }
-        main .main-equipo section .tarjetas .card1:hover .equipo-name h3 {
+          transform: translateY(-60px);
+          color: #ffffff;
+          background-color: #dc143c;
+          height: 2rem;
+          padding: 5px; }
+        main .main-equipo section .tarjetas .card1:hover .equipo-name h4 {
           display: none; }
         main .main-equipo section .tarjetas .card1:hover .info-description {
-          margin-top: 15px;
+          transform: translateY(190px);
           opacity: 100%; }
         main .main-equipo section .tarjetas .card1 .icon {
           width: 30%;
           position: absolute;
           top: 10px;
-          right: 0; }
+          right: 10px; }
           main .main-equipo section .tarjetas .card1 .icon .icon1 {
             width: 100%;
             color: #ffffff; }
@@ -859,11 +896,13 @@ main .main-equipo {
             height: 90px;
             margin-left: -7px;
             color: #ffffff;
-            display: none; }
+            display: none;
+            transform: scale(1.2); }
           main .main-equipo section .tarjetas .card1 .icon .icon3 {
             width: 100%;
             color: #ffffff;
-            display: none; }
+            display: none;
+            transform: scale(1.2); }
           main .main-equipo section .tarjetas .card1 .icon i {
             color: #ffffff; }
         main .main-equipo section .tarjetas .card1 .imgq {
@@ -874,7 +913,7 @@ main .main-equipo {
             position: relative;
             width: 100%; }
           main .main-equipo section .tarjetas .card1 .imgq .espe {
-            margin-left: -70px;
+            margin-left: -85px;
             margin-top: 10%;
             height: 325px;
             width: 400px; }
@@ -886,7 +925,8 @@ main .main-equipo {
             position: relative;
             width: 100%; }
         main .main-equipo section .tarjetas .card1 .equipo-name {
-          margin-top: 20px; }
+          margin-top: 20px;
+          transition: all 400ms ease-in-out; }
           main .main-equipo section .tarjetas .card1 .equipo-name h3 {
             font-family: "Sarabun";
             font-weight: 600;
@@ -900,14 +940,14 @@ main .main-equipo {
           justify-content: initial;
           align-items: center;
           flex-direction: row;
-          width: 250px;
+          width: 100%;
           height: 100px;
           color: #000000;
           background-color: #ffffff4f;
           padding: 5px;
           margin-top: -250px;
           opacity: 0;
-          transition: all 400ms; }
+          transition: all 0.5s ease-in-out; }
           main .main-equipo section .tarjetas .card1 .info-description h4 {
             font-family: "Sarabun";
             font-weight: 600;
@@ -980,7 +1020,11 @@ footer {
     footer .redes .foot-twitter {
       background-color: #03A9F4; }
     footer .redes .foot-insta {
-      background: circle, center, darkslateblue 0 10% white 10% 20% dodgerblue 20% 30% powderblue 30% 100%; }
+      background: #fed11a;
+      background: -moz-linear-gradient(59deg, #fed11a 1%, #fd227f 37%, #9e03d0 68%);
+      background: -webkit-linear-gradient(59deg, #fed11a 1%, #fd227f 37%, #9e03d0 68%);
+      background: linear-gradient(59deg, #fed11a 1%, #fd227f 37%, #9e03d0 68%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fed11a",endColorstr="#9e03d0",GradientType=1); }
     footer .redes .foot-tiktok {
       background-color: #000000; }
     footer .redes .foot-spotify {
@@ -989,6 +1033,11 @@ footer {
       margin-left: 5px;
       color: #ffffff;
       text-decoration: none; }
+      footer .redes a:hover {
+        box-shadow: 10px 35px 95px 12px rgba(0, 0, 0, 0.6);
+        -webkit-box-shadow: 10px 35px 95px 12px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: 10px 35px 95px 12px rgba(0, 0, 0, 0.6);
+        transform: scale(1.2); }
       footer .redes a img {
         width: 45px; }
       footer .redes a h4 {
@@ -1031,6 +1080,8 @@ footer {
 
 /*!---------------------------------------------------MEDIA QUERIES---------------------------------------------------*/
 @media screen and (max-width: 4000px) {
+  .grid-container .aside .clasificacion-index div a h2 {
+    font-size: 1.5rem; }
   .aside .clasificacion-index .tabla .abreviacion {
     display: none; }
   main .section-calendario .contenedor-calendario .resultado .resultado-abreviacion {
@@ -1051,8 +1102,6 @@ footer {
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 1750px) {
-  .grid-container .aside .clasificacion-index div a h2 {
-    font-size: 1.7rem; }
   .clasificacion2 .copa,
   .clasificacion3 .copa {
     height: 25%;
@@ -1075,8 +1124,8 @@ footer {
     margin-left: 20px; }
   .grid-container .proximo div img {
     height: 80%; }
-  .clasificacion2 h2,
-  .clasificacion3 h2 {
+  .clasificacion2 a,
+  .clasificacion3 a {
     font-size: 1.8rem; }
   .clasificacion2 div img,
   .clasificacion3 div img {
@@ -1085,8 +1134,6 @@ footer {
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 1560px) {
-  .grid-container .aside .clasificacion-index div a h2 {
-    font-size: 1.7rem; }
   .grid-container .aside .clasificacion-index .tabla table tr td,
   .grid-container .aside .clasificacion-index .tabla table thead tr th {
     padding: 8px 4px 8px 4px;
@@ -1112,8 +1159,6 @@ footer {
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 1460px) {
-  .grid-container .aside .clasificacion-index div a h2 {
-    font-size: 1.2rem; }
   .grid-container .aside .clasificacion-index .tabla table tr td,
   .grid-container .aside .clasificacion-index .tabla table thead tr th {
     padding: 4px 2px 4px 2px; }
@@ -1122,8 +1167,6 @@ footer {
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 1400px) {
-  .grid-container .aside .clasificacion-index div a h2 {
-    font-size: 1rem; }
   .grid-container .aside .clasificacion-index .tabla table thead tr .pj,
   .grid-container .aside .clasificacion-index .tabla table tr .pj {
     display: none; }
@@ -1189,9 +1232,6 @@ footer {
     justify-content: space-around; }
   .grid-container .aside .clasificacion-index {
     width: auto; }
-  .grid-container .aside .clasificacion-index div a h2 {
-    font-size: 1.7rem;
-    padding: 5px; }
   .grid-container .aside .clasificacion-index .tabla table tr .abreviacion {
     display: none; }
   .grid-container .aside .clasificacion-index .tabla table thead tr .pj,
@@ -1217,7 +1257,7 @@ footer {
   .clasificacion3 .copa {
     width: 10%;
     right: 45%; }
-  .clasificacion3 h2 {
+  .clasificacion3 a {
     font-size: 1.2rem; }
   .clasificacion2 div img {
     width: 30px;
@@ -1295,8 +1335,6 @@ footer {
   .clasificacion2 .fixt,
   .clasificacion3 .fixt {
     display: none; }
-  .clasificacion3 h2 {
-    font-size: 2rem; }
   .clasificacion2 .fixt1,
   .clasificacion3 .fixt1 {
     flex-direction: row-reverse; }
@@ -1331,14 +1369,15 @@ footer {
     width: 23vw; }
   .grid-container .hero0 .hero .hero1 .hero-logo1 img {
     width: 40%; }
-  .grid-container .hero0 .hero .hero1 .hero-logo1 h3 {
+  .grid-container .hero0 .hero .hero1 .hero-logo1 h2 {
     font-size: 2rem; }
   .grid-container .hero0 .hero .hero1 .hero-logo2 img {
     width: 40%; }
-  .grid-container .hero0 .hero .hero-logo2 h3 {
+  .grid-container .hero0 .hero .hero1 .hero-logo2 h2 {
     font-size: 2rem; }
   .grid-container .twitter {
-    width: 90%; }
+    width: 90%;
+    justify-self: center; }
   .grid-container .proximo {
     margin: 0; }
   .grid-container .proximo div img {
@@ -1357,8 +1396,6 @@ footer {
     display: initial; }
   .clasificacion3 {
     grid-template-columns: repeat(4, 130px); }
-  .clasificacion3 h2 {
-    font-size: 1.5rem; }
   .clasificacion3 div h3 {
     font-size: 1.5rem; }
   footer {
@@ -1380,13 +1417,13 @@ footer {
   .grid-container .hero0 .hero .hero1 img {
     width: 23vw; }
   .grid-container .hero0 .hero .hero1 .hero-logo1 img {
-    width: 2.4rem; }
+    width: 2rem; }
   .grid-container .hero0 .hero .hero1 .hero-logo2 img {
-    width: 2.4rem; }
-  .grid-container .hero0 .hero .hero1 .hero-logo1 h3 {
-    font-size: 2rem; }
-  .grid-container .hero0 .hero .hero1 .hero-logo2 h3 {
-    font-size: 2rem; }
+    width: 2rem; }
+  .grid-container .hero0 .hero .hero1 .hero-logo1 h2 {
+    font-size: 1.5rem; }
+  .grid-container .hero0 .hero .hero1 .hero-logo2 h2 {
+    font-size: 1.5rem; }
   .grid-container .aside {
     display: flex;
     flex-direction: column;
@@ -1398,14 +1435,14 @@ footer {
     width: 80vw; }
   main .section-calendario .contenedor-calendario .resultado tr td:nth-child(5) div {
     font-size: 0.7rem; }
+  .clasificacion2 {
+    grid-template-columns: repeat(3, 150px);
+    width: 90vw; }
   .clasificacion2 .copa {
     width: 20%;
     height: inherit;
     right: 5%;
     top: 29%; }
-  .clasificacion2 {
-    grid-template-columns: repeat(3, 150px);
-    width: 90vw; }
   .clasificacion2 div .clasificacion-equipo {
     display: none; }
   .clasificacion3 {
@@ -1415,7 +1452,7 @@ footer {
     height: inherit;
     right: 10%;
     top: 37%; }
-  .clasificacion3 h2 {
+  .clasificacion3 a {
     font-size: 1rem; }
   .clasificacion3 div {
     width: 80%; }
@@ -1437,7 +1474,7 @@ footer {
     height: inherit;
     right: 6%;
     top: 32%; }
-  .clasificacion2 h2 {
+  .clasificacion2 a {
     font-size: 1.5rem; }
   .clasificacion2 div img {
     width: 40px;
@@ -1468,9 +1505,13 @@ footer {
   .grid-container .hero0 .hero .hero1 img {
     width: 23vw; }
   .grid-container .hero0 .hero .hero1 .hero-logo1 img {
-    width: 2rem; }
+    width: 1.5rem; }
   .grid-container .hero0 .hero .hero1 .hero-logo2 img {
-    width: 2rem; }
+    width: 1.5rem; }
+  .grid-container .hero0 .hero .hero1 .hero-logo1 h2 {
+    font-size: 1.3rem; }
+  .grid-container .hero0 .hero .hero1 .hero-logo2 h2 {
+    font-size: 1.3rem; }
   .grid-container .ultimo .carousel .carousel-indicators {
     margin-bottom: 0; }
   .grid-container .ultimo .carousel .carousel-item .carousel-caption {
@@ -1506,8 +1547,7 @@ footer {
     margin-bottom: 20px; }
   .grid-container .twitter {
     width: 250px;
-    height: 600px;
-    margin-left: 40px; }
+    height: 600px; }
   main .titulo-calendario {
     font-size: 1.2rem; }
   main .section-calendario .contenedor-calendario .resultado tr td img {
@@ -1525,12 +1565,12 @@ footer {
     height: inherit;
     right: 12%;
     top: 37%; }
-  .clasificacion3 h2 {
-    font-size: 0.8rem; }
+  .clasificacion3 a {
+    font-size: 0.7rem; }
   .clasificacion3 div {
     width: 100%; }
-  .clasificacion3 div h3 {
-    font-size: 0.7rem; }
+  .clasificacion2 div h3, .clasificacion3 div h3 {
+    font-size: 0.5rem; }
   .clasificacion3 div img {
     width: 80%; } }
 
@@ -1558,7 +1598,7 @@ footer {
   .clasificacion-kings1 .tabla1 thead tr .celda-presupuesto,
   .clasificacion-kings1 .tabla1 tr .celda-presupuesto {
     display: table-cell; }
-  .clasificacion2 h2 {
+  .clasificacion2 a {
     font-size: 1.2rem; }
   .main-contacto {
     display: flex;
@@ -1570,8 +1610,8 @@ footer {
     width: 80%; }
   form .contacto div textarea {
     width: 90%; }
-  main section .titulo-equipo,
-  main section .titulo-equipoq {
+  main .main-equipo section .titulo-equipo,
+  main .main-equipo section .titulo-equipoq {
     width: 80vw; }
   main .presupuesto1 {
     font-size: 1.7rem; }
@@ -1600,7 +1640,7 @@ footer {
     font-size: 0.7rem; }
   .clasificacion3 {
     grid-template-columns: repeat(4, 40px); }
-  .clasificacion3 h2 {
+  .clasificacion3 a {
     font-size: 0.7rem; }
   main .presupuesto-encabezado .presupuesto1 {
     font-size: 1.5rem; }
