@@ -14,7 +14,7 @@
         .hero {
             @include flex (flex, center, center, row);
 
-            h1 {
+            .h1 {
                 display: none;
             }
 
@@ -115,6 +115,9 @@
             margin-bottom: 5px;
             width: 90%;
             overflow: scroll;
+            &::-webkit-scrollbar {
+                display: none;
+            }
 
             div {
                 a {
@@ -180,7 +183,7 @@
                         &:nth-child(even) {
                             background-color: #ddd
                         }
-                        
+
 
                         &:hover td {
                             background-color: #ed2a2a;
@@ -193,13 +196,16 @@
 
                         td {
                             padding: 10px 5px 10px 5px;
-                            &:nth-child(2){
+
+                            &:nth-child(2) {
                                 text-align: right;
                             }
-                            &:nth-child(3){
+
+                            &:nth-child(3) {
                                 text-align: left;
                                 width: 30%;
                             }
+
                             img {
                                 width: 30px;
                             }

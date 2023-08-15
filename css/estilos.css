@@ -123,44 +123,39 @@ header {
     height: 100px; }
     header a img:nth-child(2) {
       display: none;
-      transform: scale(1.2); }
+      transform: scale(1.1); }
   header a:hover img:nth-child(1) {
     display: none; }
   header a:hover img:nth-child(2) {
     display: initial;
     margin-left: 5px; }
-  header nav {
+  header nav ul {
+    list-style: none;
+    padding-left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row; }
-    header nav ul {
-      list-style: none;
-      padding-left: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row; }
-      header nav ul li a {
-        text-decoration: none;
-        color: #000000;
-        font-family: "Sarabun";
-        font-weight: 700;
-        font-size: 1.2rem;
-        margin-left: 20px;
-        border-left: 2px solid #000000;
-        border-right: 2px solid #000000;
-        padding: 0 20px 0 20px; }
-        header nav ul li a:hover {
-          color: #ffffff;
-          border-left: 2px solid #ffffff;
-          border-right: 2px solid #ffffff; }
-      header nav ul li:hover {
-        transform: scale(1.1); }
-      header nav ul li .h-eq {
+    header nav ul li a {
+      text-decoration: none;
+      color: #000000;
+      font-family: "Sarabun";
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-left: 20px;
+      border-left: 2px solid #000000;
+      border-right: 2px solid #000000;
+      padding: 0 20px 0 20px; }
+      header nav ul li a:hover {
+        color: #ffffff;
+        border-left: 2px solid #ffffff;
+        border-right: 2px solid #ffffff; }
+    header nav ul li:hover {
+      transform: scale(1.1); }
+    header nav ul li .h-eq {
+      border: none; }
+      header nav ul li .h-eq:hover {
         border: none; }
-        header nav ul li .h-eq:hover {
-          border: none; }
 
 .grid-container {
   display: grid;
@@ -174,7 +169,7 @@ header {
       justify-content: center;
       align-items: center;
       flex-direction: row; }
-      .grid-container .hero0 .hero h1 {
+      .grid-container .hero0 .hero .h1 {
         display: none; }
       .grid-container .hero0 .hero .hero1 {
         margin: 50px 0 50px 0;
@@ -245,6 +240,8 @@ header {
       margin-bottom: 5px;
       width: 90%;
       overflow: scroll; }
+      .grid-container .aside .clasificacion-index::-webkit-scrollbar {
+        display: none; }
       .grid-container .aside .clasificacion-index div a {
         text-decoration: none;
         color: #E03050;
@@ -426,7 +423,10 @@ main .presupuesto div div .accordion .accordion-item {
     background-attachment: fixed;
     background-position: 20%;
     background-size: normal;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px black, 0 0 1rem red, 0 0 0.2rem red;
+    color: white; }
 
 main .presupuesto div div .carousel .carousel-inner .carousel-item img {
   margin: 20px;
@@ -693,7 +693,7 @@ main .nav2 .clasificacion-kings {
     text-decoration: underline #d5d5d5;
     margin-right: 15px; }
 
-main h1 {
+main .h1 {
   display: none; }
 
 main .titulo-calendario {
@@ -1206,7 +1206,7 @@ footer {
     display: flex;
     flex-direction: column; }
   header a img {
-    height: 90px;
+    height: 75px;
     padding: 5px; }
   header nav ul li a {
     text-decoration: none;
@@ -1214,6 +1214,8 @@ footer {
     font-size: 1rem;
     font-family: 'Sarabun', sans-serif;
     font-weight: 700; }
+  main .nav2 h1, main .nav3 h1 {
+    display: none; }
   .grid-container .hero0 .hero .hero1 {
     margin: 50px 0 50px 0;
     padding: 10px;
@@ -1262,9 +1264,6 @@ footer {
   .clasificacion2 div img {
     width: 30px;
     height: 30px; }
-  main .presupuesto div div .accordion .accordion-item .accordion-header .accordion-button {
-    color: #f45c5c;
-    font-weight: 700; }
   footer .footer-logo {
     display: inline-block; } }
 
@@ -1353,7 +1352,11 @@ footer {
     height: 80%;
     width: 80%; }
   .clasificacion3 div h3 {
-    font-size: 2rem; } }
+    font-size: 2rem; }
+  main .presupuesto div div .accordion .accordion-item {
+    background-position: center; }
+    main .presupuesto div div .accordion .accordion-item .accordion-header .accordion-button {
+      background-position: center; } }
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 900px) {
@@ -1488,6 +1491,8 @@ footer {
   header {
     display: flex;
     flex-direction: row; }
+  header a img {
+    height: 90px; }
   header nav ul {
     display: inline; }
   header nav ul li a {
@@ -1554,10 +1559,13 @@ footer {
     width: 30px; }
   main .section-calendario .contenedor-calendario .resultado tr td:nth-child(5) {
     width: 20%; }
+  .clasificacion-kings1 .tabla1 thead tr th:nth-child(3) {
+    padding: 10px 0 10px 0; }
   .clasificacion-kings1 .tabla1 .abv {
     display: none; }
   .clasificacion-kings1 .tabla1 .abrev {
-    display: table-cell; }
+    display: table-cell;
+    padding: 10px 0 10px 0; }
   .clasificacion3 {
     grid-template-columns: repeat(4, 50px); }
   .clasificacion3 .copa {
@@ -1569,7 +1577,8 @@ footer {
     font-size: 0.7rem; }
   .clasificacion3 div {
     width: 100%; }
-  .clasificacion2 div h3, .clasificacion3 div h3 {
+  .clasificacion2 div h3,
+  .clasificacion3 div h3 {
     font-size: 0.5rem; }
   .clasificacion3 div img {
     width: 80%; } }

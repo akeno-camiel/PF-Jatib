@@ -1,5 +1,4 @@
 /*!---------------------------------------------------MEDIA QUERIES---------------------------------------------------*/
-
 @media screen and (max-width:4000px) {
     .grid-container .aside .clasificacion-index div a h2 {
         font-size: 1.5rem;
@@ -222,7 +221,7 @@
     }
 
     header a img {
-        height: 90px;
+        height: 75px;
         padding: 5px;
     }
 
@@ -233,7 +232,9 @@
         font-family: 'Sarabun', sans-serif;
         font-weight: 700;
     }
-
+    main .nav2 h1, main .nav3 h1{
+        display: none;
+    }
     .grid-container .hero0 .hero .hero1 {
         margin: 50px 0 50px 0;
         padding: 10px;
@@ -312,11 +313,6 @@
     .clasificacion2 div img {
         width: 30px;
         height: 30px;
-    }
-
-    main .presupuesto div div .accordion .accordion-item .accordion-header .accordion-button {
-        color: rgb(244, 92, 92);
-        font-weight: 700;
     }
 
     footer .footer-logo {
@@ -498,6 +494,26 @@
 
     .clasificacion3 div h3 {
         font-size: 2rem;
+    }
+
+    main {
+        .presupuesto {
+            div {
+                div {
+                    .accordion {
+                        .accordion-item {
+                            background-position: center;
+
+                            .accordion-header {
+                                .accordion-button {
+                                    background-position: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -749,6 +765,10 @@
         flex-direction: row;
     }
 
+    header a img {
+        height: 90px;
+    }
+
     header nav ul {
         display: inline;
     }
@@ -760,6 +780,7 @@
     header nav ul li a:hover {
         border: none;
     }
+
 
     .grid-container {
         display: grid;
@@ -870,13 +891,16 @@
     main .section-calendario .contenedor-calendario .resultado tr td:nth-child(5) {
         width: 20%;
     }
-
+    .clasificacion-kings1 .tabla1 thead tr th:nth-child(3){
+        padding: 10px 0 10px 0;
+    }
     .clasificacion-kings1 .tabla1 .abv {
         display: none;
     }
 
     .clasificacion-kings1 .tabla1 .abrev {
         display: table-cell;
+        padding: 10px 0 10px 0;
     }
 
     .clasificacion3 {
@@ -898,7 +922,8 @@
         width: 100%;
     }
 
-    .clasificacion2 div h3, .clasificacion3 div h3 {
+    .clasificacion2 div h3,
+    .clasificacion3 div h3 {
         font-size: 0.5rem;
     }
 

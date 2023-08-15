@@ -12,7 +12,7 @@ header {
 
             &:nth-child(2) {
                 display: none;
-                transform: scale(1.2);
+                transform: scale(1.1);
 
             }
         }
@@ -28,8 +28,6 @@ header {
     }
 
     nav {
-        @include flex (flex, center, center, row);
-
         ul {
             list-style: none;
             padding-left: 0;

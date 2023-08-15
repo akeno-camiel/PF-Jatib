@@ -36,6 +36,12 @@ main {
                                 background-color: $color-black;
                                 background-attachment: fixed;
                                 @include bg (20%, normal, no-repeat);
+                                font-weight: 700;
+                                text-shadow:
+                                    1px 1px 2px black,
+                                    0 0 1rem rgb(255, 0, 0),
+                                    0 0 0.2rem rgb(255, 0, 0);
+                                color: white;
                             }
                         }
                     }
