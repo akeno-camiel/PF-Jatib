@@ -1399,12 +1399,10 @@ footer {
   .clasificacion3 div h3 {
     font-size: 1.5rem; }
   main .presupuesto div div .accordion .accordion-item {
-    background-attachment: scroll;
-    background-position: top; }
-  main .presupuesto div div .accordion .accordion-header .accordion-button {
-    background-attachment: scroll;
-    background-position: center;
-    background-size: contain; }
+    background-position: center; }
+    main .presupuesto div div .accordion .accordion-item .accordion-header .accordion-button {
+      background-position: 45%;
+      background-size: 50%; }
   footer {
     grid-template-rows: 100px 700px auto; } }
 

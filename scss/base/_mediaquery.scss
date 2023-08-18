@@ -592,15 +592,13 @@
                 div {
                     .accordion {
                         .accordion-item {
-                            background-attachment: scroll;
-                            background-position: top;
-                        }
+                            background-position: center;
 
-                        .accordion-header {
-                            .accordion-button {
-                                background-attachment: scroll;
-                                background-position: center;
-                                background-size: contain;
+                            .accordion-header {
+                                .accordion-button {
+                                    background-position: 45%;
+                                    background-size: 50%;
+                                }
                             }
                         }
                     }
