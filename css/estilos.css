@@ -1400,10 +1400,12 @@ footer {
     font-size: 1.5rem; }
   main .presupuesto div div .accordion .accordion-item {
     background-attachment: scroll;
-    background-position: center; }
+    background-position: center;
+    background-size: contain; }
   main .presupuesto div div .accordion .accordion-header .accordion-button {
     background-attachment: scroll;
-    background-position: center; }
+    background-position: center;
+    background-size: contain; }
   footer {
     grid-template-rows: 100px 700px auto; } }
 

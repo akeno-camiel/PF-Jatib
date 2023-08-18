@@ -594,12 +594,14 @@
                         .accordion-item {
                             background-attachment: scroll;
                             background-position: center;
+                            background-size: contain;
                         }
 
                         .accordion-header {
                             .accordion-button {
                                 background-attachment: scroll;
                                 background-position: center;
+                                background-size: contain;
                             }
                         }
                     }
