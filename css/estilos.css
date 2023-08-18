@@ -1401,8 +1401,8 @@ footer {
   main .presupuesto div div .accordion .accordion-item {
     background-position: center; }
     main .presupuesto div div .accordion .accordion-item .accordion-header .accordion-button {
-      background-position: 45%;
-      background-size: 50%; }
+      background-position: 45% 45%;
+      background-size: 70%; }
   footer {
     grid-template-rows: 100px 700px auto; } }
 
