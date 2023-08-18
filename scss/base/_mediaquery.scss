@@ -612,6 +612,14 @@
                 .accordion {
                     .accordion-item {
                         background-attachment: scroll;
+                        background-position: center;
+                    }
+
+                    .accordion-header {
+                        .accordion-button {
+                            background-attachment: scroll;
+                            background-position: center;
+                        }
                     }
                 }
             }

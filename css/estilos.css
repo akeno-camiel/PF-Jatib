@@ -1403,7 +1403,11 @@ footer {
   .clasificacion3 div h3 {
     font-size: 1.5rem; }
   .presupuesto div div .accordion .accordion-item {
-    background-attachment: scroll; }
+    background-attachment: scroll;
+    background-position: center; }
+  .presupuesto div div .accordion .accordion-header .accordion-button {
+    background-attachment: scroll;
+    background-position: center; }
   footer {
     grid-template-rows: 100px 700px auto; } }
 
