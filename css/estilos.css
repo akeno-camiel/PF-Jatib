@@ -1353,11 +1353,7 @@ footer {
     height: 80%;
     width: 80%; }
   .clasificacion3 div h3 {
-    font-size: 2rem; }
-  main .presupuesto div div .accordion .accordion-item {
-    background-position: center; }
-    main .presupuesto div div .accordion .accordion-item .accordion-header .accordion-button {
-      background-position: center; } }
+    font-size: 2rem; } }
 
 /*!------------------------MEDIA QUERIES------------------------*/
 @media screen and (max-width: 900px) {
@@ -1402,10 +1398,10 @@ footer {
     grid-template-columns: repeat(4, 130px); }
   .clasificacion3 div h3 {
     font-size: 1.5rem; }
-  .presupuesto div div .accordion .accordion-item {
+  main .presupuesto div div .accordion .accordion-item {
     background-attachment: scroll;
     background-position: center; }
-  .presupuesto div div .accordion .accordion-header .accordion-button {
+  main .presupuesto div div .accordion .accordion-header .accordion-button {
     background-attachment: scroll;
     background-position: center; }
   footer {

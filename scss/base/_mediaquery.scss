@@ -498,26 +498,6 @@
     .clasificacion3 div h3 {
         font-size: 2rem;
     }
-
-    main {
-        .presupuesto {
-            div {
-                div {
-                    .accordion {
-                        .accordion-item {
-                            background-position: center;
-
-                            .accordion-header {
-                                .accordion-button {
-                                    background-position: center;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 
 /*!------------------------MEDIA QUERIES------------------------*/
@@ -606,19 +586,21 @@
         font-size: 1.5rem;
     }
 
-    .presupuesto {
-        div {
+    main {
+        .presupuesto {
             div {
-                .accordion {
-                    .accordion-item {
-                        background-attachment: scroll;
-                        background-position: center;
-                    }
-
-                    .accordion-header {
-                        .accordion-button {
+                div {
+                    .accordion {
+                        .accordion-item {
                             background-attachment: scroll;
                             background-position: center;
+                        }
+
+                        .accordion-header {
+                            .accordion-button {
+                                background-attachment: scroll;
+                                background-position: center;
+                            }
                         }
                     }
                 }
