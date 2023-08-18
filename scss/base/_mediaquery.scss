@@ -596,16 +596,18 @@
 
                             .accordion-header {
                                 .accordion-button {
-                                    background-position: 45% 45%;
-                                    background-size: 70%;
+                                    background-position: top;
                                 }
                             }
                         }
+
+
                     }
                 }
             }
         }
     }
+
 
     footer {
         grid-template-rows: 100px 700px auto;
