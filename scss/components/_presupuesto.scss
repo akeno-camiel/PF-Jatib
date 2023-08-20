@@ -2,13 +2,13 @@ main {
     .presupuesto-encabezado {
         background-color: $color-kings;
         .presupuesto1 {
-            @include fuente ('Times New Roman', 600, 40px);
+            @include fuente ('Sarabun', 600, 40px);
             margin-left: 30px;
             color: $color-white;
         }
 
         .pp {
-            @include fuente ('Times New Roman', 400, 1.2rem);
+            @include fuente ('Sarabun', 400, 1.2rem);
             margin-left: 60px;
             color: $color-white
         }
@@ -18,7 +18,7 @@ main {
         div {
             div {
                 .presupuesto1 {
-                    @include fuente ('Times New Roman', 600, 40px);
+                    @include fuente ('Sarabun', 600, 40px);
                     margin-left: 30px;
                 }
 
